@@ -1,0 +1,218 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-family: 'lato';
+}
+
+#body {
+	padding-top: 80px;
+}
+.main-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	background-color: white;
+	display: grid;
+	grid-template-columns: 200px auto;
+	grid-template-rows: auto auto;
+	grid-template-areas: 
+		"img menu"
+		"links links";
+	z-index: 10;
+	@media (min-width: 768px) {
+		grid-template-columns: 200px auto 0;
+		grid-template-areas: 
+		"img links menu";
+	}
+	.nav-img {
+		grid-area: img;
+		position: relative;
+		left: 2%;
+	}
+	.nav-links {
+		@include inline-flexbox;
+		flex-direction: column;
+		width: 100%;
+		grid-area: links;
+		align-items: stretch;
+		justify-self: end;
+		margin: 0;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+		.nav-link {
+			color: $olive-green;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-size: 1.2em;
+			text-decoration: none;
+			display: block;
+			vertical-align: middle;
+			height: 100%;
+			
+			&:hover {
+				background-color: $dark-green-transparent;
+				.dropdown {
+					height: auto;
+					box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+				}
+			}
+			a {
+				text-decoration: none;
+				color: $olive-green;
+				div {
+					height: 45px;
+					width: 100%;
+					text-align: center;
+					padding-top: 10px;
+				}
+			}
+			.dropdown {
+				height: 0px;
+				overflow: hidden;
+				position: absolute;
+				top: 60px;
+				background-color: $white;
+				border-radius: 4px;
+				
+				.dropdown-links {
+					margin: 0;
+					padding: .5em 1em;
+					list-style: none;
+					.dropdown-link {
+						margin: 5px 0 ;
+						text-decoration: none;
+						a {
+							text-decoration: none;
+							color: $olive-green;
+						}
+						&:hover {
+							background-color: $dark-green-transparent;
+						}
+					}
+				}
+			}
+		}
+		@media (min-width: 768px) {
+			flex-direction: row;
+			width: auto;
+			position: relative;
+			right: 2%;
+			padding: 0 1em;
+			box-shadow: none;
+			height: 60px;
+			.nav-link {
+				border-bottom: 3px solid $white;
+				a {
+					div {
+						width: auto;
+						padding: 15px 1em 0 1em;
+						text-align: center;
+					}
+				}
+				&:hover {
+					border-bottom: 3px solid $olive-green;
+				}
+			}
+			
+		}
+	}
+	.nav-menu {
+		height: 30px;
+		width: 40px;
+		justify-self: end;
+		position: relative;
+		top: 12px;
+		right: 2%;
+		.menu-bar {
+			border-radius: 4px;
+			width: 30px;
+			margin: 5px auto;
+			height: 3px;
+			background-color: $light-grey;
+		}
+	}
+}
+
+.footer {
+	background-color: $dark-green;
+	padding-top: 1em;
+	box-shadow: 0 -3px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	.footer-content {
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 1em;
+		grid-row-gap: 1em;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+			"services services"
+			"about contact"
+			"logo logo";
+		@media (min-width: 576px) {
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: auto auto;
+			grid-template-areas: 
+				"about services contact"
+				"logo logo logo";
+		}
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-rows: auto auto;
+			grid-template-areas: 
+				"about services contact ."
+				"logo logo logo logo";
+		}
+		.footer-links {
+			.footer-links-header {
+				border-bottom: 3px solid $lime-green;
+				font-size: 1.2em;
+				font-weight: bold;
+				padding-bottom: .2em;
+			}
+			ul {
+				list-style: none;
+				margin: .5em 0;
+				padding: 0;
+				font-weight: lighter;
+				li {
+					margin: 5px 0;
+					a {
+						text-decoration: none;
+						color: white;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			&.footer-about {
+				grid-area: about;
+			}
+			&.footer-services {
+				grid-area: services;
+			}
+			&.footer-contact {
+				grid-area: contact;
+			}
+		}
+		.footer-logo {
+			grid-area: logo;
+			justify-self: end;
+			text-align: right;
+			padding-bottom: 1em;
+			color: $lime-green;
+			font-weight: lighter;
+			a {
+				text-decoration: none;
+				color: $lime-green;
+			}
+		}
+	}
+
+}
