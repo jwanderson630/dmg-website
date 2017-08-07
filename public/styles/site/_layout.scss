@@ -3,16 +3,16 @@ html, body {
 	margin: 0;
 	height: 100%;
 	font-family: 'lato';
+	font-size: $font-size-base;
 }
-
 #body {
-	padding-top: 80px;
+	
 }
 .main-nav {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 60px;
+	min-height: 60px;
 	width: 100%;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 	background-color: white;
@@ -24,6 +24,7 @@ html, body {
 		"links links";
 	z-index: 10;
 	@media (min-width: 768px) {
+		height: 60px;
 		grid-template-columns: 200px auto 0;
 		grid-template-areas: 
 		"img links menu";
@@ -42,7 +43,9 @@ html, body {
 		justify-self: end;
 		margin: 0;
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-		.nav-link {
+		background-color: $white;
+		.nav-item {
+			@include linear-transition(.1s);
 			color: $olive-green;
 			box-sizing: border-box;
 			cursor: pointer;
@@ -58,32 +61,50 @@ html, body {
 					height: auto;
 					box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 				}
-			}
-			a {
-				text-decoration: none;
-				color: $olive-green;
-				div {
-					height: 45px;
-					width: 100%;
-					text-align: center;
-					padding-top: 10px;
+				.nav-label {
+					.dropdown-arrow {
+						@include rotate(270deg);
+					}
 				}
 			}
+			.nav-link {
+				text-decoration: none;
+				color: $olive-green;
+				
+			}
+			.nav-label {
+				height: 45px;
+				width: 100%;
+				padding: 20px 0 0 1em;
+				.dropdown-arrow {
+					@include arrow($olive-green, 1em);
+					@include rotate(90deg);
+					@include linear-transition(0.1s);
+					position: absolute;
+					right: 2%;
+				}	
+			}
+			
 			.dropdown {
 				height: 0px;
 				overflow: hidden;
-				position: absolute;
-				top: 60px;
 				background-color: $white;
-				border-radius: 4px;
-				
+				border-radius: 0 0 4px 4px;
+				text-align: left;
+				position: static;
+				width: 100%;
 				.dropdown-links {
 					margin: 0;
-					padding: .5em 1em;
 					list-style: none;
+					list-style-position: inside;
+					padding: 0;
 					.dropdown-link {
-						margin: 5px 0 ;
+						@include linear-transition(.1s);
+						margin: 0 ;
 						text-decoration: none;
+						padding: 1em 0 1em 3em;
+						
+
 						a {
 							text-decoration: none;
 							color: $olive-green;
@@ -98,15 +119,13 @@ html, body {
 		@media (min-width: 768px) {
 			flex-direction: row;
 			width: auto;
-			position: relative;
-			right: 2%;
 			padding: 0 1em;
 			box-shadow: none;
 			height: 60px;
-			.nav-link {
+			.nav-item {
 				border-bottom: 3px solid $white;
-				a {
-					div {
+				.nav-link {
+					.nav-label {
 						width: auto;
 						padding: 15px 1em 0 1em;
 						text-align: center;
@@ -114,6 +133,20 @@ html, body {
 				}
 				&:hover {
 					border-bottom: 3px solid $olive-green;
+				}
+				.dropdown {
+					height: 0px;
+					position: absolute;
+					top: 60px;
+					text-align: left;
+					width: auto;
+					.dropdown-links {
+						padding: 0;
+						.dropdown-link {
+							padding: .5em 1em;
+							
+						}
+					}
 				}
 			}
 			
@@ -138,10 +171,8 @@ html, body {
 
 .footer {
 	background-color: $dark-green;
-	padding-top: 1em;
+	padding-top: 3em;
 	box-shadow: 0 -3px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-	position: absolute;
-	bottom: 0;
 	width: 100%;
 	.footer-content {
 		color: white;

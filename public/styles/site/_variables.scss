@@ -1,9 +1,12 @@
-$font-size-base: 14px;
+$font-size-base: 16px;
+
+
 $dark-green: #4C4517;
 $dark-green-transparent: rgba(76, 69, 23, 0.12);
 $olive-green: #75702B;
 $lime-green: #EDE100;
 $orange: #C66005;
+$orange-transparent: rgba(198,96,5, 0.5);
 $light-green: #A89E00;
 $gold: #F9A718;
 $dark-blue: #4C779C;
@@ -34,6 +37,94 @@ $light-grey: #DEE3E5;
 
 }
 
+@mixin linear-transition($time) {
+	transition: $time linear;
+	-moz-transition: $time linear;
+	-webkit-transition: $time linear;
+	-o-transition: $time  linear;
+}
+
+@mixin arrow($color, $size) {
+	svg {
+		width: $size;
+		path {
+			fill: $color;
+		}
+	}
+}
+
+@mixin rotate($deg) {
+	transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-o-transform: rotate($deg);
+}
+
+
+h1 {
+	margin: 0;
+	font-size: 3em;
+	font-family: 'Bree Serif', serif;
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0;
+	font-size: 2.5em;
+	font-family: 'Bree Serif', serif;
+	font-weight: normal;
+	color: $dark-green;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.8em;
+	font-weight: normal;
+}
+
+h4 {
+	color: $olive-green;
+	font-size: 1.5em;
+	margin: 0;
+	font-weight: normal;
+}
+
+.btn {
+	@include linear-transition(0.1s);
+	background-color: $orange;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+	color: $white;
+	display: inline-block;
+	padding: .5em 1em;
+	&.light-green {
+		background-color: $light-green;
+	}
+	&.dark-green {
+		background-color: $dark-green;
+	}
+	&.light-blue {
+		background-color: $light-blue;
+	}
+	&.dark-blue {
+		background-color: $dark-blue;
+	}
+	&.gold {
+		background-color: $gold;
+	}
+	&:hover {
+		box-shadow: 0 2px 6px 3px rgba(0,0,0,0.16);
+	}
+}
+
+
+.section-headline {
+	display: inline-block;
+	.underline {
+		background-color: $orange;
+		height: 3px;
+	}
+}
 
 .container {
   position: relative;

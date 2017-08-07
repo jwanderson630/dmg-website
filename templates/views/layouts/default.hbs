@@ -7,6 +7,7 @@
 		<title>DMG-Website</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 		<link href="styles/site.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
@@ -28,11 +29,13 @@
 				</a>
 			</div>
 			<ul class="nav-links">
-				<li class="nav-link"><a href="">
-					<div>About</div></a>
+				<li class="nav-item">
+					<a class="nav-link" href="#">
+						<div class="nav-label">About</div>
+					</a>
 				</li>
-				<li class="nav-link">
-					<a href=""><div>Services</div></a>
+				<li class="nav-item">
+					<span class="nav-link"><div class="nav-label">Services<span class="hidden-md-up dropdown-arrow"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></span></div></span>
 					<div class="dropdown">
 						<ul class="dropdown-links">
 							<li class="dropdown-link"><a href="#">Strategy and Consulting</a></li>
@@ -43,8 +46,8 @@
 						</ul>
 					</div>
 				</li>
-				<li class="nav-link"><a href=""><div>Resources</div></a></li>
-				<li class="nav-link"><a href=""><div>Contact Us</div></a></li>
+				<li class="nav-item"><a href="" class="nav-link"><div class="nav-label">Resources</div></a></li>
+				<li class="nav-item"><a href="" class="nav-link"><div class="nav-label">Contact Us</div></a></li>
 			</ul>
 			<div class="nav-menu hidden-md-up">
 				<div class="menu-bar"></div>
@@ -86,14 +89,6 @@
 		</div>
 		<div class="footer">
 			<div class="footer-content container">
-				<div class="footer-links footer-about">
-					<div class="footer-links-header">About</div>
-					<ul>
-						<li><a href="#">Team</a></li>
-						<li><a href="#">History</a></li>
-						<li><a href="#">Careers</a></li>
-					</ul>
-				</div>
 				<div class="footer-links footer-services">
 					<div class="footer-links-header">Services</div>
 					<ul>
@@ -102,6 +97,14 @@
 						<li><a href="#">Marketing Automation</a></li>
 						<li><a href="#">Data Optimization</a></li>
 						<li><a href="#">Teleservices</a></li>
+					</ul>
+				</div>
+				<div class="footer-links footer-about">
+					<div class="footer-links-header">About</div>
+					<ul>
+						<li><a href="#">Team</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">Careers</a></li>
 					</ul>
 				</div>
 				<div class="footer-links footer-contact">
