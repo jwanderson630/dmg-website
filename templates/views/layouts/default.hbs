@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>DMG-Website</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link href="styles/site.css" rel="stylesheet">
+		<link href="/styles/site.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
@@ -24,21 +24,27 @@
 	<body>
 		<div class="main-nav">
 			<div class="nav-img">
-				<a href="#">
+				<a href="/">
 					<img src="http://via.placeholder.com/150x60">
 				</a>
+				<div class="nav-menu hidden-md-up">
+					<div class="menu-bar"></div>
+					<div class="menu-bar"></div>
+					<div class="menu-bar"></div>
+				</div>
 			</div>
+
 			<ul class="nav-links">
-				<li class="nav-item">
+				<li {{#ifeq section "about"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}>
 					<a class="nav-link" href="#">
 						<div class="nav-label">About</div>
 					</a>
 				</li>
-				<li class="nav-item">
-					<span class="nav-link"><div class="nav-label">Services<span class="hidden-md-up dropdown-arrow"><svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></span></div></span>
+				<li {{#ifeq section "services"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}>
+					<span class="nav-link"><div class="nav-label" {{#ifeq section "services"}}class="active"{{else}}{{/ifeq}}>Services<span class="hidden-md-up dropdown-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg></span></div></span>
 					<div class="dropdown">
 						<ul class="dropdown-links">
-							<li class="dropdown-link"><a href="#">Strategy and Consulting</a></li>
+							<li class="dropdown-link"><a href="/service/strategy-and-consulting">Strategy and Consulting</a></li>
 							<li class="dropdown-link"><a href="#">Campaigns and Content</a></li>
 							<li class="dropdown-link"><a href="#">Marketing Automation</a></li>
 							<li class="dropdown-link"><a href="#">Data Optimization</a></li>
@@ -46,14 +52,9 @@
 						</ul>
 					</div>
 				</li>
-				<li class="nav-item"><a href="" class="nav-link"><div class="nav-label">Resources</div></a></li>
-				<li class="nav-item"><a href="" class="nav-link"><div class="nav-label">Contact Us</div></a></li>
+				<li {{#ifeq section "resources"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}><a href="" class="nav-link"><div class="nav-label">Resources</div></a></li>
+				<li {{#ifeq section "contact-us"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}><a href="" class="nav-link"><div class="nav-label">Contact Us</div></a></li>
 			</ul>
-			<div class="nav-menu hidden-md-up">
-				<div class="menu-bar"></div>
-				<div class="menu-bar"></div>
-				<div class="menu-bar"></div>
-			</div>
 		</div>
 		<div id="body">
 			<!--

@@ -1,0 +1,70 @@
+.service-page {
+	.header-image {
+		background-image: url('http://via.placeholder.com/1000x1000');
+		background-size: cover;
+		background-position: 50% 50%;
+		height: 40%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
+	.header-content-container {
+		@include flexbox;
+		align-items: stretch;
+		height: 40vh;
+		.header-content {
+			margin-top: 60px;
+			padding: 2%;
+			width: 100%;
+			.header-border {
+				@include flexbox;
+				flex-direction: column;
+				border: 3px solid $white;
+				border-radius: 4px;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+				.inner-content {
+					color: $white;
+					padding: 2em;
+					h1 {
+						width: 90%;
+						margin: 0 auto;
+						font-family: 'lato', sans-serif;
+						@media (min-width: 768px) {
+							width: 60%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.page-body {
+		background-color: $white;
+		padding: 3em 0;
+		.body-content {
+			padding-bottom: 5em;
+			h2 {
+				border-bottom: 3px solid $orange;
+				display: inline-block;
+			}
+			p {
+				line-height: 1.5em;
+			}
+			ul {
+				list-style: none;
+				li {
+					line-height: 1.5em;
+					padding: .5em 0;
+				}
+				img {
+					position: relative;
+					top: .4em;
+					height: 1.5em;
+					margin-right: 0.2em;
+				}
+			}
+		}
+	}
+}

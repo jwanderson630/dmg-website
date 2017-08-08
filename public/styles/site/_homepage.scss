@@ -15,7 +15,7 @@
 		height: 100vh;
 		.header-content {
 			margin-top: 60px;
-			padding: 2%;
+			padding: 4% 2%;
 			width: 100%;
 			.header-border {
 				@include flexbox;
@@ -52,12 +52,14 @@
 				}
 				.arrow {
 					@include arrow($white, 2em);
-					@include rotate(90deg);
 					position: absolute;
-					bottom: 4%;
+					bottom: 5%;
 					left:  50%;
 
 				}
+			}
+			@media(min-width: 768px) {
+				padding: 2%;
 			}
 		}
 
@@ -83,6 +85,28 @@
 					margin-right: 0.2em;
 				}
 			}
+			.section-break {
+				position: relative;
+				opacity: .8;
+				margin-top: 2em;
+				.break-line {
+					height: 3px;
+					width: 100%;
+					background-color: $light-grey;
+					position: absolute;
+					top: 10px;
+				}
+				.break-arrow {
+					@include arrow($light-grey, 24px);
+					width: 30px;
+					text-align: center;
+					background-color: white;
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 50%;
+				}
+			}
 		}
 	}
 
@@ -95,6 +119,10 @@
 		.contact-content {
 			padding-top: 8em;
 			padding-bottom: 8em;
+			h2 {
+				display: inline-block;
+				border-bottom: 3px solid $orange;
+			}
 			.contact-arrow {
 				height: 100%;
 				opacity: 0.2;
@@ -115,37 +143,27 @@
 		h3 {
 			font-family: 'Bree Serif', serif;
 			color: $dark-green;
+			border-bottom: 3px solid $orange;
+			display: inline-block;
 		}
 		.featured-content {
 			@include flexbox;
-			flex-direction: flex-row;
+			flex-direction: row;
 			flex-wrap: wrap;
 			align-items: stretch;
 			margin-top: 2em;
 			.fc {
+				@include flexbox;
+				flex-direction: column; 
+				justify-content: space-between;
 				box-sizing: border-box;
 				border-bottom: 2px solid $light-grey;
 				padding: 1em 0 2em 0;
-				display: grid;
-				grid-template-rows: auto auto auto;
-				grid-template-areas:
-					"header"
-					"content"
-					"button";
 				&:last-child {
 					border-bottom: none;
 				}
 
-				h4 {
-					grid-area: header;
-				}
-
-				p {
-					grid-area: content;
-				}
-
 				.fc-button {
-					grid-area: button;
 					align-self: end;
 				}
 				@media (min-width: 768px) {
@@ -153,7 +171,6 @@
 					border-bottom: none;
 					border-right: 2px solid $light-grey;
 					padding: 0 1em;
-					grid-template-rows: 2fr 3fr 1fr;
 					&:first-child {
 						padding: 0 1em 0 0;
 					}
