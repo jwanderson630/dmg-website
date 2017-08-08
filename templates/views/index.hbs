@@ -48,21 +48,13 @@
 		<div class="container featured-content-section">
 			<h3>Featured Content</h3>
 			<div class="featured-content">
+				{{# each data.posts}}
 				<article class="fc">
-					<h4>This is the headline for this resource</h4>
-					<p>This is a snippet from the content. This is a snippet from the content. This is a snippet from the content. This is a snippet from the content.</p>
-					<a href="#"><div class="fc-button btn light-green">Read More</div></a>
+					<h4>{{{title}}}</h4>
+					<p>{{{content.brief}}}</p>
+					<a href="#"><div class="fc-button btn ">Read More</div></a>
 				</article>
-				<article class="fc">
-					<h4>This is the headline for this resource</h4>
-					<p>This is a snippet from the content. This is a snippet from the content. This is a snippet from the content. This is a snippet from the content.</p>
-					<a href="#"><div class="fc-button btn light-blue">Read More</div></a>
-				</article>
-				<article class="fc">
-					<h4>This is the headline for this resource</h4>
-					<p>This is a snippet from the content. This is a snippet from the content. This is a snippet from the content. This is a snippet from the content.</p>
-					<a href="#"><div class="fc-button btn gold">Read More</div></a>
-				</article>
+				{{/each}}
 			</div>
 		</div>
 	</div>
