@@ -34,6 +34,11 @@ html, body {
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 		background-color: $white;
 		padding: 0;
+		.nav-link {
+			text-decoration: none;
+			color: $olive-green;
+				
+		}
 		.nav-item {
 			@include linear-transition(.1s);
 			color: $olive-green;
@@ -58,11 +63,6 @@ html, body {
 						@include rotate(180deg);
 					}
 				}
-			}
-			.nav-link {
-				text-decoration: none;
-				color: $olive-green;
-				
 			}
 			.nav-label {
 				height: 45px;
@@ -89,17 +89,15 @@ html, body {
 					list-style: none;
 					list-style-position: inside;
 					padding: 0;
+					a {
+							text-decoration: none;
+							color: $olive-green;
+						}
 					.dropdown-link {
 						@include linear-transition(.1s);
 						margin: 0 ;
 						text-decoration: none;
 						padding: 1em 0 1em 3em;
-						
-
-						a {
-							text-decoration: none;
-							color: $olive-green;
-						}
 						&:hover {
 							background-color: $dark-green-transparent;
 						}
@@ -115,12 +113,10 @@ html, body {
 			height: 60px;
 			.nav-item {
 				border-bottom: 3px solid $white;
-				.nav-link {
-					.nav-label {
-						width: auto;
-						padding: 15px 1em 0 1em;
-						text-align: center;
-					}
+				.nav-label {
+					width: auto;
+					padding: 15px 1em 0 1em;
+					text-align: center;
 				}
 				&.active {
 					border-bottom: 3px solid transparent;
@@ -231,3 +227,74 @@ html, body {
 		}
 	}
 }
+
+.featured-content-section {
+		margin-top: 3em;
+		h3 {
+			font-family: 'Bree Serif', serif;
+			color: $dark-green;
+			border-bottom: 3px solid $orange;
+			display: inline-block;
+		}
+		.featured-content {
+			@include flexbox;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: stretch;
+			margin-top: 2em;
+			.fc {
+				@include flexbox;
+				flex-direction: column; 
+				box-sizing: border-box;
+				border-bottom: 2px solid $light-grey;
+				padding: 1em 0 2em 0;
+				&:last-child {
+					border-bottom: none;
+				}
+
+				.fc-button {
+					align-self: end;
+				}
+				@media (min-width: 768px) {
+					width: 33%;
+					border-bottom: none;
+					border-right: 2px solid $dark-grey-transparent;
+					padding: 0 1em;
+					&:first-child {
+						padding: 0 1em 0 0;
+					}
+					&:last-child {
+						padding: 0 0 0 1em;
+						border-right: none;
+					}
+				}
+			}
+		}
+	}
+
+.pagination {
+	list-style-type: none;
+	margin: 1.5em 0 1.5em 0;
+	padding: 0;
+	display: inline-block;
+	li {
+		float: left;
+		margin: 0 .2em;
+		path {
+			fill: $olive-green;
+		}
+		&.disabled {
+			a {
+				cursor: not-allowed;
+			}
+			path {
+				fill: $light-grey;
+			}
+			&.back {
+				display: none;
+			}
+		}
+	}
+}
+
+

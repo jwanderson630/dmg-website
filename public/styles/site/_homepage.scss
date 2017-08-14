@@ -112,10 +112,6 @@
 
 	.contact-section {
 		background-color: $dark-green-transparent;
-		background-image: url('/images/contact-arrow.svg');
-		background-size: cover;
-		background-position: left;
-  		background-repeat: no-repeat;
 		.contact-content {
 			padding-top: 8em;
 			padding-bottom: 8em;
@@ -135,52 +131,6 @@
 			p {
 				margin: 2em 0;
 			}
-		}
-		
+		}	
 	}
-	.featured-content-section {
-		margin-top: 3em;
-		h3 {
-			font-family: 'Bree Serif', serif;
-			color: $dark-green;
-			border-bottom: 3px solid $orange;
-			display: inline-block;
-		}
-		.featured-content {
-			@include flexbox;
-			flex-direction: row;
-			flex-wrap: wrap;
-			align-items: stretch;
-			margin-top: 2em;
-			.fc {
-				@include flexbox;
-				flex-direction: column; 
-				justify-content: space-between;
-				box-sizing: border-box;
-				border-bottom: 2px solid $light-grey;
-				padding: 1em 0 2em 0;
-				&:last-child {
-					border-bottom: none;
-				}
-
-				.fc-button {
-					align-self: end;
-				}
-				@media (min-width: 768px) {
-					width: 33%;
-					border-bottom: none;
-					border-right: 2px solid $light-grey;
-					padding: 0 1em;
-					&:first-child {
-						padding: 0 1em 0 0;
-					}
-					&:last-child {
-						padding: 0 0 0 1em;
-						border-right: none;
-					}
-				}
-			}
-		}
-	}
-	
 }

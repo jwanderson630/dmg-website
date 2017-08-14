@@ -1,0 +1,124 @@
+.resources-page {
+	.header-image {
+		background-image: url('http://via.placeholder.com/1000x1000');
+		background-size: cover;
+		background-position: 50% 50%;
+		height: 40%;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: -1;
+	}
+	.header-content-container {
+		@include flexbox;
+		align-items: stretch;
+		height: 40vh;
+		.header-content {
+			margin-top: 60px;
+			padding: 2%;
+			width: 100%;
+			.header-border {
+				@include flexbox;
+				flex-direction: column;
+				border: 3px solid $white;
+				border-radius: 4px;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+				.inner-content {
+					color: $white;
+					padding: 2em;
+					h1 {
+						width: 90%;
+						margin: 0 auto;
+						font-family: 'lato', sans-serif;
+						@media (min-width: 768px) {
+							width: 60%;
+						}
+					}
+				}
+			}
+		}
+	}
+	.resources {
+		background-color: $white;
+		.resources-filters {
+			background-color: $white;
+			text-align: right;
+			margin-top: 1.5em;
+			.filter-dropdown {
+				@include linear-transition(0.2s);
+				max-height: 35px;
+				overflow: hidden;
+				border: 1px solid $light-grey;
+				border-radius: 4px;
+				display: inline-block;
+				position: absolute;
+				right: 15px;
+				background-color: $white;
+				z-index: 9;
+				a {
+					text-decoration: none;
+					color: $dark-grey;
+				}
+				svg {
+					height: 12px;
+					path {
+						fill: $olive-green;
+					}
+				}
+				.selected-filter {
+					padding: 0.5em;
+					@include linear-transition(0.1s);
+					cursor: pointer;
+					&:hover {
+						box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+					}
+				}
+				.filter {
+					@include linear-transition(0.1s);
+					padding: .5em 1em;
+					color: $dark-grey;
+					&:hover {
+						background-color: $dark-green-transparent;
+					}
+				}
+				&:hover {
+					max-height: 300px;
+					.selected-filter {
+						box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+						svg {
+							@include rotate(180deg);
+						}
+					}
+				}
+				@media(min-width: 768px) {
+					right: 0;
+				}
+			}
+		}
+		.resources-container {
+			.resources-content {
+				@include flexbox;
+				flex-direction: column;
+				flex-wrap: wrap;
+				background-color: $white;
+				padding-top: 2em;
+				.resource {
+					@include flexbox;
+					flex-direction: column; 
+					box-sizing: border-box;
+					border-bottom: 2px solid $dark-grey-transparent;
+					padding: 1em 0 2em 0;
+					&:last-child {
+						border-bottom: none;
+					}
+
+					.resource-button {
+						align-self: end;
+					}
+				}
+			}
+		}
+	}	
+}

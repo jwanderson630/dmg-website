@@ -24,4 +24,19 @@
 				</ul>
 			</article>
 		</div>
+	</div>
+	<div class="featured-content-section">
+		<div class="container">
+			<h3>Additional Resources</h3>
+			<div class="featured-content">
+				{{# each data.posts}}
+				<article class="fc">
+					<h4>{{{title}}}</h4>
+					{{{content.brief}}}
+					<a href="#"><div class="fc-button btn {{{categories.[0].name}}}">Read More</div></a>
+				</article>
+				{{/each}}
+			</div>
+		</div>
+	</div>
 </div>

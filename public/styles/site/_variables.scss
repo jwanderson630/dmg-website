@@ -2,7 +2,7 @@ $font-size-base: 16px;
 
 
 $dark-green: #4C4517;
-$dark-green-transparent: rgba(76, 69, 23, 0.12);
+$dark-green-transparent: rgb(233, 232,226);
 $olive-green: #75702B;
 $lime-green: #EDE100;
 $orange: #C66005;
@@ -13,6 +13,7 @@ $dark-blue: #4C779C;
 $light-blue: #7FADC2;
 $white: #FFFFFF;
 $dark-grey: #404040;
+$dark-grey-transparent: rgba(50,50,50,0.3);
 $light-grey: #DEE3E5;
 
 @mixin flexbox {
@@ -97,25 +98,31 @@ h4 {
 	color: $white;
 	display: inline-block;
 	padding: .5em 1em;
-	&.light-green {
+	&.strategy-and-consulting {
 		background-color: $light-green;
 	}
-	&.dark-green {
+	&.data-optimization {
 		background-color: $dark-green;
 	}
-	&.light-blue {
+	&.teleservices {
 		background-color: $light-blue;
 	}
-	&.dark-blue {
+	&.marketing-automation {
 		background-color: $dark-blue;
 	}
-	&.gold {
+	&.campaigns-and-content {
 		background-color: $gold;
 	}
 	&:hover {
 		box-shadow: 0 2px 6px 3px rgba(0,0,0,0.16);
 	}
 }
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both; 
+  }
 
 
 .container {

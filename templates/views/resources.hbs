@@ -1,0 +1,71 @@
+<div class="page-content resources-page">
+	<div class="header-image">
+	</div>
+	<div class="header-content-container">
+		<div class="header-content">
+			<div class="header-border">
+				<div class="inner-content">
+					<h1 class="main-headline">Resources</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="resources">
+		<div class="resources-filters container">
+			<div class="filter-dropdown">
+				<div class="selected-filter">
+					All Categories <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
+				</div>
+				<div class="filter-options">
+					<a href="/resources" >
+						<div class="filter active">
+							All Categories
+						</div>
+					</a>
+					<a href="/resources/strategy-and-consulting">
+						<div class="filter">
+							Strategy and Consulting
+						</div>
+					</a>
+					<a href="/resources/campaigns-and-content">
+						<div class="filter">
+							Campaigins and Content
+						</div>
+					</a>
+					<a href="/resources/marketing-automation">
+						<div class="filter">
+							Marketing Automation
+						</div>
+					</a>
+					<a href="/resources/data-optimization">
+						<div class="filter">
+							Data Optimization
+						</div>
+					</a>
+					<a href="/resources/teleservices">
+						<div class="filter">
+							Teleservices
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="resources-container container">
+			<div class="resources-content">
+				{{# each data.posts.results}}
+				<article class="resource">
+					<h4>{{{title}}}</h4>
+					{{{content.brief}}}
+					<a href="#"><div class="resource-button btn {{{categories.[0].name}}}">Read More</div></a>
+				</article>
+				{{/each}}
+			</div>
+		</div>
+		<div class="pagination-container container">
+			{{>pagination}}
+		</div>
+	</div>
+</div>
+
+

@@ -51,8 +51,8 @@
 				{{# each data.posts}}
 				<article class="fc">
 					<h4>{{{title}}}</h4>
-					<p>{{{content.brief}}}</p>
-					<a href="#"><div class="fc-button btn ">Read More</div></a>
+					{{{content.brief}}}
+					<a href="#"><div class="fc-button btn {{{categories.[0].name}}}">Read More</div></a>
 				</article>
 				{{/each}}
 			</div>

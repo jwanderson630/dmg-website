@@ -11,7 +11,7 @@ exports = module.exports = function (req, res) {
 
 	view.on('init', function (next) {
 
-		keystone.list('Post').model.find({featured: true}).sort('publishedDate').limit(3).exec(function (err, results) {
+		keystone.list('Post').model.find({featured: true}).sort('-publishedDate').populate('categories').limit(3).exec(function (err, results) {
 
 			if (err || !results.length) {
 				return next(err);

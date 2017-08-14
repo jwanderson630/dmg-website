@@ -35,25 +35,26 @@
 			</div>
 
 			<ul class="nav-links">
-				<li {{#ifeq section "about"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}>
-					<a class="nav-link" href="#">
-						<div class="nav-label">About</div>
-					</a>
-				</li>
+				<a class="nav-link" href="#">
+					<li {{#ifeq section "about"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}>
+							<div class="nav-label">About</div>
+						
+					</li>
+				</a>
 				<li {{#ifeq section "services"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}>
 					<span class="nav-link"><div class="nav-label" {{#ifeq section "services"}}class="active"{{else}}{{/ifeq}}>Services<span class="hidden-md-up dropdown-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg></span></div></span>
 					<div class="dropdown">
 						<ul class="dropdown-links">
-							<li class="dropdown-link"><a href="/service/strategy-and-consulting">Strategy and Consulting</a></li>
-							<li class="dropdown-link"><a href="#">Campaigns and Content</a></li>
-							<li class="dropdown-link"><a href="#">Marketing Automation</a></li>
-							<li class="dropdown-link"><a href="#">Data Optimization</a></li>
-							<li class="dropdown-link"><a href="#">Teleservices</a></li>
+							<a href="/service/strategy-and-consulting"><li class="dropdown-link">Strategy and Consulting</li></a>
+							<a href="#"><li class="dropdown-link">Campaigns and Content</li></a>
+							<a href="#"><li class="dropdown-link">Marketing Automation</li></a>
+							<a href="#"><li class="dropdown-link">Data Optimization</li></a>
+							<a href="#"><li class="dropdown-link">Teleservices</li></a>
 						</ul>
 					</div>
 				</li>
-				<li {{#ifeq section "resources"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}><a href="" class="nav-link"><div class="nav-label">Resources</div></a></li>
-				<li {{#ifeq section "contact-us"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}><a href="" class="nav-link"><div class="nav-label">Contact Us</div></a></li>
+				<a href="/resources" class="nav-link"><li {{#ifeq section "resources"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}><div class="nav-label">Resources</div></li></a>
+				<a href="" class="nav-link"><li {{#ifeq section "contact-us"}}class="active nav-item"{{else}}class="nav-item"{{/ifeq}}><div class="nav-label">Contact Us</div></li></a>
 			</ul>
 		</div>
 		<div id="body">
