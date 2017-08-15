@@ -1,0 +1,42 @@
+<div class="page-content service-page">
+	<div class="header-image">
+	</div>
+	<div class="header-content-container">
+		<div class="header-content">
+			<div class="header-border">
+				<div class="inner-content">
+					<h1 class="main-headline">Convert more leads, faster.</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-body">
+		<div class="body-content container">
+			<article>
+				<h2>Teleservices</h2>
+				<p>The silver bullet in our marketing mix is an in-house, boutique teleservices team. With an average tenure of more than six years, our highly experienced callers provide a human touch that pushes campaigns and results forward. Teleservices represent the highest performing element of our integrated lead nurture programs and always deliver predictable, measurable results.</p>
+				<ul>
+					<li><img src='/images/arrow-light-blue.svg'/>Target list development / optimization</li>
+					<li><img src='/images/arrow-light-blue.svg'/>Account profiling</li>
+					<li><img src='/images/arrow-light-blue.svg'/>Event promotion</li>
+					<li><img src='/images/arrow-light-blue.svg'/>Surveys / market research</li>
+					<li><img src='/images/arrow-light-blue.svg'/>Lead qualification / nurture / conversion</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="featured-content-section">
+		<div class="container">
+			<h3>Additional Resources</h3>
+			<div class="featured-content">
+				{{# each data.posts}}
+				<article class="fc">
+					<h4>{{{title}}}</h4>
+					{{{content.brief}}}
+					<a href="#"><div class="fc-button btn {{{categories.[0].key}}}">Read More</div></a>
+				</article>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

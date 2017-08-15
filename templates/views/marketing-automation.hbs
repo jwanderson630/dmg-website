@@ -1,0 +1,41 @@
+<div class="page-content service-page">
+	<div class="header-image">
+	</div>
+	<div class="header-content-container">
+		<div class="header-content">
+			<div class="header-border">
+				<div class="inner-content">
+					<h1 class="main-headline">Optimize your automation tools and programs.</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-body">
+		<div class="body-content container">
+			<article>
+				<h2>Marketing Automation</h2>
+				<p>Our dedicated technical team has an array of software certifications, but successful marketing automation requires more than tools and technological knowhow. It demands meticulous audience targeting, high-quality data, and compelling content—wrapped in process-driven strategies and campaigns. We can help you with all of it. </p>
+				<ul>
+					<li><img src='/images/arrow-dark-blue.svg'/>Maturity assessment and roadmap development</li>
+					<li><img src='/images/arrow-dark-blue.svg'/>Technology optimization</li>
+					<li><img src='/images/arrow-dark-blue.svg'/>Program development and lead management</li>
+					<li><img src='/images/arrow-dark-blue.svg'/>Standards documentation and training</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="featured-content-section">
+		<div class="container">
+			<h3>Additional Resources</h3>
+			<div class="featured-content">
+				{{# each data.posts}}
+				<article class="fc">
+					<h4>{{{title}}}</h4>
+					{{{content.brief}}}
+					<a href="#"><div class="fc-button btn {{{categories.[0].key}}}">Read More</div></a>
+				</article>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

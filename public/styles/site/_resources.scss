@@ -14,7 +14,7 @@
 		align-items: stretch;
 		height: 40vh;
 		.header-content {
-			margin-top: 60px;
+			margin-top: $nav-base-height;
 			padding: 2%;
 			width: 100%;
 			.header-border {
@@ -45,7 +45,7 @@
 		.resources-filters {
 			background-color: $white;
 			text-align: right;
-			margin-top: 1.5em;
+			padding-top: 1.5em;
 			.filter-dropdown {
 				@include linear-transition(0.2s);
 				max-height: 35px;
@@ -69,11 +69,8 @@
 				}
 				.selected-filter {
 					padding: 0.5em;
-					@include linear-transition(0.1s);
 					cursor: pointer;
-					&:hover {
-						box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-					}
+					border-bottom: 1px solid $light-grey;
 				}
 				.filter {
 					@include linear-transition(0.1s);
@@ -86,7 +83,7 @@
 				&:hover {
 					max-height: 300px;
 					.selected-filter {
-						box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+						border-bottom: 1px solid $light-grey;
 						svg {
 							@include rotate(180deg);
 						}
@@ -110,12 +107,9 @@
 					box-sizing: border-box;
 					border-bottom: 2px solid $dark-grey-transparent;
 					padding: 1em 0 2em 0;
+					align-items: end;
 					&:last-child {
 						border-bottom: none;
-					}
-
-					.resource-button {
-						align-self: end;
 					}
 				}
 			}

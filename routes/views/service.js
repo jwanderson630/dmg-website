@@ -17,7 +17,6 @@ exports = module.exports = function (req, res) {
 				return next(err);
 			} else {
 				locals.data.category = results.id;
-				console.log(locals.data.category);
 				next();
 			}
 	
@@ -33,8 +32,6 @@ exports = module.exports = function (req, res) {
 			}
 			else {
 				locals.data.posts = results;
-				console.log(locals.data.posts);
-				console.log(locals.data.category);
 				next();
 			};
 		});

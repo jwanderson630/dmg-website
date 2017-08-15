@@ -50,6 +50,7 @@ exports = module.exports = function (req, res) {
 				next(err);
 			});
 		} else {
+			locals.data.category = {name: 'All Categories'};
 			next();
 		}
 	});
@@ -57,7 +58,22 @@ exports = module.exports = function (req, res) {
 	// Load the posts
 	view.on('init', function (next) {
 
+		if (locals.data.category.name !== 'All Categories') {
+
 		var q = keystone.list('Post').paginate({
+			page: req.query.page || 1,
+			perPage: 10,
+			maxPages: 10,
+			filters: {
+				state: 'published',
+				categories: locals.data.category,
+			},
+		})
+			.sort('-publishedDate')
+			.populate('author categories').where('categories').in([locals.data.category]);
+		} else {
+
+			var q = keystone.list('Post').paginate({
 			page: req.query.page || 1,
 			perPage: 10,
 			maxPages: 10,
@@ -68,13 +84,10 @@ exports = module.exports = function (req, res) {
 			.sort('-publishedDate')
 			.populate('author categories');
 
-		if (locals.data.category) {
-			q.where('categories').in([locals.data.category]);
-		}
+		};
 
 		q.exec(function (err, results) {
 			locals.data.posts = results;
-			console.log(locals.data.posts.results[1]);
 			next(err);
 		});
 

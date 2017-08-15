@@ -1,5 +1,6 @@
 $font-size-base: 16px;
 
+$nav-base-height: 80px;
 
 $dark-green: #4C4517;
 $dark-green-transparent: rgb(233, 232,226);
@@ -15,6 +16,7 @@ $white: #FFFFFF;
 $dark-grey: #404040;
 $dark-grey-transparent: rgba(50,50,50,0.3);
 $light-grey: #DEE3E5;
+$lighter-grey: #efefef;
 
 @mixin flexbox {
 	display: -webkit-box;

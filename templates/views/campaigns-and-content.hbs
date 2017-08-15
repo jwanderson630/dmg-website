@@ -1,0 +1,41 @@
+<div class="page-content service-page">
+	<div class="header-image">
+	</div>
+	<div class="header-content-container">
+		<div class="header-content">
+			<div class="header-border">
+				<div class="inner-content">
+					<h1 class="main-headline">Get more out of your marketing campaigns and content.</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-body">
+		<div class="body-content container">
+			<article>
+				<h2>Campaigns + Content</h2>
+				<p>We turn big ideas and process excellence into high-performing campaigns that deliver measurable results. All of our campaigns and content are based on the buyer’s journey, delivering the right offers to the right people at the right time. And all of them are designed to stimulate engagement and increase lead conversion.</p>
+				<ul>
+					<li><img src='/images/arrow-gold.svg'/>Integrated account-based marketing (ABM) campaigns </li>
+					<li><img src='/images/arrow-gold.svg'/>Lead lifecycle program development, execution, and measurement</li>
+					<li><img src='/images/arrow-gold.svg'/>Content gap analysis and planning</li>
+					<li><img src='/images/arrow-gold.svg'/>Content development</li>
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="featured-content-section">
+		<div class="container">
+			<h3>Additional Resources</h3>
+			<div class="featured-content">
+				{{# each data.posts}}
+				<article class="fc">
+					<h4>{{{title}}}</h4>
+					{{{content.brief}}}
+					<a href="#"><div class="fc-button btn {{{categories.[0].key}}}">Read More</div></a>
+				</article>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

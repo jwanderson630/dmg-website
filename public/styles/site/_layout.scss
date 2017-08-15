@@ -13,13 +13,13 @@ html, body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	min-height: 60px;
+	min-height: $nav-base-height;
 	width: 100%;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 	background-color: white;
 	z-index: 10;
 	@media (min-width: 768px) {
-		height: 60px;
+		height: $nav-base-height;
 		flex-direction: row;
 	}
 	.nav-img {
@@ -110,16 +110,17 @@ html, body {
 			width: auto;
 			padding: 0 1em;
 			box-shadow: none;
-			height: 60px;
+			height: $nav-base-height;
 			.nav-item {
 				border-bottom: 3px solid $white;
 				.nav-label {
 					width: auto;
-					padding: 15px 1em 0 1em;
+					padding: 25px 1em 0 1em;
 					text-align: center;
 				}
 				&.active {
-					border-bottom: 3px solid transparent;
+					border-bottom: 3px solid $olive-green;
+					background-color: $white;
 				}
 				&:hover {
 					border-bottom: 3px solid $olive-green;
@@ -127,7 +128,7 @@ html, body {
 				.dropdown {
 					height: 0px;
 					position: absolute;
-					top: 60px;
+					top: $nav-base-height;
 					text-align: left;
 					width: auto;
 					.dropdown-links {
@@ -251,21 +252,27 @@ html, body {
 				&:last-child {
 					border-bottom: none;
 				}
-
-				.fc-button {
-					align-self: end;
-				}
 				@media (min-width: 768px) {
 					width: 33%;
 					border-bottom: none;
 					border-right: 2px solid $dark-grey-transparent;
 					padding: 0 1em;
+					p {
+						margin-bottom: 4em;
+					}
+					.fc-button {
+						position: absolute;
+						bottom: 0;
+					}
 					&:first-child {
 						padding: 0 1em 0 0;
 					}
 					&:last-child {
 						padding: 0 0 0 1em;
 						border-right: none;
+						&:first-child {
+							padding: 0;
+						}
 					}
 				}
 			}
@@ -277,21 +284,32 @@ html, body {
 	margin: 1.5em 0 1.5em 0;
 	padding: 0;
 	display: inline-block;
+	a {
+		text-decoration: none;
+		color: $dark-green;
+	}
 	li {
 		float: left;
 		margin: 0 .2em;
+		padding: .3em 0;
+		&.page-number {
+			background-color: $dark-green-transparent;
+			padding: .5em;
+			border-radius: 2px;
+			&.active {
+				background-color: $olive-green;
+				a {
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
 		path {
 			fill: $olive-green;
 		}
 		&.disabled {
-			a {
-				cursor: not-allowed;
-			}
 			path {
 				fill: $light-grey;
-			}
-			&.back {
-				display: none;
 			}
 		}
 	}
