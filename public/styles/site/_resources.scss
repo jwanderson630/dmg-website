@@ -21,7 +21,7 @@
 				@include flexbox;
 				flex-direction: column;
 				border: 3px solid $white;
-				border-radius: 4px;
+				@include border-radius;
 				height: 100%;
 				align-items: center;
 				justify-content: center;
@@ -51,7 +51,7 @@
 				max-height: 35px;
 				overflow: hidden;
 				border: 1px solid $light-grey;
-				border-radius: 4px;
+				@include border-radius;
 				display: inline-block;
 				position: absolute;
 				right: 15px;

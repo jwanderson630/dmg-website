@@ -63,6 +63,26 @@ $lighter-grey: #efefef;
 	-o-transform: rotate($deg);
 }
 
+@mixin border-radius {
+  border-radius: 6px;
+}
+
+.strategy-and-consulting {
+    background-color: $light-green;
+  }
+.data-optimization {
+    background-color: $dark-green;
+  }
+.teleservices {
+    background-color: $light-blue;
+  }
+.marketing-automation {
+    background-color: $dark-blue;
+  }
+.campaigns-and-content {
+    background-color: $gold;
+}
+
 
 h1 {
 	margin: 0;
@@ -92,39 +112,23 @@ h4 {
 	font-weight: normal;
 }
 
+p, li, span{
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+
 .btn {
 	@include linear-transition(0.1s);
+  @include border-radius;
 	background-color: $orange;
-	border-radius: 4px;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
 	color: $white;
 	display: inline-block;
 	padding: .5em 1em;
-	&.strategy-and-consulting {
-		background-color: $light-green;
-	}
-	&.data-optimization {
-		background-color: $dark-green;
-	}
-	&.teleservices {
-		background-color: $light-blue;
-	}
-	&.marketing-automation {
-		background-color: $dark-blue;
-	}
-	&.campaigns-and-content {
-		background-color: $gold;
-	}
 	&:hover {
 		box-shadow: 0 2px 6px 3px rgba(0,0,0,0.16);
 	}
 }
-
-.clearfix::after {
-  display: block;
-  content: "";
-  clear: both; 
-  }
 
 
 .container {

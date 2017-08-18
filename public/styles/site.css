@@ -1,3 +1,18 @@
+.strategy-and-consulting {
+  background-color: #A89E00; }
+
+.data-optimization {
+  background-color: #4C4517; }
+
+.teleservices {
+  background-color: #7FADC2; }
+
+.marketing-automation {
+  background-color: #4C779C; }
+
+.campaigns-and-content {
+  background-color: #F9A718; }
+
 h1 {
   margin: 0;
   font-size: 3em;
@@ -22,34 +37,23 @@ h4 {
   margin: 0;
   font-weight: normal; }
 
+p, li, span {
+  font-size: 1.1em;
+  line-height: 1.5em; }
+
 .btn {
   transition: 0.1s linear;
   -moz-transition: 0.1s linear;
   -webkit-transition: 0.1s linear;
   -o-transition: 0.1s linear;
+  border-radius: 6px;
   background-color: #C66005;
-  border-radius: 4px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
   color: #FFFFFF;
   display: inline-block;
   padding: .5em 1em; }
-  .btn.strategy-and-consulting {
-    background-color: #A89E00; }
-  .btn.data-optimization {
-    background-color: #4C4517; }
-  .btn.teleservices {
-    background-color: #7FADC2; }
-  .btn.marketing-automation {
-    background-color: #4C779C; }
-  .btn.campaigns-and-content {
-    background-color: #F9A718; }
   .btn:hover {
     box-shadow: 0 2px 6px 3px rgba(0, 0, 0, 0.16); }
-
-.clearfix::after {
-  display: block;
-  content: "";
-  clear: both; }
 
 .container {
   position: relative;
@@ -256,7 +260,7 @@ html, body {
         height: 0px;
         overflow: hidden;
         background-color: #FFFFFF;
-        border-radius: 0 0 4px 4px;
+        border-radius: 0 0 6px 6px;
         text-align: left;
         position: static;
         width: 100%; }
@@ -314,7 +318,7 @@ html, body {
     top: 12px;
     right: 2%; }
     .main-nav .nav-menu .menu-bar {
-      border-radius: 4px;
+      border-radius: 6px;
       width: 30px;
       margin: 5px auto;
       height: 3px;
@@ -482,7 +486,7 @@ html, body {
       display: flex;
       flex-direction: column;
       border: 3px solid #FFFFFF;
-      border-radius: 4px;
+      border-radius: 6px;
       height: 100%;
       align-items: center;
       justify-content: center; }
@@ -496,7 +500,7 @@ html, body {
           -o-transition: 0.1s linear;
           background-color: rgba(198, 96, 5, 0.5);
           border: 3px solid #FFFFFF;
-          border-radius: 4px;
+          border-radius: 6px;
           color: #FFFFFF;
           display: inline-block;
           font-size: 1.5em;
@@ -521,10 +525,12 @@ html, body {
   padding: 3em 0; }
   .homepage .page-body .intro {
     padding-bottom: 5em; }
-    .homepage .page-body .intro p {
-      line-height: 1.5em; }
+    .homepage .page-body .intro h2 {
+      margin: 1em 0; }
     .homepage .page-body .intro ul {
-      list-style: none; }
+      list-style: none;
+      margin-bottom: 2em;
+      padding-left: 4em; }
       .homepage .page-body .intro ul li {
         line-height: 1.5em;
         padding: .5em 0; }
@@ -555,6 +561,115 @@ html, body {
           width: 24px; }
           .homepage .page-body .intro .section-break .break-arrow svg path {
             fill: #DEE3E5; }
+.homepage .services-section {
+  margin: 2em 0 4em 0;
+  padding: 0 5%; }
+  .homepage .services-section .services-help {
+    margin-bottom: 2em; }
+    .homepage .services-section .services-help .dropdown-container {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch; }
+      .homepage .services-section .services-help .dropdown-container .header {
+        display: inline-block;
+        margin-right: 1em;
+        margin-bottom: 1em; }
+      .homepage .services-section .services-help .dropdown-container .dropdown {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        transition: 0.1s linear;
+        -moz-transition: 0.1s linear;
+        -webkit-transition: 0.1s linear;
+        -o-transition: 0.1s linear;
+        flex-grow: 2;
+        align-items: center;
+        padding: 0 1em;
+        background-color: #C66005;
+        color: #FFFFFF;
+        border-radius: 6px;
+        position: relative;
+        box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        min-height: 3em;
+        min-width: 200px; }
+        .homepage .services-section .services-help .dropdown-container .dropdown .static {
+          font-size: 1.4em; }
+        .homepage .services-section .services-help .dropdown-container .dropdown .dynamic {
+          font-size: 1.4em; }
+        .homepage .services-section .services-help .dropdown-container .dropdown .arrow {
+          position: absolute;
+          right: 1em; }
+        .homepage .services-section .services-help .dropdown-container .dropdown:hover {
+          box-shadow: 0 2px 11px 4px rgba(0, 0, 0, 0.25); }
+      @media (min-width: 1200px) {
+        .homepage .services-section .services-help .dropdown-container {
+          flex-direction: row; }
+          .homepage .services-section .services-help .dropdown-container .header {
+            margin-bottom: 0; }
+          .homepage .services-section .services-help .dropdown-container .dropdown {
+            min-height: 0; } }
+  .homepage .services-section .services-capabilities {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap; }
+    .homepage .services-section .services-capabilities .capability {
+      transition: 0.1s linear;
+      -moz-transition: 0.1s linear;
+      -webkit-transition: 0.1s linear;
+      -o-transition: 0.1s linear;
+      background-color: #A89E00;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 1em;
+      box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.2);
+      color: #FFFFFF;
+      padding: 1em;
+      flex-basis: 100%; }
+      .homepage .services-section .services-capabilities .capability h3 {
+        font-size: 1.6em; }
+      .homepage .services-section .services-capabilities .capability .img-holder {
+        text-align: center;
+        margin-bottom: 1em; }
+      .homepage .services-section .services-capabilities .capability .btn-holder {
+        text-align: center; }
+        .homepage .services-section .services-capabilities .capability .btn-holder .capability-btn {
+          transition: 0.1s linear;
+          -moz-transition: 0.1s linear;
+          -webkit-transition: 0.1s linear;
+          -o-transition: 0.1s linear;
+          display: inline-block;
+          font-size: 1.2em;
+          font-weight: 700;
+          padding: .75em 2em;
+          border: 3px solid #FFFFFF;
+          border-radius: 6px;
+          margin: 0 auto; }
+          .homepage .services-section .services-capabilities .capability .btn-holder .capability-btn:hover {
+            background-color: #FFFFFF;
+            color: #A89E00; }
+      .homepage .services-section .services-capabilities .capability:hover {
+        box-shadow: 0 2px 12px 5px rgba(0, 0, 0, 0.3); }
+      @media (min-width: 576px) {
+        .homepage .services-section .services-capabilities .capability {
+          flex-basis: 70%; } }
+      @media (min-width: 815px) {
+        .homepage .services-section .services-capabilities .capability {
+          flex-basis: 300px; } }
+    @media (min-width: 1500px) {
+      .homepage .services-section .services-capabilities {
+        flex-wrap: nowrap; } }
 .homepage .contact-section {
   background-color: #e9e8e2; }
   .homepage .contact-section .contact-content {
@@ -602,7 +717,7 @@ html, body {
       display: flex;
       flex-direction: column;
       border: 3px solid #FFFFFF;
-      border-radius: 4px;
+      border-radius: 6px;
       height: 100%;
       align-items: center;
       justify-content: center; }
@@ -668,7 +783,7 @@ html, body {
       display: flex;
       flex-direction: column;
       border: 3px solid #FFFFFF;
-      border-radius: 4px;
+      border-radius: 6px;
       height: 100%;
       align-items: center;
       justify-content: center; }
@@ -696,7 +811,7 @@ html, body {
       max-height: 35px;
       overflow: hidden;
       border: 1px solid #DEE3E5;
-      border-radius: 4px;
+      border-radius: 6px;
       display: inline-block;
       position: absolute;
       right: 15px;
