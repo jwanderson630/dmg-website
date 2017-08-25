@@ -4,6 +4,7 @@ html, body {
 	height: 100%;
 	font-family: 'lato';
 	font-size: $font-size-base;
+	color: $dark-grey;
 }
 
 .main-nav {
@@ -115,7 +116,7 @@ html, body {
 				border-bottom: 3px solid $white;
 				.nav-label {
 					width: auto;
-					padding: 25px 1em 0 1em;
+					padding: 15px 1em 0 1em;
 					text-align: center;
 				}
 				&.active {
@@ -291,7 +292,7 @@ html, body {
 	li {
 		float: left;
 		margin: 0 .2em;
-		padding: .3em 0;
+		padding: .5em 0;
 		&.page-number {
 			background-color: $dark-green-transparent;
 			padding: .5em;
@@ -306,6 +307,8 @@ html, body {
 		}
 		path {
 			fill: $olive-green;
+			position: relative;
+			top: 3px;
 		}
 		&.disabled {
 			path {

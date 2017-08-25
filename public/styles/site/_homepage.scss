@@ -137,7 +137,7 @@
 					color: $white;
 					@include border-radius;
 					position: relative;
-					box-shadow: 0 2px 9px 3px rgba(0,0,0,0.2);
+					box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
 					cursor: pointer;
 					min-height: 3em;
 					min-width: 200px;
@@ -152,7 +152,7 @@
 						right: 1em;
 					}
 					&:hover {
-						box-shadow: 0 2px 11px 4px rgba(0,0,0,0.25);
+						box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.25);
 					}
 				}
 				@media (min-width: 1200px) {
@@ -169,27 +169,37 @@
 		}
 		.services-capabilities {
 			@include flexbox;
-			justify-content: space-evenly;
+			justify-content: center;
 			align-items: stretch;
 			flex-wrap: wrap;
 			.capability {
+				@include flexbox;
 				@include linear-transition(0.1s);
-				background-color: $light-green;
 				@include border-radius;
 				cursor: pointer;
 				margin: 1em;
-				box-shadow: 0 2px 9px 3px rgba(0,0,0,0.2);
+				box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
 				color: $white;
 				padding: 1em;
 				flex-basis: 100%;
+				flex-direction: column;
+				justify-content: space-evenly;
 				h3 {
 					font-size: 1.6em;
+					text-align: center;
+				}
+				p {
+					color: $white;
 				}
 				.img-holder {
 					text-align: center;
 					margin-bottom: 1em;
 				}
 				.btn-holder {
+					@include flexbox;
+					flex-direction: column;
+					justify-content: flex-end;
+					flex-grow: 2;
 					text-align: center;
 					.capability-btn {
 						@include linear-transition(0.1s);
@@ -206,8 +216,38 @@
 						}
 					}
 				}
+				&.sc {
+				    background-color: $light-green;
+			    	.capability-btn:hover {
+			    		color: $light-green;
+				    }
+				 }
+				&.do {
+				    background-color: $dark-green;
+				    .capability-btn:hover {
+			    		color: $dark-green;
+				    }
+				  }
+				&.tel {
+				    background-color: $light-blue;
+				    .capability-btn:hover {
+			    		color: $light-blue;
+				    }
+				  }
+				&.ma {
+				    background-color: $dark-blue;
+				    .capability-btn:hover {
+			    		color: $dark-blue;
+				    }
+				  }
+				&.cc {
+				    background-color: $gold;
+				    .capability-btn:hover {
+			    		color: $gold;
+				    }
+				}
 				&:hover {
-					box-shadow: 0 2px 12px 5px rgba(0,0,0,0.30);
+					box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.25);
 				}
 				@media (min-width: 576px) {
 					flex-basis: 70%;
