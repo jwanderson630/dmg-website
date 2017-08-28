@@ -24,6 +24,7 @@ html, body {
 		flex-direction: row;
 	}
 	.nav-img {
+		max-height: 60px;
 		left: 2%;
 	}
 	.nav-links {
@@ -35,13 +36,15 @@ html, body {
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 		background-color: $white;
 		padding: 0;
+		max-height: 0;
+		overflow: hidden;
 		.nav-link {
 			text-decoration: none;
 			color: $olive-green;
 				
 		}
 		.nav-item {
-			@include linear-transition(.1s);
+			@include linear-transition(0.1s);
 			color: $olive-green;
 			box-sizing: border-box;
 			cursor: pointer;
@@ -53,11 +56,12 @@ html, body {
 			&.active {
 				background-color: $dark-green-transparent;
 			}
-			&:hover {
+
+			&.expand {
 				background-color: $dark-green-transparent;
 				.dropdown {
 					height: auto;
-					box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+					border-bottom: 1px solid $light-grey;
 				}
 				.nav-label {
 					.dropdown-arrow {
@@ -67,13 +71,13 @@ html, body {
 			}
 			.nav-label {
 				height: 45px;
-				width: 100%;
 				padding: 20px 0 0 1em;
 				.dropdown-arrow {
 					@include arrow($olive-green, 1em);
 					@include linear-transition(0.1s);
-					position: absolute;
-					right: 2%;
+					float: right;
+					position: relative;
+					right: 5%;
 				}	
 			}
 			
@@ -81,7 +85,6 @@ html, body {
 				height: 0px;
 				overflow: hidden;
 				background-color: $white;
-				border-radius: 0 0 6px 6px;
 				text-align: left;
 				position: static;
 				width: 100%;
@@ -106,12 +109,19 @@ html, body {
 				}
 			}
 		}
+		&.expand {
+			@include linear-transition(.1s);
+			max-height: 800px;
+			.dropdown-arrow {
+			}
+		}
 		@media (min-width: 768px) {
 			flex-direction: row;
 			width: auto;
 			padding: 0 1em;
 			box-shadow: none;
 			height: $nav-base-height;
+			max-height: $nav-base-height;
 			.nav-item {
 				border-bottom: 3px solid $white;
 				.nav-label {
@@ -124,7 +134,11 @@ html, body {
 					background-color: $white;
 				}
 				&:hover {
+					background-color: $dark-green-transparent;
 					border-bottom: 3px solid $olive-green;
+					.dropdown {
+						height: auto;
+					}
 				}
 				.dropdown {
 					height: 0px;
@@ -132,6 +146,7 @@ html, body {
 					top: $nav-base-height;
 					text-align: left;
 					width: auto;
+					border-radius: 0 0 4px 4px;
 					.dropdown-links {
 						padding: 0;
 						.dropdown-link {
@@ -151,6 +166,7 @@ html, body {
 		position: relative;
 		top: 12px;
 		right: 2%;
+		cursor: pointer;
 		.menu-bar {
 			@include border-radius;
 			width: 30px;
@@ -248,7 +264,7 @@ html, body {
 				@include flexbox;
 				flex-direction: column; 
 				box-sizing: border-box;
-				border-bottom: 2px solid $light-grey;
+				border-bottom: 1px solid $light-grey;
 				padding: 1em 0 2em 0;
 				&:last-child {
 					border-bottom: none;
@@ -256,7 +272,7 @@ html, body {
 				@media (min-width: 768px) {
 					width: 33%;
 					border-bottom: none;
-					border-right: 2px solid $dark-grey-transparent;
+					border-right: 1px solid $light-grey;
 					padding: 0 1em;
 					p {
 						margin-bottom: 4em;

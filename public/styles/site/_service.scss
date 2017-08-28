@@ -1,7 +1,7 @@
 .service-page {
 	.page-body {
 		background-color: $white;
-		padding: 3em 0;
+		padding: 5vh 0;
 		.body-content {
 			h2 {
 				border-bottom: 3px solid $orange;
@@ -12,13 +12,14 @@
 			}
 			ul {
 				list-style: none;
+				padding-left: 5%;
 				li {
+					@include flexbox;
+					align-content: center;
 					line-height: 1.5em;
 					padding: .5em 0;
 				}
 				img {
-					position: relative;
-					top: .4em;
 					height: 1.5em;
 					margin-right: 0.2em;
 				}
@@ -26,8 +27,19 @@
 		}
 	}
 	.featured-content-section { 
-		background-color: $dark-green-transparent;
+		background-color: $dark-green-lightened;
 		padding: 3em 0;
 		margin-top: 0;
+		.fc {
+			border-bottom: 1px solid $dark-green-transparent;
+			&:last-child {
+				border-bottom: none;
+			}
+			@media (min-width: 768px) {
+				width: 33%;
+				border-bottom: none;
+				border-right: 1px solid $dark-green-transparent;
+			}
+		}
 	}
 }
