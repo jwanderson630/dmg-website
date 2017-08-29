@@ -27,12 +27,7 @@
 				justify-content: center;
 				.inner-content {
 					color: $white;
-					padding: 2em;
-					.main-headline {
-					}
-					.sub-headline {
-
-					}
+					padding: 5%;
 					.header-button {
 						@include linear-transition(.1s);
 						background-color: $orange-transparent;
@@ -65,9 +60,9 @@
 	}
 	.page-body {
 		background-color: $white;
-		padding: 3em 0;
+		padding: 3vh 0 5vh 0;
 		.intro {
-			padding-bottom: 4em;
+			padding-bottom: 5vh;
 			h2 {
 				margin: 1em 0;
 			}
@@ -107,14 +102,19 @@
 					display: inline-block;
 					position: absolute;
 					top: 0;
-					left: 50%;
+					right: 50%;
+					.arrow-img {
+						position: relative;
+						right: -50%;
+						background-color: white;
+					}
 				}
 			}
 		}
 	}
 
 	.services-section {
-		margin: 2em 0 4em 0;
+		margin: 5vh 0 5vh 0;
 		padding: 0 5%;
 		.services-help {
 			margin-bottom: 2em;
@@ -126,8 +126,9 @@
 					display: inline-block;
 					margin-right: 1em;
 					margin-bottom: 1em;
+					font-size: 1.9em;
 				}
-				.dropdown {
+				#services-help-dropdown {
 					@include border-radius;
 					flex-grow: 2;
 					min-width: 200px;
@@ -145,12 +146,18 @@
 						cursor: pointer;
 						min-height: 3em;
 						.static {
-						font-size: 1.4em;
+						font-size: 1.3em;
 						}
-						.dynamic {
-							font-size: 1.4em;
+						.dynamic-text {
+							@include linear-transition(0.5s);
+							font-size: 1.2em;
+							opacity: 1;
+							&.hidden {
+								opacity: 0;
+							}
 						}
 						.arrow {
+							@include linear-transition(0.1s);
 							position: absolute;
 							right: 1em;
 						}
@@ -185,12 +192,15 @@
 							}
 						}
 					}
-					&:hover {
+					&.expand {
 						.dropdown-btn {
 							box-shadow: 1px 1px 10px 2px rgba(0,0,0,0.25);
 						}
 						.dropdown-options {
 							max-height: 600px;
+						}
+						.arrow {
+							transform: rotate(180deg);
 						}
 					}
 				}
@@ -304,8 +314,8 @@
 	.contact-section {
 		background-color: $dark-green-transparent;
 		.contact-content {
-			padding-top: 8em;
-			padding-bottom: 8em;
+			padding-top: 6vh;
+			padding-bottom: 6vh;
 			h2 {
 				display: inline-block;
 				border-bottom: 3px solid $orange;
@@ -321,6 +331,10 @@
 			}
 			p {
 				margin: 2em 0;
+			}
+			@media(min-width: 890px) {
+				padding-top: 10vh;
+				padding-bottom: 10vh;
 			}
 		}
 		@media (min-width: 890px) and (max-width: 992px) {

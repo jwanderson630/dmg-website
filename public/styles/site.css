@@ -72,7 +72,7 @@ p {
   background-position: 50% 50%;
   padding: 2vh 2vw; }
   .header-content-container-md .header-content {
-    margin-top: 60px;
+    margin-top: 80px;
     width: 100%; }
     .header-content-container-md .header-content .header-border {
       display: -webkit-box;
@@ -233,17 +233,17 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  min-height: 60px;
+  min-height: 80px;
   width: 100%;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   background-color: white;
   z-index: 10; }
   @media (min-width: 768px) {
     .main-nav {
-      height: 60px;
+      height: 80px;
       flex-direction: row; } }
   .main-nav .nav-img {
-    max-height: 60px;
+    max-height: 80px;
     left: 2%; }
   .main-nav .nav-links {
     display: -webkit-inline-box;
@@ -278,16 +278,19 @@ html, body {
       height: 100%; }
       .main-nav .nav-links .nav-item.active {
         background-color: rgba(76, 69, 23, 0.1); }
-      .main-nav .nav-links .nav-item.expand {
+      .main-nav .nav-links .nav-item:hover {
         background-color: rgba(76, 69, 23, 0.1); }
-        .main-nav .nav-links .nav-item.expand .dropdown {
-          height: auto;
-          border-bottom: 1px solid #DEE3E5; }
-        .main-nav .nav-links .nav-item.expand .nav-label .dropdown-arrow {
-          transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -webkit-transform: rotate(180deg);
-          -o-transform: rotate(180deg); }
+      @media (max-width: 768px) {
+        .main-nav .nav-links .nav-item.expand {
+          background-color: rgba(76, 69, 23, 0.1); }
+          .main-nav .nav-links .nav-item.expand .dropdown {
+            height: auto;
+            border-bottom: 1px solid #DEE3E5; } }
+      .main-nav .nav-links .nav-item.expand .nav-label .dropdown-arrow svg {
+        transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg); }
       .main-nav .nav-links .nav-item .nav-label {
         height: 45px;
         padding: 20px 0 0 1em; }
@@ -340,13 +343,13 @@ html, body {
         width: auto;
         padding: 0 1em;
         box-shadow: none;
-        height: 60px;
-        max-height: 60px; }
+        height: 80px;
+        max-height: 80px; }
         .main-nav .nav-links .nav-item {
           border-bottom: 3px solid #FFFFFF; }
           .main-nav .nav-links .nav-item .nav-label {
             width: auto;
-            padding: 15px 1em 0 1em;
+            padding: 25px 1em 0 1em;
             text-align: center; }
           .main-nav .nav-links .nav-item.active {
             border-bottom: 3px solid #75702B;
@@ -359,10 +362,11 @@ html, body {
           .main-nav .nav-links .nav-item .dropdown {
             height: 0px;
             position: absolute;
-            top: 60px;
+            top: 80px;
             text-align: left;
             width: auto;
-            border-radius: 0 0 4px 4px; }
+            border-radius: 0 0 4px 4px;
+            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25); }
             .main-nav .nav-links .nav-item .dropdown .dropdown-links {
               padding: 0; }
               .main-nav .nav-links .nav-item .dropdown .dropdown-links .dropdown-link {
@@ -384,7 +388,7 @@ html, body {
 
 .footer {
   background-color: #4C4517;
-  padding-top: 3em;
+  padding-top: 5vh;
   box-shadow: 0 -3px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   width: 100%; }
   .footer .footer-content {
@@ -422,7 +426,7 @@ html, body {
     .footer .footer-content .footer-logo {
       width: 100%;
       text-align: right;
-      padding-bottom: 1em;
+      padding: 2vh 0;
       color: #EDE100;
       font-weight: lighter; }
       .footer .footer-content .footer-logo a {
@@ -535,7 +539,7 @@ html, body {
   align-items: stretch;
   height: 100vh; }
   .homepage .header-content-container .header-content {
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 4% 2%;
     width: 100%; }
     .homepage .header-content-container .header-content .header-border {
@@ -552,7 +556,7 @@ html, body {
       justify-content: center; }
       .homepage .header-content-container .header-content .header-border .inner-content {
         color: #FFFFFF;
-        padding: 2em; }
+        padding: 5%; }
         .homepage .header-content-container .header-content .header-border .inner-content .header-button {
           transition: 0.1s linear;
           -moz-transition: 0.1s linear;
@@ -582,9 +586,9 @@ html, body {
         padding: 2%; } }
 .homepage .page-body {
   background-color: #FFFFFF;
-  padding: 3em 0; }
+  padding: 3vh 0 5vh 0; }
   .homepage .page-body .intro {
-    padding-bottom: 4em; }
+    padding-bottom: 5vh; }
     .homepage .page-body .intro h2 {
       margin: 1em 0; }
     .homepage .page-body .intro ul {
@@ -620,13 +624,17 @@ html, body {
         display: inline-block;
         position: absolute;
         top: 0;
-        left: 50%; }
+        right: 50%; }
         .homepage .page-body .intro .section-break .break-arrow svg {
           width: 24px; }
           .homepage .page-body .intro .section-break .break-arrow svg path {
             fill: #DEE3E5; }
+        .homepage .page-body .intro .section-break .break-arrow .arrow-img {
+          position: relative;
+          right: -50%;
+          background-color: white; }
 .homepage .services-section {
-  margin: 2em 0 4em 0;
+  margin: 5vh 0 5vh 0;
   padding: 0 5%; }
   .homepage .services-section .services-help {
     margin-bottom: 2em; }
@@ -641,13 +649,14 @@ html, body {
       .homepage .services-section .services-help .dropdown-container .header {
         display: inline-block;
         margin-right: 1em;
-        margin-bottom: 1em; }
-      .homepage .services-section .services-help .dropdown-container .dropdown {
+        margin-bottom: 1em;
+        font-size: 1.9em; }
+      .homepage .services-section .services-help .dropdown-container #services-help-dropdown {
         border-radius: 4px;
         flex-grow: 2;
         min-width: 200px;
         position: relative; }
-        .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-btn {
+        .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn {
           display: -webkit-box;
           display: -moz-box;
           display: -ms-flexbox;
@@ -666,16 +675,27 @@ html, body {
           box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
           cursor: pointer;
           min-height: 3em; }
-          .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-btn .static {
-            font-size: 1.4em; }
-          .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-btn .dynamic {
-            font-size: 1.4em; }
-          .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-btn .arrow {
+          .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .static {
+            font-size: 1.3em; }
+          .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .dynamic-text {
+            transition: 0.5s linear;
+            -moz-transition: 0.5s linear;
+            -webkit-transition: 0.5s linear;
+            -o-transition: 0.5s linear;
+            font-size: 1.2em;
+            opacity: 1; }
+            .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .dynamic-text.hidden {
+              opacity: 0; }
+          .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .arrow {
+            transition: 0.1s linear;
+            -moz-transition: 0.1s linear;
+            -webkit-transition: 0.1s linear;
+            -o-transition: 0.1s linear;
             position: absolute;
             right: 1em; }
-          .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-btn:hover {
+          .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn:hover {
             box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25); }
-        .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-options {
+        .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options {
           border-radius: 4px;
           transition: 0.3s linear;
           -moz-transition: 0.3s linear;
@@ -688,22 +708,24 @@ html, body {
           position: absolute;
           background-color: #FFFFFF;
           width: 100%; }
-          .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-options ul {
+          .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options ul {
             list-style: none;
             padding: 0;
             margin: 0; }
-            .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-options ul a {
+            .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options ul a {
               text-decoration: none;
               color: #404040; }
-            .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-options ul li {
+            .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options ul li {
               padding: 0.5em;
               border-bottom: 1px solid #DEE3E5; }
-              .homepage .services-section .services-help .dropdown-container .dropdown .dropdown-options ul li:hover {
+              .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options ul li:hover {
                 background-color: rgba(76, 69, 23, 0.1); }
-        .homepage .services-section .services-help .dropdown-container .dropdown:hover .dropdown-btn {
+        .homepage .services-section .services-help .dropdown-container #services-help-dropdown.expand .dropdown-btn {
           box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25); }
-        .homepage .services-section .services-help .dropdown-container .dropdown:hover .dropdown-options {
+        .homepage .services-section .services-help .dropdown-container #services-help-dropdown.expand .dropdown-options {
           max-height: 600px; }
+        .homepage .services-section .services-help .dropdown-container #services-help-dropdown.expand .arrow {
+          transform: rotate(180deg); }
       @media (min-width: 1200px) {
         .homepage .services-section .services-help .dropdown-container {
           flex-direction: row; }
@@ -806,8 +828,8 @@ html, body {
 .homepage .contact-section {
   background-color: rgba(76, 69, 23, 0.1); }
   .homepage .contact-section .contact-content {
-    padding-top: 8em;
-    padding-bottom: 8em; }
+    padding-top: 6vh;
+    padding-bottom: 6vh; }
     .homepage .contact-section .contact-content h2 {
       display: inline-block;
       border-bottom: 3px solid #C66005; }
@@ -820,6 +842,10 @@ html, body {
       padding: .5em 2em; }
     .homepage .contact-section .contact-content p {
       margin: 2em 0; }
+    @media (min-width: 890px) {
+      .homepage .contact-section .contact-content {
+        padding-top: 10vh;
+        padding-bottom: 10vh; } }
   @media (min-width: 890px) and (max-width: 992px) {
     .homepage .contact-section {
       background-image: url("/images/contact-arrow.svg");
@@ -900,7 +926,7 @@ html, body {
   align-items: stretch;
   height: 40vh; }
   .resources-page .header-content-container .header-content {
-    margin-top: 60px;
+    margin-top: 80px;
     padding: 2%;
     width: 100%; }
     .resources-page .header-content-container .header-content .header-border {

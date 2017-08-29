@@ -24,7 +24,7 @@ html, body {
 		flex-direction: row;
 	}
 	.nav-img {
-		max-height: 60px;
+		max-height: $nav-base-height;
 		left: 2%;
 	}
 	.nav-links {
@@ -56,16 +56,22 @@ html, body {
 			&.active {
 				background-color: $dark-green-transparent;
 			}
-
-			&.expand {
+			&:hover {
 				background-color: $dark-green-transparent;
-				.dropdown {
-					height: auto;
-					border-bottom: 1px solid $light-grey;
+			}
+			&.expand {
+				@media (max-width: 768px) {
+					background-color: $dark-green-transparent;
+					.dropdown {
+						height: auto;
+						border-bottom: 1px solid $light-grey;
+					}
 				}
 				.nav-label {
 					.dropdown-arrow {
-						@include rotate(180deg);
+						svg {
+							@include rotate(180deg);
+						}
 					}
 				}
 			}
@@ -126,7 +132,7 @@ html, body {
 				border-bottom: 3px solid $white;
 				.nav-label {
 					width: auto;
-					padding: 15px 1em 0 1em;
+					padding: 25px 1em 0 1em;
 					text-align: center;
 				}
 				&.active {
@@ -147,6 +153,7 @@ html, body {
 					text-align: left;
 					width: auto;
 					border-radius: 0 0 4px 4px;
+					box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.25);
 					.dropdown-links {
 						padding: 0;
 						.dropdown-link {
@@ -179,7 +186,7 @@ html, body {
 
 .footer {
 	background-color: $dark-green;
-	padding-top: 3em;
+	padding-top: 5vh;
 	box-shadow: 0 -3px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 	width: 100%;
 	.footer-content {
@@ -221,7 +228,7 @@ html, body {
 		.footer-logo {
 			width: 100%;
 			text-align: right;
-			padding-bottom: 1em;
+			padding: 2vh 0;
 			color: $lime-green;
 			font-weight: lighter;
 			a {
