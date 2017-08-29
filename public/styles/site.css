@@ -35,12 +35,12 @@ p {
   -o-transition: 0.1s linear;
   border-radius: 4px;
   background-color: #C66005;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
   color: #FFFFFF;
   display: inline-block;
   padding: .5em 1em; }
   .btn:hover {
-    box-shadow: 0 2px 6px 3px rgba(0, 0, 0, 0.16); }
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08); }
   .btn.strategy-and-consulting {
     background-color: #A89E00; }
   .btn.data-optimization {
@@ -53,7 +53,10 @@ p {
     background-color: #F9A718; }
 
 .header-image-md {
-  height: 40%;
+  background-image: url("http://via.placeholder.com/1000x1000");
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 60vh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -67,9 +70,6 @@ p {
   display: flex;
   align-items: stretch;
   min-height: 40vh;
-  background-image: url("http://via.placeholder.com/1000x1000");
-  background-size: cover;
-  background-position: 50% 50%;
   padding: 2vh 2vw; }
   .header-content-container-md .header-content {
     margin-top: 80px;
@@ -366,7 +366,7 @@ html, body {
             text-align: left;
             width: auto;
             border-radius: 0 0 4px 4px;
-            box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25); }
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
             .main-nav .nav-links .nav-item .dropdown .dropdown-links {
               padding: 0; }
               .main-nav .nav-links .nav-item .dropdown .dropdown-links .dropdown-link {
@@ -376,7 +376,7 @@ html, body {
     height: 30px;
     width: 40px;
     position: relative;
-    top: 12px;
+    top: 25px;
     right: 2%;
     cursor: pointer; }
     .main-nav .nav-menu .menu-bar {
@@ -672,7 +672,7 @@ html, body {
           color: #FFFFFF;
           border-radius: 4px;
           position: relative;
-          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
           cursor: pointer;
           min-height: 3em; }
           .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .static {
@@ -694,7 +694,7 @@ html, body {
             position: absolute;
             right: 1em; }
           .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn:hover {
-            box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25); }
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08); }
         .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options {
           border-radius: 4px;
           transition: 0.3s linear;
@@ -704,7 +704,7 @@ html, body {
           flex-basis: 100%;
           max-height: 0;
           overflow: hidden;
-          box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
           position: absolute;
           background-color: #FFFFFF;
           width: 100%; }
@@ -721,7 +721,7 @@ html, body {
               .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-options ul li:hover {
                 background-color: rgba(76, 69, 23, 0.1); }
         .homepage .services-section .services-help .dropdown-container #services-help-dropdown.expand .dropdown-btn {
-          box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25); }
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
         .homepage .services-section .services-help .dropdown-container #services-help-dropdown.expand .dropdown-options {
           max-height: 600px; }
         .homepage .services-section .services-help .dropdown-container #services-help-dropdown.expand .arrow {
@@ -755,7 +755,7 @@ html, body {
       border-radius: 4px;
       cursor: pointer;
       margin: 1em;
-      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
       color: #FFFFFF;
       padding: 1em;
       flex-basis: 100%;
@@ -784,6 +784,7 @@ html, body {
           -moz-transition: 0.1s linear;
           -webkit-transition: 0.1s linear;
           -o-transition: 0.1s linear;
+          color: #FFFFFF;
           display: inline-block;
           font-size: 1.2em;
           font-weight: 700;
@@ -815,7 +816,7 @@ html, body {
         .homepage .services-section .services-capabilities .capability.cc .capability-btn:hover {
           color: #F9A718; }
       .homepage .services-section .services-capabilities .capability:hover {
-        box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25); }
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08); }
       @media (min-width: 576px) {
         .homepage .services-section .services-capabilities .capability {
           flex-basis: 70%; } }
@@ -1050,17 +1051,26 @@ html, body {
     border-radius: 4px;
     background-color: rgba(76, 69, 23, 0.1);
     padding: 3%;
-    margin-top: 2em; }
+    margin-top: 3vh;
+    margin-bottom: 3vh; }
     .about-page .page-body .body-content .client-section .quote-container .quote {
+      transition: 0.2s linear;
+      -moz-transition: 0.2s linear;
+      -webkit-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
       flex-direction: row;
-      align-items: flex-start; }
+      align-items: flex-start;
+      opacity: 1;
+      min-height: 6em; }
       .about-page .page-body .body-content .client-section .quote-container .quote p {
         line-height: 2em; }
+      .about-page .page-body .body-content .client-section .quote-container .quote.hidden {
+        opacity: 0; }
       .about-page .page-body .body-content .client-section .quote-container .quote .quote-mark {
         width: 20px;
         position: relative;
@@ -1072,13 +1082,20 @@ html, body {
           transform: rotate(180deg);
           bottom: 2px; }
     .about-page .page-body .body-content .client-section .quote-container .client-info {
+      transition: 0.2s linear;
+      -moz-transition: 0.2s linear;
+      -webkit-transition: 0.2s linear;
+      -o-transition: 0.2s linear;
       margin-top: 1em;
-      text-align: right; }
+      text-align: right;
+      opacity: 1; }
       .about-page .page-body .body-content .client-section .quote-container .client-info .client-name {
         font-size: 1.2em; }
         .about-page .page-body .body-content .client-section .quote-container .client-info .client-name .mdash {
           font-weight: 700;
           color: #C66005; }
+      .about-page .page-body .body-content .client-section .quote-container .client-info.hidden {
+        opacity: 0; }
     .about-page .page-body .body-content .client-section .quote-container .controls {
       display: -webkit-box;
       display: -moz-box;
@@ -1089,10 +1106,10 @@ html, body {
       justify-content: center;
       margin-top: 1em; }
       .about-page .page-body .body-content .client-section .quote-container .controls .dot {
-        transition: 0.1s linear;
-        -moz-transition: 0.1s linear;
-        -webkit-transition: 0.1s linear;
-        -o-transition: 0.1s linear;
+        transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -webkit-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
         height: .75em;
         width: .75em;
         border-radius: 50%;
@@ -1106,6 +1123,12 @@ html, body {
         height: 100%;
         position: relative;
         top: 2px; }
+      .about-page .page-body .body-content .client-section .quote-container .controls .arrow {
+        border-radius: 4px;
+        cursor: pointer;
+        padding: .1em; }
+        .about-page .page-body .body-content .client-section .quote-container .controls .arrow:hover {
+          background-color: rgba(76, 69, 23, 0.1); }
   .about-page .page-body .body-content .client-section .logo-container {
     display: -webkit-box;
     display: -moz-box;
@@ -1113,11 +1136,13 @@ html, body {
     display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2em; }
+    justify-content: space-evenly;
+    margin-top: 0 -15px; }
+    .about-page .page-body .body-content .client-section .logo-container .client-logo {
+      margin: 15px; }
   .about-page .page-body .body-content.team-section {
     background-color: #e9e8e2;
-    margin-top: 3em; }
+    margin-top: 5vh; }
     .about-page .page-body .body-content.team-section .executive-team {
       background-color: rgba(76, 69, 23, 0.1);
       padding: 2em 0;
@@ -1145,7 +1170,7 @@ html, body {
       flex: 1 1 250px;
       margin: 1em 15px;
       max-width: 262px;
-      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
       overflow: hidden;
       cursor: pointer;
       background-color: #FFFFFF;
@@ -1158,7 +1183,11 @@ html, body {
           font-size: 1.3em;
           font-weight: lighter; }
       .about-page .page-body .body-content.team-section .team-member:hover {
-        box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.25); }
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+    .about-page .page-body .body-content.team-section .divider.dividing {
+      width: 100%;
+      height: 10px;
+      background-color: blue; }
     @media (min-width: 992px) {
       .about-page .page-body .body-content.team-section .executive-team {
         text-align: left; }
@@ -1192,7 +1221,7 @@ html, body {
       min-width: 300px;
       width: 100%;
       justify-content: space-evenly;
-      box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
       text-align: center;
       margin-right: 1em; }
       .about-page .page-body .body-content.building-section .building-history .history-images .image-block {
