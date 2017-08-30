@@ -79,17 +79,40 @@ $(document).ready( () => {
 
 	setInterval(cycleQuotes, 4000)
 
+
 	var dividers = {
-		breakpoints: {
-			lg: [3,7,11,15,19],
-			md: [2,3,6,9,12,15,18,19],
-			sm: [2,3,5,7,9,11,13,15,17,19],
-			xs: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+		peoplePerLine: {
+			lg: {
+				exec: 3,
+				team: 4,
+			},
+			md: {
+				exec: 3,
+				team: 3,
+			},
+			sm: {
+				exec: 2,
+				team: 2,
+			},
+			xs: {
+				exec: 1,
+				team: 1
+			}
 		},
 		currentDividers: "",
+		numPeople: {
+			exec: $('.exec-divider').length,
+			team: $('.team-divider').length,
+		},
+		openDivider: {
+			index: null,
+			group: null,
+		}
+
 	};
 
 	setDivders = function(windowWidth) {
+		$('.divider').removeClass('visible');
 		$('.divider').removeClass('dividing');
 		if (windowWidth > 1200) {
 			dividers.currentDividers = "lg";
@@ -100,14 +123,50 @@ $(document).ready( () => {
 		} else {
 			dividers.currentDividers ="xs";
 		}
-		for (let divider of dividers.breakpoints[dividers.currentDividers]) {
-			$("#divider" + divider).addClass('dividing');
+		for (let i = 0; i < dividers.numPeople.exec; i++) {
+			if ((i + 1) % dividers.peoplePerLine[dividers.currentDividers].exec === 0 || (i + 1) === dividers.numPeople.exec) {
+				$("#exec-divider" + i).addClass('dividing');
+			}
+		};
+		for (let i = 0; i < dividers.numPeople.team; i++) {
+			if ((i + 1) % dividers.peoplePerLine[dividers.currentDividers].team === 0 || (i + 1) === dividers.numPeople.team) {
+				$("#team-divider" + i).addClass('dividing');
+			}
 		};
 	};
 
 	$(window).resize((event) => {
 		setDivders(event.target.innerWidth);
-	})
+	});
+
+	dertermineDivider = function(index, group) {
+		for (let i = index; i < dividers.numPeople[group]; i++) {
+			if ((i + 1) % dividers.peoplePerLine[dividers.currentDividers][group] === 0 || (i + 1) === dividers.numPeople[group]) {
+				return i;
+			}
+		}
+	};
+
+
+
+	displayBio = function(bio, certifications, group, index) {
+		$('.team-member.active').removeClass('active');
+		$("#" + group + index).addClass('active');
+		let dividerIndex = dertermineDivider(index, group);
+		if (dividerIndex === dividers.openDivider.index && group === dividers.openDivider.group) {
+			$('#' + group + "-divider" + dividerIndex + " .text").removeClass('visible');
+			setTimeout(() => {
+				$('#' + group + "-divider" + dividerIndex + " .text").html(bio);
+				$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
+			}, 250);
+		} else {
+			$('.divider.visible').removeClass('visible');
+			$('#' + group + "-divider" + dividerIndex).addClass('visible');
+			$('#' + group + "-divider" + dividerIndex + " .text").html(bio).addClass('visible');
+		}
+		dividers.openDivider.index = dividerIndex;
+		dividers.openDivider.group = group;
+	};
 
 	setDivders($(window).innerWidth())
 })

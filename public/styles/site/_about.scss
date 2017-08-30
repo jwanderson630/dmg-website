@@ -151,6 +151,7 @@
 					cursor: pointer;
 					background-color: $white;
 					text-align: left;
+					border-bottom: 5px solid $white;
 					.team-photo {
 						img {
 							width: 100%;
@@ -163,15 +164,46 @@
 							font-weight: lighter;
 						}
 					}
+					&.active {
+						box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
+						border-bottom: 5px solid $dark-green;
+					}
 					&:hover {
 						box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
 					}
 				}
 				.divider {
+					max-height: 0;
+					width: 0;
+					overflow: hidden;
+					will-change: transform;
 					&.dividing {
+						transition: max-height 0.5s linear, opacity 0.5s linear;
+						-moz-transition: max-height 0.5s linear, opacity 0.5s linear;
+						-webkit-transition: max-height 0.5s linear, opacity 0.5s linear;
+						-o-transition: max-height 0.5s  linear, opacity 0.5s  linear;
+						max-height: 0;
 						width: 100%;
-						height: 10px;
-						background-color: blue;
+						padding-left: 15px;
+						padding-right: 15px;
+						opacity: 0;
+						&.visible {
+							padding-bottom: 15px;
+							max-height: 500px;
+							opacity: 1;	
+						}
+						.text {
+							@include ease-transition (0.2s);
+							@include border-radius;
+							padding: 1em;
+							background-color: $white;
+							color: $white;
+							min-height: 100px;
+							box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
+							&.visible {
+								color: $dark-grey;
+							}
+						}
 					}
 				}
 				@media (min-width: 992px) {

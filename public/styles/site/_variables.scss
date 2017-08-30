@@ -48,6 +48,13 @@ $lighter-grey: #efefef;
 	-o-transition: $time  linear;
 }
 
+@mixin ease-transition($time) {
+  transition: $time ease-in-out;
+  -moz-transition: $time ease-in-out;
+  -webkit-transition: $time ease-in-out;
+  -o-transition: $time  ease-in-out;
+}
+
 @mixin arrow($color, $size) {
 	svg {
 		width: $size;

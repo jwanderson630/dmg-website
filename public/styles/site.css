@@ -1174,7 +1174,8 @@ html, body {
       overflow: hidden;
       cursor: pointer;
       background-color: #FFFFFF;
-      text-align: left; }
+      text-align: left;
+      border-bottom: 5px solid #FFFFFF; }
       .about-page .page-body .body-content.team-section .team-member .team-photo img {
         width: 100%; }
       .about-page .page-body .body-content.team-section .team-member .team-info {
@@ -1182,12 +1183,43 @@ html, body {
         .about-page .page-body .body-content.team-section .team-member .team-info .team-name {
           font-size: 1.3em;
           font-weight: lighter; }
+      .about-page .page-body .body-content.team-section .team-member.active {
+        box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08);
+        border-bottom: 5px solid #4C4517; }
       .about-page .page-body .body-content.team-section .team-member:hover {
         box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08); }
-    .about-page .page-body .body-content.team-section .divider.dividing {
-      width: 100%;
-      height: 10px;
-      background-color: blue; }
+    .about-page .page-body .body-content.team-section .divider {
+      max-height: 0;
+      width: 0;
+      overflow: hidden;
+      will-change: transform; }
+      .about-page .page-body .body-content.team-section .divider.dividing {
+        transition: max-height 0.5s linear, opacity 0.5s linear;
+        -moz-transition: max-height 0.5s linear, opacity 0.5s linear;
+        -webkit-transition: max-height 0.5s linear, opacity 0.5s linear;
+        -o-transition: max-height 0.5s  linear, opacity 0.5s  linear;
+        max-height: 0;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        opacity: 0; }
+        .about-page .page-body .body-content.team-section .divider.dividing.visible {
+          padding-bottom: 15px;
+          max-height: 500px;
+          opacity: 1; }
+        .about-page .page-body .body-content.team-section .divider.dividing .text {
+          transition: 0.2s ease-in-out;
+          -moz-transition: 0.2s ease-in-out;
+          -webkit-transition: 0.2s ease-in-out;
+          -o-transition: 0.2s ease-in-out;
+          border-radius: 4px;
+          padding: 1em;
+          background-color: #FFFFFF;
+          color: #FFFFFF;
+          min-height: 100px;
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+          .about-page .page-body .body-content.team-section .divider.dividing .text.visible {
+            color: #404040; }
     @media (min-width: 992px) {
       .about-page .page-body .body-content.team-section .executive-team {
         text-align: left; }
