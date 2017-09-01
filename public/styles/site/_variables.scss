@@ -15,9 +15,11 @@ $dark-blue: #4C779C;
 $light-blue: #7FADC2;
 $white: #FFFFFF;
 $dark-grey: #404040;
-$dark-grey-transparent: rgba(50,50,50,0.3);
+$dark-grey-transparent: rgba(149,152,154,0.3);
 $light-grey: #DEE3E5;
 $lighter-grey: #efefef;
+
+$font-family: 'Oswald', sans-serif;
 
 @mixin flexbox {
 	display: -webkit-box;
@@ -75,6 +77,11 @@ $lighter-grey: #efefef;
   border-radius: 4px;
 }
 
+@mixin underline($color) {
+  text-decoration: underline;
+  text-decoration-color: $color;
+}
+
 
 
 
@@ -114,6 +121,19 @@ p {
   color: $dark-grey;
 }
 
+input, textarea, select, option {
+  font-family: $font-family;
+}
+
+
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
+}
+
 .btn {
 	@include linear-transition(0.1s);
   @include border-radius;
@@ -143,7 +163,6 @@ p {
 }
 
 .header-image-md {
-    background-image: url('http://via.placeholder.com/1000x1000');
     background-size: cover;
     background-position: 50% 50%;
     min-height: 60vh;

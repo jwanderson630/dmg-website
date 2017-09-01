@@ -112,6 +112,7 @@ $(document).ready( () => {
 	};
 
 	setDivders = function(windowWidth) {
+		$('.team-member.active').removeClass('active');
 		$('.divider').removeClass('visible');
 		$('.divider').removeClass('dividing');
 		if (windowWidth > 1200) {
@@ -166,6 +167,8 @@ $(document).ready( () => {
 		}
 		dividers.openDivider.index = dividerIndex;
 		dividers.openDivider.group = group;
+		$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " .text").css("height") + 10) + "px");
+		console.log($('#' + group + "-divider" + dividerIndex + " .text").css("height"));
 	};
 
 	setDivders($(window).innerWidth())

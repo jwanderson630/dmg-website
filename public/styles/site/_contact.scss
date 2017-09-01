@@ -1,0 +1,58 @@
+.contact-page {
+	.header-image-md {
+		background-image: url('/images/headers/contact-min.jpg');
+		background-position: 50% 10%;
+	}
+}
+.contact-content {
+	@include flexbox;
+	flex-direction: column;
+	padding-bottom: 8vh;
+	.contact-info {
+		margin-bottom: 3vh;
+		a {
+			color: $orange;
+		}
+	}
+	.contact-form {
+		.form-group {
+			width: 100%;
+			input, textarea {
+				@include border-radius;
+				border: 1px solid $light-grey;
+				width: 100%;
+				margin-bottom: 10px;
+				padding: 0 5px;
+				font-size: 18px;
+			}
+			input {
+				height: 2em;
+			}
+			textarea {
+				resize: none;
+				height: 4em;
+			}
+		}
+		.submit {
+			border:none;
+			cursor: pointer;
+			font-size: 1.2em;
+		}
+	}
+	@media(min-width: 768px) {
+		flex-direction: row;
+		.contact-info {
+			width: 60%;
+			padding-right: 3vw;
+		}
+		.contact-form {
+			width: 40%;
+			padding-left: 3vw;
+		}
+	}
+}
+
+.map {
+	background-color: $white;
+	height: 40vh;
+}

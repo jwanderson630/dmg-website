@@ -1,44 +1,69 @@
-<div class="container">
-	<h1>Contact Us</h1>
-</div>
-<div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+<div class="page-content service-page contact-page">
+	<div class="header-image-md">
+	</div>
+	<div class="header-content-container-md">
+		<div class="header-content">
+			<div class="header-border">
+				<div class="inner-content">
+					<h1 class="main-headline">Contact Us</h1>
 				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
-				</div>
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
-						<option value="">(select one)</option>
-						{{#each enquiryTypes}}
-						<option value="{{value}}">{{label}}</option>
-						{{/each}}
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send</button>
-				</div>
-			</form>
-			{{/if}}
+			</div>
 		</div>
+	</div>
+	<div class="page-body">
+		<div class="body-content container contact-content">
+			<div class="contact-info">
+				<h2>Let's Talk</h2>
+				<p>We’re standing by to answer your questions? We’d love to talk with you and get to know your business and marketing challenges.</p>
+				<p>
+					<strong>Email: </strong> <a href="mailTo:info@dunthorpemarketing.com">info@dunthorpemarketing.com</a><br>
+					<strong>Phone: </strong>503.236.4242<br>
+					<strong>Fax: </strong> 503.236.4609
+				</p>
+				<p>
+					<strong>Dunthorpe Marketing Group, Inc.</strong><br>
+					8825 S.E. 11th Avenue, Suite 100<br>
+					Portland, OR 97202-7045
+				</p>
+			</div>
+			<div class="contact-form">
+				{{#if enquirySubmitted}}
+				<h3>Thanks for getting in touch.</h3>
+				{{else}}
+				<form method="post">
+					<input type="hidden" name="action" value="contact">
+					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+						<input required type="text" name="firstName" placeholder="First Name*"  value="{{formData.firstName}}">
+					</div>
+					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+						<input required type="text" name="lastName" placeholder="Last Name*"  value="{{formData.lastName}}">
+					</div>
+					<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+						<input required type="email" name="email" placeholder="Email*" value="{{formData.email}}">
+					</div>
+					<div class="form-group">
+						<input type="text" name="phone" placeholder="Phone" value="{{formData.email}}">
+					</div>
+					<div class="form-group">
+						<input  required type="text" name="company" placeholder="Company*" value="{{formData.email}}">
+					</div>
+					<div class="form-group">
+						<input type="text" name="jobTitle" placeholder="Job Title" value="{{formData.email}}">
+					</div>
+					<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+						<textarea  name="message" placeholder="Leave us a message...">{{formData.message}}</textarea>
+					</div>
+					<div class="form-actions">
+						<button  type="submit" class="btn submit">Send Message</button>
+					</div>
+				</form>
+				{{/if}}
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="map">
+		<iframe src="https://snazzymaps.com/embed/13050" width="100%" height="100%" style="border:none;"></iframe>
 	</div>
 </div>

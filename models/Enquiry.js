@@ -13,17 +13,15 @@ var Enquiry = new keystone.List('Enquiry', {
 
 Enquiry.add({
 	firstName: { type: Types.Name, required: true },
+	lastName: { type: Types.Name, required: true},
 	email: { type: Types.Email, required: true },
 	phone: { type: String },
-	enquiryType: { type: Types.Select, options: [
-		{ value: 'message', label: 'Just leaving a message' },
-		{ value: 'question', label: 'I\'ve got a question' },
-		{ value: 'other', label: 'Something else...' },
-	] },
-	message: { type: Types.Markdown, required: true },
+	company: {type: String},
+	jobTitle: {type: String},
+	message: { type: Types.Markdown },
 	createdAt: { type: Date, default: Date.now },
 });
 
 Enquiry.defaultSort = '-createdAt';
-Enquiry.defaultColumns = 'name, email, enquiryType, createdAt';
+Enquiry.defaultColumns = 'firstName, lastName, email, company, createdAt';
 Enquiry.register();

@@ -2,10 +2,10 @@ $(document).ready(() => {
 	var helpQuestions = {
 		questions: [
 			"transform my marketing operations and processes",
-			"need to get more out of my marketing campaigns and content",
-			"need to optimize my automation tools and programs",
-			"need to maximize my data resources",
-			"need to convert more leads, faster",
+			"get more out of my marketing campaigns and content",
+			"optimize my automation tools and programs",
+			"maximize my data resources",
+			"convert more leads, faster",
 		],
 		currentQuestion: 0,
 		paused: false,

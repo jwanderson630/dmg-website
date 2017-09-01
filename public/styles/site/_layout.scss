@@ -2,7 +2,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	font-family: 'lato';
+	font-family: $font-family;
 	font-size: $font-size-base;
 	color: $dark-grey;
 }
@@ -25,7 +25,11 @@ html, body {
 	}
 	.nav-img {
 		max-height: $nav-base-height;
-		left: 2%;
+		left: 2vw;
+		position: relative;
+		img {
+			height: 100%;
+		}
 	}
 	.nav-links {
 		@include inline-flexbox;
@@ -124,7 +128,7 @@ html, body {
 		@media (min-width: 768px) {
 			flex-direction: row;
 			width: auto;
-			padding: 0 1em;
+			padding: 0 4vh;
 			box-shadow: none;
 			height: $nav-base-height;
 			max-height: $nav-base-height;
@@ -231,6 +235,9 @@ html, body {
 			padding: 2vh 0;
 			color: $lime-green;
 			font-weight: lighter;
+			img {
+				height: 80px;
+			}
 			a {
 				text-decoration: none;
 				color: $lime-green;
@@ -260,6 +267,21 @@ html, body {
 			color: $dark-green;
 			border-bottom: 3px solid $orange;
 			display: inline-block;
+			&.sc {
+				border-bottom: 3px solid $light-green;
+			}
+			&.cc {
+				border-bottom: 3px solid $gold;
+			}
+			&.ma {
+				border-bottom: 3px solid $dark-blue;
+			}
+			&.do {
+				border-bottom: 3px solid $dark-green;
+			}
+			&.tel {
+				border-bottom: 3px solid $light-blue;
+			}
 		}
 		.featured-content {
 			@include flexbox;
@@ -271,7 +293,7 @@ html, body {
 				@include flexbox;
 				flex-direction: column; 
 				box-sizing: border-box;
-				border-bottom: 1px solid $light-grey;
+				border-bottom: 3px solid $dark-grey-transparent;
 				padding: 1em 0 2em 0;
 				&:last-child {
 					border-bottom: none;
@@ -279,7 +301,7 @@ html, body {
 				@media (min-width: 768px) {
 					width: 33%;
 					border-bottom: none;
-					border-right: 1px solid $light-grey;
+					border-right: 3px solid $dark-grey-transparent;
 					padding: 0 1em;
 					p {
 						margin-bottom: 4em;
@@ -338,6 +360,18 @@ html, body {
 				fill: $light-grey;
 			}
 		}
+	}
+}
+
+#flash-messages {
+	position: absolute;
+	top: $nav-base-height + 40;
+	display: inline-block;
+	div {
+		@include border-radius;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); 
+		padding: 1em;
+		background-color: white;
 	}
 }
 
