@@ -7,9 +7,9 @@ $(document).ready( () => {
 	var clientQuotes = {
 		quotes: [
 			{
-				quote: "Quote 1",
-				clientName: "Jane Smith",
-				clientCompany: "TestCo Inc."
+				quote: "DMG is one of those awesome partnership’s at Danaher. They originally started working in a single BU and then through referrals and significant value added results they have helped many Danaher BUs in recent years. They bring unique experience, a graceful style and a mindset of getting to the right answer. In the DBSO, we view them as part of a very short list of significantly valued partners.",
+				clientName: "Mike Weatherred",
+				clientCompany: "Vice President"
 			},
 			{
 				quote: "Quote 2",
@@ -86,7 +86,7 @@ $(document).ready( () => {
 	setInterval(cycleQuotes, 4000)
 
 
-	var dividers = {
+	var teamSection = {
 		peoplePerLine: {
 			lg: {
 				exec: 3,
@@ -125,21 +125,21 @@ $(document).ready( () => {
 		resetDividers();
 		$('.divider').removeClass('dividing');
 		if (windowWidth > 1200) {
-			dividers.currentDividers = "lg";
+			teamSection.currentDividers = "lg";
 		} else if (windowWidth > 991) {
-			dividers.currentDividers = "md";
+			teamSection.currentDividers = "md";
 		} else if (windowWidth > 560) {
-			dividers.currentDividers = "sm";
+			teamSection.currentDividers = "sm";
 		} else {
-			dividers.currentDividers ="xs";
+			teamSection.currentDividers ="xs";
 		}
-		for (let i = 0; i < dividers.numPeople.exec; i++) {
-			if ((i + 1) % dividers.peoplePerLine[dividers.currentDividers].exec === 0 || (i + 1) === dividers.numPeople.exec) {
+		for (let i = 0; i < teamSection.numPeople.exec; i++) {
+			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers].exec === 0 || (i + 1) === teamSection.numPeople.exec) {
 				$("#exec-divider" + i).addClass('dividing');
 			}
 		};
-		for (let i = 0; i < dividers.numPeople.team; i++) {
-			if ((i + 1) % dividers.peoplePerLine[dividers.currentDividers].team === 0 || (i + 1) === dividers.numPeople.team) {
+		for (let i = 0; i < teamSection.numPeople.team; i++) {
+			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers].team === 0 || (i + 1) === teamSection.numPeople.team) {
 				$("#team-divider" + i).addClass('dividing');
 			}
 		};
@@ -153,19 +153,19 @@ $(document).ready( () => {
 	});
 
 	dertermineDivider = function(index, group) {
-		for (let i = index; i < dividers.numPeople[group]; i++) {
-			if ((i + 1) % dividers.peoplePerLine[dividers.currentDividers][group] === 0 || (i + 1) === dividers.numPeople[group]) {
+		for (let i = index; i < teamSection.numPeople[group]; i++) {
+			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers][group] === 0 || (i + 1) === teamSection.numPeople[group]) {
 				return i;
 			}
 		}
 	};
 
 	resetDividers = function() {
-		dividers.selected = {
+		teamSection.selected = {
 			index: null,
 			group: null,
 		};
-		dividers.openDivider = {
+		teamSection.openDivider = {
 			index: null,
 			group: null
 		}
@@ -176,13 +176,13 @@ $(document).ready( () => {
 
 
 	displayBio = function(bio, certifications, group, index) {
-		if (index === dividers.selected.index && group === dividers.selected.group) {
+		if (index === teamSection.selected.index && group === teamSection.selected.group) {
 			resetDividers();
 		} else {
 			$('.team-member.active').removeClass('active');
 			$("#" + group + index).addClass('active');
 			let dividerIndex = dertermineDivider(index, group);
-			if (dividerIndex === dividers.openDivider.index && group === dividers.openDivider.group) {
+			if (dividerIndex === teamSection.openDivider.index && group === teamSection.openDivider.group) {
 				$('#' + group + "-divider" + dividerIndex + " .text").removeClass('visible');
 				setTimeout(() => {
 					$('#' + group + "-divider" + dividerIndex + " .text").html(bio);
@@ -193,10 +193,10 @@ $(document).ready( () => {
 				$('#' + group + "-divider" + dividerIndex).addClass('visible');
 				$('#' + group + "-divider" + dividerIndex + " .text").html(bio).addClass('visible');
 			}
-			dividers.openDivider.index = dividerIndex;
-			dividers.openDivider.group = group;
-			dividers.selected.index = index;
-			dividers.selected.group = group;
+			teamSection.openDivider.index = dividerIndex;
+			teamSection.openDivider.group = group;
+			teamSection.selected.index = index;
+			teamSection.selected.group = group;
 			$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " .text").css("height") + 10) + "px");
 		}
 	};
