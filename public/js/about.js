@@ -113,13 +113,16 @@ $(document).ready( () => {
 		openDivider: {
 			index: null,
 			group: null,
+		},
+		selected: {
+			index: null,
+			group: null
 		}
 
 	};
 
 	setDivders = function(windowWidth) {
-		$('.team-member.active').removeClass('active');
-		$('.divider').removeClass('visible');
+		resetDividers();
 		$('.divider').removeClass('dividing');
 		if (windowWidth > 1200) {
 			dividers.currentDividers = "lg";
@@ -143,7 +146,6 @@ $(document).ready( () => {
 	};
 
 	$(window).resize((event) => {
-		console.log(pageWidth, event.target.innerWidth)
 		if(event.target.innerWidth !== pageWidth) {
 			setDivders(event.target.innerWidth);
 			pageWidth = event.target.innerWidth;
@@ -158,26 +160,45 @@ $(document).ready( () => {
 		}
 	};
 
+	resetDividers = function() {
+		dividers.selected = {
+			index: null,
+			group: null,
+		};
+		dividers.openDivider = {
+			index: null,
+			group: null
+		}
+		$('.team-member.active').removeClass('active');
+		$('.divider.visible').removeClass('visible');
+	}
+
 
 
 	displayBio = function(bio, certifications, group, index) {
-		$('.team-member.active').removeClass('active');
-		$("#" + group + index).addClass('active');
-		let dividerIndex = dertermineDivider(index, group);
-		if (dividerIndex === dividers.openDivider.index && group === dividers.openDivider.group) {
-			$('#' + group + "-divider" + dividerIndex + " .text").removeClass('visible');
-			setTimeout(() => {
-				$('#' + group + "-divider" + dividerIndex + " .text").html(bio);
-				$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
-			}, 250);
+		if (index === dividers.selected.index && group === dividers.selected.group) {
+			resetDividers();
 		} else {
-			$('.divider.visible').removeClass('visible');
-			$('#' + group + "-divider" + dividerIndex).addClass('visible');
-			$('#' + group + "-divider" + dividerIndex + " .text").html(bio).addClass('visible');
+			$('.team-member.active').removeClass('active');
+			$("#" + group + index).addClass('active');
+			let dividerIndex = dertermineDivider(index, group);
+			if (dividerIndex === dividers.openDivider.index && group === dividers.openDivider.group) {
+				$('#' + group + "-divider" + dividerIndex + " .text").removeClass('visible');
+				setTimeout(() => {
+					$('#' + group + "-divider" + dividerIndex + " .text").html(bio);
+					$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
+				}, 250);
+			} else {
+				$('.divider.visible').removeClass('visible');
+				$('#' + group + "-divider" + dividerIndex).addClass('visible');
+				$('#' + group + "-divider" + dividerIndex + " .text").html(bio).addClass('visible');
+			}
+			dividers.openDivider.index = dividerIndex;
+			dividers.openDivider.group = group;
+			dividers.selected.index = index;
+			dividers.selected.group = group;
+			$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " .text").css("height") + 10) + "px");
 		}
-		dividers.openDivider.index = dividerIndex;
-		dividers.openDivider.group = group;
-		$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " .text").css("height") + 10) + "px");
 	};
 
 

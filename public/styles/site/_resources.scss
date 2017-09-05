@@ -80,7 +80,7 @@
 						background-color: $dark-green-transparent;
 					}
 				}
-				&:hover {
+				&.expand {
 					max-height: 310px;
 					.selected-filter {
 						border-bottom: 1px solid $light-grey;

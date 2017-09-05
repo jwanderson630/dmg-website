@@ -14,7 +14,7 @@
 	<div class="resources">
 		<div class="resources-filters container">
 			<div class="filter-dropdown">
-				<div class="selected-filter">
+				<div class="selected-filter" id="filter-dropdown">
 					{{data.category.name}} <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/></svg>
 				</div>
 				<div class="filter-options">
@@ -57,7 +57,7 @@
 				<article class="resource">
 					<h4>{{{title}}}</h4>
 					{{{content.brief}}}
-					<a href="#"><div class="resource-button btn {{{categories.[0].key}}}">Read More</div></a>
+					<a href="{{postUrl slug}}"><div class="resource-button btn {{{categories.[0].key}}}">Read More</div></a>
 				</article>
 				{{/each}}
 			</div>
@@ -67,5 +67,6 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="/js/resources.js"></script>
 
 
