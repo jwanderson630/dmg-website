@@ -1,5 +1,9 @@
 $(document).ready( () => {
 
+	
+
+
+
 	var clientQuotes = {
 		quotes: [
 			{
@@ -36,6 +40,8 @@ $(document).ready( () => {
 		currentQuote: 0,
 		paused: false,
 	};
+
+	var pageWidth = pageWidth = $(window).innerWidth();
 
 
 	changeQuote = function(changeTo, timeout) {
@@ -137,7 +143,11 @@ $(document).ready( () => {
 	};
 
 	$(window).resize((event) => {
-		setDivders(event.target.innerWidth);
+		console.log(pageWidth, event.target.innerWidth)
+		if(event.target.innerWidth !== pageWidth) {
+			setDivders(event.target.innerWidth);
+			pageWidth = event.target.innerWidth;
+		};
 	});
 
 	dertermineDivider = function(index, group) {
@@ -168,8 +178,8 @@ $(document).ready( () => {
 		dividers.openDivider.index = dividerIndex;
 		dividers.openDivider.group = group;
 		$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " .text").css("height") + 10) + "px");
-		console.log($('#' + group + "-divider" + dividerIndex + " .text").css("height"));
 	};
+
 
 	setDivders($(window).innerWidth())
 })

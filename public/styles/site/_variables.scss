@@ -162,6 +162,7 @@ input, textarea, select, option {
 }
 
 .header-image-md {
+    @include linear-transition(0.1s);
     background-size: cover;
     background-position: 50% 50%;
     min-height: 60vh;
