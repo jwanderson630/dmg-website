@@ -13,7 +13,7 @@ exports = module.exports = function (req, res) {
 	};
 
 	view.on('init', function(next) {
-		keystone.list('Employee').model.find({executive: true}).sort('name').exec(function(err,results) {
+		keystone.list('Employee').model.find({executive: true}).sort('-name').exec(function(err,results) {
 			if (err || !results.length) {
 				console.log(err);
 				return next(err);

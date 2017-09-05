@@ -1,9 +1,5 @@
 $(document).ready( () => {
 
-	
-
-
-
 	var clientQuotes = {
 		quotes: [
 			{
@@ -56,9 +52,9 @@ $(document).ready( () => {
 			clientQuotes.currentQuote = changeTo;
 		}, timeout);
 	};
-
+	console.log($('.team-section').position().top);
 	cycleQuotes = function() {
-		if (!clientQuotes.paused) {
+		if (!clientQuotes.paused && $(window).scrollTop() < ($('.team-section').position().top - 100)) {
 			const newQuote = clientQuotes.currentQuote + 1 > 4 ? 0 : clientQuotes.currentQuote + 1; 
 			changeQuote(newQuote, 500);
 		};
@@ -185,19 +181,30 @@ $(document).ready( () => {
 			if (dividerIndex === teamSection.openDivider.index && group === teamSection.openDivider.group) {
 				$('#' + group + "-divider" + dividerIndex + " .text").removeClass('visible');
 				setTimeout(() => {
-					$('#' + group + "-divider" + dividerIndex + " .text").html(bio);
+					$('#' + group + "-divider" + dividerIndex + " .bioText").html(bio);
+					if (certifications != "") {
+						$('#' + group + "-divider" + dividerIndex + " .certText").html("<br><strong>Certifications:</strong> " + certifications);
+					} else {
+						$('#' + group + "-divider" + dividerIndex + " .certText").html("");
+					};
 					$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
 				}, 250);
 			} else {
 				$('.divider.visible').removeClass('visible');
 				$('#' + group + "-divider" + dividerIndex).addClass('visible');
-				$('#' + group + "-divider" + dividerIndex + " .text").html(bio).addClass('visible');
+				$('#' + group + "-divider" + dividerIndex + " .bioText").html(bio);
+				if (certifications != "") {
+						$('#' + group + "-divider" + dividerIndex + " .certText").html("<br><strong>Certifications:</strong> " + certifications);
+				} else {
+					$('#' + group + "-divider" + dividerIndex + " .certText").html("");
+				};
+				$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
 			}
 			teamSection.openDivider.index = dividerIndex;
 			teamSection.openDivider.group = group;
 			teamSection.selected.index = index;
 			teamSection.selected.group = group;
-			$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " .text").css("height") + 10) + "px");
+			$('#' + group + "-divider" + dividerIndex + ".visible").css("max-height", ($('#' + group + "-divider" + dividerIndex + " text").css("height") + 10) + "px");
 		}
 	};
 
