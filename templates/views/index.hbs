@@ -127,20 +127,22 @@
 			</div>
 		</div>
 
-		<div class="container featured-content-section">
-			<h3>Featured Content</h3>
-			<div class="featured-content">
-				{{# each data.posts}}
-				<article class="fc">
-					<h4>{{{title}}}</h4>
-					{{{content.brief}}}
-					<div class="fc-cta">
-						<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">Read More</a>
-					</div>
-				</article>
-				{{/each}}
+		<div class="featured-content-section">
+			<div class="container">
+				<h3>Featured Content</h3>
+				<div class="featured-content">
+					{{# each data.posts}}
+					<article class="fc">
+						<h4>{{{title}}}</h4>
+						{{{content.brief}}}
+						<div class="fc-cta">
+							<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">Read More</a>
+						</div>
+					</article>
+					{{/each}}
+				</div>
+				<a  href="/resources" class="resource-btn">View all resources</a>
 			</div>
-			<a  href="/resources" class="resource-btn">View all resources</a>
 		</div>
 	</div>
 </div>
