@@ -33,10 +33,13 @@
 				<article class="fc">
 					<h4>{{{title}}}</h4>
 					{{{content.brief}}}
-					<a href="#"><div class="fc-button btn {{{categories.[0].key}}}">Read More</div></a>
+					<div class="fc-cta">
+						<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">Read More</a>
+					</div>
 				</article>
 				{{/each}}
 			</div>
+			<a  href="/resources" class="resource-btn">View all resources</a>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-$font-size-base: 18px;
+$font-size-base: 16px;
 
 $nav-base-height: 80px;
 
@@ -19,7 +19,7 @@ $dark-grey-transparent: rgba(149,152,154,0.3);
 $light-grey: #DEE3E5;
 $lighter-grey: #efefef;
 
-$font-family: 'Oswald', sans-serif;
+$font-family: 'Poppins', sans-serif;
 
 @mixin flexbox {
 	display: -webkit-box;
@@ -84,12 +84,11 @@ $font-family: 'Oswald', sans-serif;
 
 
 
-
 h1 {
 	margin: 0;
 	font-size: 2.8em;
 	font-family: 'Bree Serif', serif;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 h2 {

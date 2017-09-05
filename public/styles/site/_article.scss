@@ -1,0 +1,36 @@
+.article-page {
+	.banner {
+		height: 160px;
+		background-color: $orange;
+	}
+	.featured-content-section {
+		background-color: $dark-green-lightened
+	}
+	&.strategy-and-consulting {
+		.banner {
+			background-color: $light-green;
+		}
+	}
+	&.campaigns-and-content {
+		.banner {
+			background-color: $gold;
+		}
+	}
+	&.marketing-automation {
+		.banner {
+			background-color: $dark-blue;
+		}
+	}
+	&.data-optimization {
+		.banner {
+			background-color: $dark-green;
+		}
+	}
+	&.teleservices {
+		.banner {
+			background-color: $light-blue;
+		}
+	}
+}
+
+
