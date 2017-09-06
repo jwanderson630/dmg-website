@@ -107,6 +107,8 @@
 					display: inline-block;
 					text-align: center;
 					.arrow-img {
+						@include flexbox;
+						align-items: center;
 						position: relative;
 						right: -50%;
 						background-color: white;
