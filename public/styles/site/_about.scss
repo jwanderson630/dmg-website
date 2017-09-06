@@ -26,10 +26,12 @@
 				.quote-mark {
 					width: 20px;
 					position: relative;
-					bottom: 2px;
 					padding: .2em;
 					img {
 						width: 20px;
+					}
+					&.first {
+						top: 12px;
 					}
 					&.end {
 						transform: rotate(180deg);
@@ -66,9 +68,13 @@
 					background-color: $dark-green;
 					opacity: .20;
 					margin: .2em;
+					cursor: pointer;
 					&.active {
 						background-color: $orange;
 						opacity: 1;
+					}
+					&:hover {
+						opacity: .5;
 					}
 				}
 				img {
@@ -168,9 +174,9 @@
 				will-change: max-height;
 				&.visible {
 					padding-bottom: 15px;
-					max-height: 500px;
+					max-height: 550px;
 					@media(min-width: 561px) {
-						max-height: 275px;
+						max-height: 350px;
 					}
 					@media (min-width: 992px) {
 						max-height: 200px;

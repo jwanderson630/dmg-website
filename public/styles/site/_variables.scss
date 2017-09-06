@@ -178,16 +178,17 @@ input, textarea, select, option {
     
     padding: 2vh 2vw;
     .header-content {
+      @include flexbox;
+      align-items: stretch;
       margin-top: $nav-base-height;
       width: 100%;
-      flex-basis: auto;
       .header-border {
         @include flexbox;
         flex-direction: column;
         border: 3px solid $white;
         flex-basis: auto;
         @include border-radius;
-        height: 100%;
+        width: 100%;
         align-items: center;
         justify-content: center;
         .inner-content {

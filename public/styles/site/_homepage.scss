@@ -15,19 +15,21 @@
 		align-items: stretch;
 		height: 100vh;
 		.header-content {
+			@include flexbox;
+			width: 100%;
+			align-items:stretch;
 			margin-top: $nav-base-height;
 			padding: 2vh 2vw;
 			width: 100%;
-			flex-basis: auto;
 			.header-border {
 				@include flexbox;
 				flex-direction: column;
 				border: 3px solid $white;
 				@include border-radius;
-				height: 100%;
 				align-items: center;
 				justify-content: center;
 				flex-basis: auto;
+				width: 100%;
 				.inner-content {
 					color: $white;
 					padding: 5%;
@@ -63,11 +65,11 @@
 	}
 	.page-body {
 		background-color: $white;
-		padding: 3vh 0 0 0;
+		padding: 5vh 0 0 0;
 		.intro {
 			padding-bottom: 5vh;
 			h2 {
-				margin: 1em 0;
+				margin-bottom: 2vh;
 			}
 			p {
 			}
@@ -99,17 +101,20 @@
 				}
 				.break-arrow {
 					@include arrow($light-grey, 24px);
-					width: 30px;
+					width: 100%;
 					text-align: center;
 					background-color: white;
 					display: inline-block;
-					position: absolute;
-					top: 0;
-					right: 50%;
+					text-align: center;
 					.arrow-img {
 						position: relative;
 						right: -50%;
 						background-color: white;
+						svg {
+							position: relative;
+							background-color: $white;
+							padding: 0 .3em;
+						}
 					}
 				}
 			}

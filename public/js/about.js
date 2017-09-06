@@ -52,7 +52,7 @@ $(document).ready( () => {
 			clientQuotes.currentQuote = changeTo;
 		}, timeout);
 	};
-	console.log($('.team-section').position().top);
+
 	cycleQuotes = function() {
 		if (!clientQuotes.paused && $(window).scrollTop() < ($('.team-section').position().top - 100)) {
 			const newQuote = clientQuotes.currentQuote + 1 > 4 ? 0 : clientQuotes.currentQuote + 1; 
