@@ -7,9 +7,9 @@
 .contact-content {
 	@include flexbox;
 	flex-direction: column;
-	padding-bottom: 8vh;
+	padding-bottom: 60px;
 	.contact-info {
-		margin-bottom: 3vh;
+		margin-bottom: 30px;
 		a {
 			color: $orange;
 		}
@@ -55,5 +55,5 @@
 
 .map {
 	background-color: $white;
-	height: 40vh;
+	height: 400px;
 }

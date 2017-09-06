@@ -131,7 +131,7 @@ html, body {
 		@media (min-width: 768px) {
 			flex-direction: row;
 			width: auto;
-			padding: 0 4vh;
+			padding: 0 35px;
 			box-shadow: none;
 			height: $nav-base-height;
 			max-height: $nav-base-height;
@@ -193,7 +193,7 @@ html, body {
 
 .footer {
 	background-color: $dark-green;
-	padding-top: 5vh;
+	padding-top: 40px;
 	box-shadow: 0 -3px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 	width: 100%;
 	.footer-content {
@@ -235,7 +235,7 @@ html, body {
 		.footer-logo {
 			width: 100%;
 			text-align: right;
-			padding: 2vh 0;
+			padding: 20px 0;
 			color: $lime-green;
 			font-weight: lighter;
 			img {
@@ -265,12 +265,12 @@ html, body {
 
 .page-body {
 	background-color: $white;
-	padding: 5vh 0;
+	padding: 40px 0;
 	.body-content {
 		h2 {
 			border-bottom: 3px solid $orange;
 			display: inline-block;
-			margin-bottom: 2vh;
+			margin-bottom: 20px;
 			&.sc {
 				border-bottom: 3px solid $light-green;
 			}
@@ -315,7 +315,7 @@ html, body {
 }
 
 .featured-content-section {
-		padding: 5vh 0;
+		padding: 40px 0;
 		h3 {
 			font-family: 'Bree Serif', serif;
 			color: $dark-green;
@@ -389,7 +389,7 @@ html, body {
 			background-color: rgba(76,69,23,0.1);
 			text-decoration: none;
 			color: $dark-grey;
-			margin-top: 3vh;
+			margin-top: 20px;
 			&:hover {
 				background-color: rgba(76,69,23,0.3);
 			}

@@ -8,8 +8,8 @@
 			@include border-radius;
 			background-color: $dark-green-transparent;
 			padding: 3%;
-			margin-top: 3vh;
-			margin-bottom: 3vh;
+			margin-top: 30px;
+			margin-bottom: 30px;
 			.quote {
 				@include linear-transition(0.2s);
 				@include flexbox;
@@ -106,7 +106,7 @@
 	}
 	.team-section {
 		background-color: $dark-green-lightened;
-		margin-top: 5vh;
+		margin-top: 40px;
 		.executive-team {
 			background-color: $dark-green-transparent;
 			padding: 2em 0;
