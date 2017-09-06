@@ -18,6 +18,7 @@
 			margin-top: $nav-base-height;
 			padding: 2vh 2vw;
 			width: 100%;
+			flex-basis: auto;
 			.header-border {
 				@include flexbox;
 				flex-direction: column;
@@ -26,6 +27,7 @@
 				height: 100%;
 				align-items: center;
 				justify-content: center;
+				flex-basis: auto;
 				.inner-content {
 					color: $white;
 					padding: 5%;

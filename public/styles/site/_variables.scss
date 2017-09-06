@@ -180,10 +180,12 @@ input, textarea, select, option {
     .header-content {
       margin-top: $nav-base-height;
       width: 100%;
+      flex-basis: auto;
       .header-border {
         @include flexbox;
         flex-direction: column;
         border: 3px solid $white;
+        flex-basis: auto;
         @include border-radius;
         height: 100%;
         align-items: center;
