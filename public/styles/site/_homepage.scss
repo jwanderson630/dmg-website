@@ -19,7 +19,7 @@
 			width: 100%;
 			align-items:stretch;
 			margin-top: $nav-base-height;
-			padding: 2vh 2vw;
+			padding: 20px 2vw;
 			width: 100%;
 			.header-border {
 				@include flexbox;
@@ -65,17 +65,17 @@
 	}
 	.page-body {
 		background-color: $white;
-		padding: 5vh 0 0 0;
+		padding: 40px 0 0 0;
 		.intro {
-			padding-bottom: 5vh;
+			padding-bottom: 40px;
 			h2 {
-				margin-bottom: 2vh;
+				margin-bottom: 20px;
 			}
 			p {
 			}
 			ul {
 				list-style: none;
-				margin-bottom: 4em;
+				margin-bottom: 40px;
 				padding-left: 5%;
 				li {
 					@include flexbox;
@@ -122,7 +122,7 @@
 	}
 
 	.services-section {
-		margin: 5vh 0 5vh 0;
+		margin: 40px 0 40px 0;
 		padding: 0 5%;
 		.services-help {
 			margin-bottom: 2em;
@@ -165,9 +165,11 @@
 							}
 						}
 						.arrow {
-							@include linear-transition(0.1s);
 							position: absolute;
 							right: 1em;
+							#services-help-arrow {
+								@include linear-transition(0.1s);
+							}
 						}
 						&:hover {
 							box-shadow: 0 3px 8px 4px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
@@ -207,7 +209,7 @@
 						.dropdown-options {
 							max-height: 600px;
 						}
-						.arrow {
+						#services-help-arrow {
 							transform: rotate(180deg);
 						}
 					}
@@ -327,8 +329,8 @@
 	.contact-section {
 		background-color: $dark-green-transparent;
 		.contact-content {
-			padding-top: 6vh;
-			padding-bottom: 6vh;
+			padding-top: 50px;
+			padding-bottom: 50px;
 			display: block;
 			h2 {
 				display: inline-block;
@@ -347,8 +349,8 @@
 				margin: 2em 0;
 			}
 			@media(min-width: 890px) {
-				padding-top: 10vh;
-				padding-bottom: 10vh;
+				padding-top: 100px;
+				padding-bottom: 100px;
 			}
 		}
 		@media (min-width: 890px) and (max-width: 992px) {
