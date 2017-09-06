@@ -167,8 +167,11 @@
 							}
 						}
 						.arrow {
+							@include flexbox;
+							align-items: center;
 							position: absolute;
 							right: 1em;
+
 							#services-help-arrow {
 								@include linear-transition(0.1s);
 							}

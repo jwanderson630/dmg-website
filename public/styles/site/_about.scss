@@ -110,10 +110,11 @@
 		.executive-team {
 			background-color: $dark-green-transparent;
 			padding: 2em 0;
-			text-align: center;
-			h2 {
-				margin-bottom: 0.5em;
+			.header-row {
 				text-align: center;
+				h2 {
+				margin-bottom: 0.5em;
+				}
 			}
 		}
 		.team {
