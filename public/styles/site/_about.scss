@@ -3,6 +3,14 @@
 		background-image: url('/images/headers/about-min.jpg');
 		background-position: 50% 20%;
 	}
+	.intro {
+		font-size: 1.2em;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		strong {
+			color: $dark-green;
+		}
+	}
 	.client-section {
 		.quote-container {
 			@include border-radius;
