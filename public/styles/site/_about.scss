@@ -147,9 +147,19 @@
 			background-color: $white;
 			text-align: left;
 			border-bottom: 5px solid $white;
+			
 			.team-photo {
+				position: relative;
 				img {
 					width: 100%;
+				}
+				.cover {
+					position: absolute;
+					background-color: transparentize($dark-green, .8);
+					z-index: 8;
+					height: 100%;
+					width: 100%;
+					top: 0;
 				}
 			}
 			.team-info {
@@ -211,7 +221,7 @@
 			.executive-team {
 				text-align: left;
 				.team-member {
-					max-width: 350px;
+					max-width: 300px;
 				}
 				.team-member-holder {
 					justify-content: space-between;
