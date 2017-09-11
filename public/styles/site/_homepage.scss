@@ -32,7 +32,7 @@
 				width: 100%;
 				.inner-content {
 					color: $white;
-					padding: 2%;
+					padding: 20px 5px;
 					.header-button {
 						@include linear-transition(0.1s);
 						background-color: $orange-transparent;

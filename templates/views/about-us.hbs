@@ -58,7 +58,7 @@
 					<div class="team-member-holder executive">
 						{{# each data.executiveTeam}}
 						<div class="team-member" id="exec{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "exec", {{@index}})'>
-							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
+							<div class="team-photo"><img src="{{{cloudinaryUrl image width=150 height=150 crop='fit' }}}"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
 								<div class="team-title">{{jobTitle}}</div>
