@@ -111,6 +111,19 @@
 					&:last-child {
 						border-bottom: none;
 					}
+					.category-link {
+						@include border-radius;
+						margin-top: 1em;
+						background-color: transparentize($dark-green, .8);
+						padding: 5px 10px;
+						a {
+							color: $dark-green;
+							text-decoration: none;
+							&:hover {
+								text-decoration: underline;
+							}
+						}
+					}
 				}
 			}
 		}

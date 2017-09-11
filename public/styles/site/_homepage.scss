@@ -171,7 +171,7 @@
 							align-items: center;
 							position: absolute;
 							right: 1em;
-
+							flex: 0 0 auto;
 							#services-help-arrow {
 								@include linear-transition(0.1s);
 							}
