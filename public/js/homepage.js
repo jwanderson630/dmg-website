@@ -24,7 +24,25 @@ $(document).ready(() => {
 		}
 	}
 
+	capabilityFix = function() {
+		let height = 0;
+		$('.capability .header').height('auto');
+		$('.capability .header').each( function(){
+			console.log('test');
+			if ($(this).height() > height) {
+				height = $(this).height();
+			}
+		});
+		$('.capability .header').height(height);
+	}
+
 	setInterval(changeQuestion, 4000)
+
+	$(window).resize(() => {
+		capabilityFix();
+	});
+
+	capabilityFix();
 
 	$('.dynamic-text').html(helpQuestions[1]);
 

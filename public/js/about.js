@@ -5,7 +5,7 @@ $(document).ready( () => {
 			{
 				quote: "DMG is one of those awesome partnership’s at Danaher. They originally started working in a single BU and then through referrals and significant value added results they have helped many Danaher BUs in recent years. They bring unique experience, a graceful style and a mindset of getting to the right answer. In the DBSO, we view them as part of a very short list of significantly valued partners.",
 				clientName: "Mike Weatherred",
-				clientCompany: "Vice President"
+				clientCompany: "Vice President, Danaher"
 			},
 			{
 				quote: "Quote 2",

@@ -245,6 +245,7 @@
 			a {
 				text-decoration: none;
 				color: $white;
+				display: inline-block;
 			}
 			.capability {
 				@include flexbox;
@@ -285,44 +286,53 @@
 						border: 3px solid $white;
 						@include border-radius;
 						margin: 0 auto;
-						&:hover {
-							background-color: $white;
-							color: $light-green;
-						}
 					}
 				}
 				&.sc {
 				    background-color: $light-green;
-			    	.capability-btn:hover {
-			    		color: $light-green;
+			    	&:hover {
+			    		.capability-btn {
+			    			color: $light-green;
+				    	}
 				    }
 				 }
 				&.do {
 				    background-color: $dark-green;
-				    .capability-btn:hover {
-			    		color: $dark-green;
+				    &:hover {
+				    	.capability-btn {
+			    			color: $dark-green;
+				    	}
 				    }
 				  }
 				&.tel {
 				    background-color: $light-blue;
-				    .capability-btn:hover {
-			    		color: $light-blue;
+				    &:hover {
+				    	.capability-btn {
+			    			color: $light-blue;
+				    	}
 				    }
 				  }
 				&.ma {
 				    background-color: $dark-blue;
-				    .capability-btn:hover {
-			    		color: $dark-blue;
+				    &:hover {
+				    	.capability-btn {
+			    			color: $dark-blue;
+				    	}
 				    }
 				  }
 				&.cc {
 				    background-color: $gold;
-				    .capability-btn:hover {
-			    		color: $gold;
+				    &:hover {
+				    	.capability-btn {
+			    			color: $gold;
+				    	}
 				    }
 				}
 				&:hover {
 					box-shadow: 0 3px 8px 4px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
+					.capability-btn {
+						background-color: white;
+					}
 				}
 				@media (min-width: 576px) {
 					flex-basis: 70%;

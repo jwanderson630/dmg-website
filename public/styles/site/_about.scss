@@ -31,20 +31,9 @@
 				&.hidden {
 					opacity: 0;
 				}
-				.quote-mark {
-					width: 20px;
-					position: relative;
-					padding: .2em;
-					img {
-						width: 20px;
-					}
-					&.first {
-						top: 12px;
-					}
-					&.end {
-						transform: rotate(180deg);
-						bottom: 2px;
-					}
+				.quotemark {
+					color: $orange;
+					font-weight: 700px;
 				}
 			}
 			.client-info {
