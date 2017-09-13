@@ -1,5 +1,6 @@
 $(document).ready(() => {
-	console.log(document.cookie);
+	console.log(document.cookie.split(';'));
+	console.log(document.cookie.split(';').indexOf('completedGate=true') >= 0);
 	if(document.cookie.split(';').indexOf('completedGate=true') >= 0) {
 		$('.gate-cover').remove();
 	} else {
