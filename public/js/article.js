@@ -1,14 +1,16 @@
 $(document).ready(() => {
+	console.log(document.cookie);
+	if(document.cookie.split(';').indexOf('completedGate=true') >= 0) {
+		$('.gate-cover').remove();
+	} else {
+		$('.gate-cover').addClass('visible');
+	}
 
-		console.log(document.cookie);
-		var decodedCookie = decodeURIComponent(document.cookie);
-		console.log(decodedCookie);
-
-		$('#gateForm').submit( () => {
-			console.log('hello');
-			let date = new Date();
-			date.setMonth(date.getMonth() + 12);
-			document.cookie= "completedGate=true;expires=" + date + ";domain=.example.com;path=/";
-			return true;
-		});
+	$('#gateForm').submit( () => {
+		let date = new Date();
+		date.setMonth(date.getMonth() + 12);
+		document.cookie = "completedGate=true;expires=" + date + ";domain=dmg-website.herokuapp.com;path=/";
+		console.log(document.cookie, '2');
+		return true;
+	});
 })

@@ -52,14 +52,13 @@ exports = module.exports = function (req, res) {
 
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'firstName, lastName, email, phone, company, zip, jobTitle, message',
+			fields: 'firstName, lastName, email, phone, company',
 			errorMessage: 'There was a problem submitting your enquiry:',
 		}, function (err) {
 			if (err) {
 				locals.validationErrors = err.errors;
 				console.log(err);
 			} else {
-				console.log('hello')
 				locals.gate = false;
 			}
 			next();
