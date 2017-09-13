@@ -10,7 +10,7 @@ exports = module.exports = function (req, res) {
 	locals.section = 'contact';
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
-	locals.enquirySubmitted = false;
+	locals.gate = true;
 
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'contact' }, function (next) {
@@ -20,7 +20,7 @@ exports = module.exports = function (req, res) {
 
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'firstName, lastName, email, phone, company, jobTitle, message',
+			fields: 'firstName, lastName, email, phone, company, zip, jobTitle, message',
 			errorMessage: 'There was a problem submitting your enquiry:',
 		}, function (err) {
 			if (err) {

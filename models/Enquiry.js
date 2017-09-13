@@ -19,6 +19,7 @@ Enquiry.add({
 	company: {type: String},
 	jobTitle: {type: String},
 	message: { type: Types.Markdown },
+	zip: {type: String},
 	createdAt: { type: Date, default: Date.now },
 });
 
