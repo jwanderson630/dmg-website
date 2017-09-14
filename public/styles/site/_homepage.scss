@@ -217,7 +217,7 @@
                             font-size: 1.2em;
 
                             opacity: 1;
-                            flex: 0 0 auto;
+                            flex: 2 0 auto;
                             &.hidden {
                                 opacity: 0;
                             }
@@ -227,12 +227,9 @@
 
 
                             align-items: center;
-                            flex: 2 0 auto;
+                            flex: 0 0 auto;
                             height: 100%;
-                            svg {
-                                position: absolute;
-                                right: 10px;
-                            }
+                            align-items: center;
                             #services-help-arrow {
                                 @include linear-transition(.1s);
                             }
