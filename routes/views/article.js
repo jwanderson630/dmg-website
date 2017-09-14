@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 	var locals = res.locals;
 
 	var transporter = nodemailer.createTransport({
-	    host: 'smtp-mail.outlook.com',
+	    host: 'dunthorpemarketing.com',
 	    secureConnection: false,
 	    port: 587,
 	    tls: {
