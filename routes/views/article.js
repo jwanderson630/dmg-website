@@ -1,10 +1,31 @@
 var keystone = require('keystone');
 var Enquiry = keystone.list('Enquiry');
+const nodemailer = require('nodemailer');
 
 exports = module.exports = function (req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
+
+	var transporter = nodemailer.createTransport({
+	    host: 'smtp-mail.outlook.com',
+	    secureConnection: false,
+	    port: 587,
+	    tls: {
+	    	ciphers: 'SSLv3'
+	    },
+		auth: {
+			user: 'janderson@dunthorpemarketing.com',
+			pass: 'Earth28',
+		}
+	});
+
+	var mailOptions = {
+		from: 'janderson@dunthorpemarketing.com',
+		to: 'janderson@dunthorpemarketing.com',
+		subject: 'test',
+		text: 'test',
+	};
 
 	// Set locals
 	locals.section = 'resources';
@@ -58,7 +79,14 @@ exports = module.exports = function (req, res) {
 			if (err) {
 				locals.validationErrors = err.errors;
 				console.log(err);
-			} else {
+			} else { 
+				transporter.sendMail(mailOptions, function(error, info) {
+					if (error) {
+						console.log(error);
+					} else {
+						console.log('email sent');
+					}
+				});
 				locals.gate = false;
 			}
 			next();

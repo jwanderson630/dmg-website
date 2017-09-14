@@ -1,94 +1,107 @@
 .article-page {
-	.banner {
-		height: 90px;
-		background-color: $orange;
-	}
-	.featured-content-section {
-		background-color: $dark-green-lightened
-	}
-	&.strategy-and-consulting {
-		.banner {
-			background-color: $light-green;
-		}
-	}
-	&.campaigns-and-content {
-		.banner {
-			background-color: $gold;
-		}
-	}
-	&.marketing-automation {
-		.banner {
-			background-color: $dark-blue;
-		}
-	}
-	&.data-optimization {
-		.banner {
-			background-color: $dark-green;
-		}
-	}
-	&.teleservices {
-		.banner {
-			background-color: $light-blue;
-		}
-	}
+    .banner {
+        height: 90px;
+
+        background-color: $orange;
+    }
+    .featured-content-section {
+        background-color: $dark-green-lightened;
+    }
+    &.strategy-and-consulting {
+        .banner {
+            background-color: $light-green;
+        }
+    }
+    &.campaigns-and-content {
+        .banner {
+            background-color: $gold;
+        }
+    }
+    &.marketing-automation {
+        .banner {
+            background-color: $dark-blue;
+        }
+    }
+    &.data-optimization {
+        .banner {
+            background-color: $dark-green;
+        }
+    }
+    &.teleservices {
+        .banner {
+            background-color: $light-blue;
+        }
+    }
 }
 
 .gate-cover {
-	@include flexbox;
-	@include linear-transition(0.2s);
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	background-color: transparentize($dark-green, 0.05);
-	height: 100vh;
-	width: 100vw;
-	z-index: 1000;
-	top: 0;
-	opacity: 0;
-	.gate-form-holder {
-		@include border-radius;
-		box-shadow: 1px 0px 13px 5px rgba(0, 0, 0, 0.26), 0 0 0 1px rgba(0, 0, 0, 0.08);
-		background-color: white;
-		width: 800px;
-		max-width: 95vw;
-		padding: 15px;
-		.form-header {
-			text-align: center;
-			margin: 20px 0;
-		}
-		.form-group {
-			width: 100%;
-			input, textarea {
-				@include border-radius;
-				border: 1px solid $light-grey;
-				width: 100%;
-				margin-bottom: 10px;
-				padding: 0 5px;
-				font-size: 18px;
-				box-sizing: border-box;
-			}
-			input {
-				height: 2em;
-			}
-			textarea {
-				resize: none;
-				height: 4em;
-			}
-		}
-		.form-actions {
-			text-align: center;
-			margin-top: 20px;
-		}
-		.submit {
-			border:none;
-			cursor: pointer;
-			font-size: 1.2em;
-		}
-	}
-	&.visible {
-		opacity: 1;
-	}
+    @include flexbox;
+    @include linear-transition(.2s);
+
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    opacity: 0;
+    background-color: transparentize($dark-green, .05);
+
+    align-items: center;
+    justify-content: center;
+    .gate-form-holder {
+        @include border-radius;
+
+        width: 800px;
+        max-width: 95vw;
+        padding: 15px;
+
+        background-color: white;
+        box-shadow: 1px 0 13px 5px rgba(0, 0, 0, .26), 0 0 0 1px rgba(0, 0, 0, .08);
+        .form-header {
+            margin: 20px 0;
+
+            text-align: center;
+        }
+        .form-group {
+            width: 100%;
+            input,
+            textarea {
+                @include border-radius;
+
+                font-size: 18px;
+
+                box-sizing: border-box;
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 0 5px;
+
+                border: 1px solid $light-grey;
+            }
+            input {
+                height: 2em;
+            }
+            textarea {
+                height: 4em;
+
+                resize: none;
+            }
+        }
+        .form-actions {
+            margin-top: 20px;
+
+            text-align: center;
+        }
+        .submit {
+            font-size: 1.2em;
+
+            cursor: pointer;
+
+            border: none;
+        }
+    }
+    &.visible {
+        opacity: 1;
+    }
 }
-
-
-

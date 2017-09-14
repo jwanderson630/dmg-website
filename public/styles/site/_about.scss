@@ -1,281 +1,329 @@
 .about-page {
-	.header-image-md {
-		background-image: url('/images/headers/about-min.jpg');
-		background-position: 50% 20%;
-	}
-	.intro {
-		font-size: 1.2em;
-		margin-top: 50px;
-		margin-bottom: 50px;
-		strong {
-			color: $dark-green;
-		}
-	}
-	.client-section {
-		.quote-container {
-			@include border-radius;
-			background-color: $dark-green-transparent;
-			padding: 3%;
-			margin-top: 30px;
-			margin-bottom: 30px;
-			.quote {
-				@include linear-transition(0.2s);
-				@include flexbox;
-				flex-direction: row;
-				align-items: flex-start;
-				opacity: 1;
-				min-height: 6em;
-				p {
-					line-height: 2em;
-				}
-				&.hidden {
-					opacity: 0;
-				}
-				.quotemark {
-					color: $orange;
-					font-weight: 700px;
-				}
-			}
-			.client-info {
-				@include linear-transition(0.2s);
-				margin-top: 1em;
-				text-align: right;
-				opacity: 1;
-				.client-name {
-					font-size: 1.2em;
-					.mdash {
-						font-weight: 700;
-						color: $orange;
-					}
-				}
-				&.hidden {
-					opacity: 0;
-				}
-			}
-			.controls {
-				@include flexbox;
-				align-items: center;
-				justify-content: center;
-				margin-top: 1em;
-				.dot {
-					@include linear-transition(.2s);
-					height: .75em;
-					width: .75em;
-					border-radius: 50%;
-					background-color: $dark-green;
-					opacity: .20;
-					margin: .2em;
-					cursor: pointer;
-					&.active {
-						background-color: $orange;
-						opacity: 1;
-					}
-					&:hover {
-						opacity: .5;
-					}
-				}
-				img {
-					height: 100%;
-					position: relative;
-					top: 2px;
-				}
-				.arrow {
-					@include border-radius;
-					cursor: pointer;
-					padding: .1em;
-					&:hover {
-						background-color: $dark-green-transparent;
-					}
+    .header-image-md {
+        background-image: url('/images/headers/about-min.jpg');
+        background-position: 50% 20%;
+    }
+    .intro {
+        font-size: 1.2em;
 
-				} 
-			}
-		}
-		.logo-container {
-			@include flexbox;
-			flex-wrap: wrap;
-			justify-content: space-evenly;
-			margin-top: 0 -15px;
-			.client-logo {
-				margin: 15px;
-			}
-		}
-		
-	}
-	.team-section {
-		background-color: $dark-green-lightened;
-		margin-top: 40px;
-		.executive-team {
-			background-color: $dark-green-transparent;
-			padding: 2em 0;
-			.header-row {
-				text-align: center;
-				h2 {
-				margin-bottom: 0.5em;
-				}
-			}
-		}
-		.team {
-			padding: 1em 0;
-		}
-		.team-member-holder {
-			@include flexbox;
-			flex-wrap: wrap;
-			justify-content: center;
-			margin: 0 -15px;
-		}
+        margin-top: 50px;
+        margin-bottom: 50px;
+        strong {
+            color: $dark-green;
+        }
+    }
+    .client-section {
+        .quote-container {
+            @include border-radius;
 
-		.team-member {
-			@include border-radius;
-			@include linear-transition(0.1s);
-			flex:  1 1 250px;
-			margin: 1em 15px;
-			max-width: 262px;
-			box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-			overflow: hidden;
-			cursor: pointer;
-			background-color: $white;
-			text-align: left;
-			border-bottom: 5px solid $white;
-			
-			.team-photo {
-				position: relative;
-				img {
-					width: 100%;
-				}
-				.cover {
-					position: absolute;
-					background-color: transparentize($dark-green, .8);
-					z-index: 8;
-					height: 100%;
-					width: 100%;
-					top: 0;
-				}
-			}
-			.team-info {
-				padding: .5em;
-				.team-name {
-					font-size: 1.3em;
-					font-weight: 300;
-				}
-			}
-			&.active {
-				box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
-				border-bottom: 5px solid $dark-green;
-			}
-			&:hover {
-				box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
-			}
-		}
-		.divider {
-			max-height: 0;
-			width: 0;
-			overflow: hidden;
-			&.dividing {
-				transition: max-height 0.3s linear, padding 0.3s linear;
-				-moz-transition: max-height 0.3s linear, padding 0.3s linear;
-				-webkit-transition: max-height 0.3s linear, padding 0.3s linear;
-				-o-transition: max-height 0.3s  linear, padding 0.3s linear;
-				height: 1;
-				width: 100%;
-				padding-left: 15px;
-				padding-right: 15px;
-				will-change: max-height;
-				&.visible {
-					padding-bottom: 15px;
-					max-height: 550px;
-					@media(min-width: 561px) {
-						max-height: 350px;
-					}
-					@media (min-width: 992px) {
-						max-height: 200px;
-					}
-					@media (min-width: 1200px) {
-						max-height: 200px;
-					}
-				}
-				.text {
-					@include ease-transition (0.2s);
-					@include border-radius;
-					padding: 1em;
-					background-color: $white;
-					color: $white;
-					box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0, 0.08);
-					&.visible {
-						color: $dark-grey;
-					}
-				}
-			}
-		}
-		@media (min-width: 992px) {
-			.executive-team {
-				text-align: left;
-				.team-member {
-					max-width: 300px;
-				}
-				.team-member-holder {
-					justify-content: space-between;
-				}
-			}
-		}
-	}
-	.building-section {
-		h2 {
-			margin: 1em 0;
-		}
-		p {
-			margin-bottom: 1em;
-		}
-		.building-history {
-			@include flexbox;
-			flex-direction: column;
-			align-items: center;
-			.history-text {
-				@include border-radius;
-			}
-			.history-images {
-				@include flexbox;
-				@include border-radius;
-				flex-direction: row;
-				flex-wrap: wrap;
-				min-width: 300px;
-				width: 100%;
-				justify-content: space-evenly;
-				box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
-				text-align: center;
-				.image-block {
-					flex: 1 1 300px;
-					max-width: 300px;
-					margin: 1em;
-				}
-				img {
-					@include border-radius;
-					width: 100%;
-				}
-				.image-caption {
-					@include border-radius;
-					background-color: $dark-green-transparent;
-					padding: 1em;
-				}
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 3%;
 
-			}
-			@media(min-width: 992px) {
-				flex-direction: row-reverse;
-				align-items: flex-start;
-				.history-text {
-					background-color: $dark-green-transparent;
-					padding: 1em;
-				}
-				.history-images {
-					margin-right: 1em;
-					flex-direction: column;
-					padding: 0 15px;
-					.image-block {
-						flex-basis: 0;
-						margin: 15px 0;
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
+            background-color: $dark-green-transparent;
+            .quote {
+                @include linear-transition(.2s);
+                @include flexbox;
+
+                flex-direction: row;
+
+                min-height: 6em;
+
+                opacity: 1;
+
+                align-items: flex-start;
+                p {
+                    line-height: 2em;
+                }
+                &.hidden {
+                    opacity: 0;
+                }
+                .quotemark {
+                    font-weight: 700px;
+
+                    color: $orange;
+                }
+            }
+            .client-info {
+                @include linear-transition(.2s);
+
+                margin-top: 1em;
+
+                text-align: right;
+
+                opacity: 1;
+                .client-name {
+                    font-size: 1.2em;
+                    .mdash {
+                        font-weight: 700;
+
+                        color: $orange;
+                    }
+                }
+                &.hidden {
+                    opacity: 0;
+                }
+            }
+            .controls {
+                @include flexbox;
+
+                margin-top: 1em;
+
+                align-items: center;
+                justify-content: center;
+                .dot {
+                    @include linear-transition(.2s);
+
+                    width: .75em;
+                    height: .75em;
+                    margin: .2em;
+
+                    cursor: pointer;
+
+                    opacity: .20;
+                    border-radius: 50%;
+                    background-color: $dark-green;
+                    &.active {
+                        opacity: 1;
+                        background-color: $orange;
+                    }
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+                img {
+                    position: relative;
+                    top: 2px;
+
+                    height: 100%;
+                }
+                .arrow {
+                    @include border-radius;
+
+                    padding: .1em;
+
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $dark-green-transparent;
+                    }
+                }
+            }
+        }
+        .logo-container {
+            @include flexbox;
+
+            margin-top: 0 -15px;
+
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .client-logo {
+                margin: 15px;
+            }
+        }
+    }
+    .team-section {
+        margin-top: 40px;
+
+        background-color: $dark-green-lightened;
+        .executive-team {
+            padding: 2em 0;
+
+            background-color: $dark-green-transparent;
+            .header-row {
+                text-align: center;
+                h2 {
+                    margin-bottom: .5em;
+                }
+            }
+        }
+        .team {
+            padding: 1em 0;
+        }
+        .team-member-holder {
+            @include flexbox;
+
+            margin: 0 -15px;
+
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .team-member {
+            @include border-radius;
+            @include linear-transition(.1s);
+
+            overflow: hidden;
+
+            max-width: 262px;
+            margin: 1em 15px;
+
+            cursor: pointer;
+            text-align: left;
+
+            border-bottom: 5px solid $white;
+            background-color: $white;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
+
+            flex: 1 1 250px;
+            .team-photo {
+                position: relative;
+                img {
+                    width: 100%;
+                }
+                .cover {
+                    position: absolute;
+                    z-index: 8;
+                    top: 0;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background-color: transparentize($dark-green, .8);
+                }
+            }
+            .team-info {
+                padding: .5em;
+                .team-name {
+                    font-size: 1.3em;
+                    font-weight: 300;
+                }
+            }
+            &.active {
+                border-bottom: 5px solid $dark-green;
+                box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0, .08);
+            }
+            &:hover {
+                box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0, .08);
+            }
+        }
+        .divider {
+            overflow: hidden;
+
+            width: 0;
+            max-height: 0;
+            &.dividing {
+                width: 100%;
+                height: 1;
+                padding-right: 15px;
+                padding-left: 15px;
+
+                -webkit-transition: max-height .3s linear, padding .3s linear;
+                   -moz-transition: max-height .3s linear, padding .3s linear;
+                     -o-transition: max-height .3s  linear, padding .3s linear;
+                        transition: max-height .3s linear, padding .3s linear;
+
+                will-change: max-height;
+                &.visible {
+                    max-height: 550px;
+                    padding-bottom: 15px;
+                    @media(min-width: 561px) {
+                        max-height: 350px;
+                    }
+                    @media (min-width: 992px) {
+                        max-height: 200px;
+                    }
+                    @media (min-width: 1200px) {
+                        max-height: 200px;
+                    }
+                }
+                .text {
+                    @include ease-transition (.2s);
+                    @include border-radius;
+
+                    padding: 1em;
+
+                    color: $white;
+                    background-color: $white;
+                    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0, .08);
+                    &.visible {
+                        color: $dark-grey;
+                    }
+                }
+            }
+        }
+        @media (min-width: 992px) {
+            .executive-team {
+                text-align: left;
+                .team-member {
+                    max-width: 300px;
+                }
+                .team-member-holder {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+    .building-section {
+        h2 {
+            margin: 1em 0;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .building-history {
+            @include flexbox;
+
+            flex-direction: column;
+
+            align-items: center;
+            .history-text {
+                @include border-radius;
+            }
+            .history-images {
+                @include flexbox;
+                @include border-radius;
+
+                flex-direction: row;
+
+                width: 100%;
+                min-width: 300px;
+
+                text-align: center;
+
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
+
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .image-block {
+                    max-width: 300px;
+                    margin: 1em;
+
+                    flex: 1 1 300px;
+                }
+                img {
+                    @include border-radius;
+
+                    width: 100%;
+                }
+                .image-caption {
+                    @include border-radius;
+
+                    padding: 1em;
+
+                    background-color: $dark-green-transparent;
+                }
+            }
+            @media(min-width: 992px) {
+                flex-direction: row-reverse;
+
+                align-items: flex-start;
+                .history-text {
+                    padding: 1em;
+
+                    background-color: $dark-green-transparent;
+                }
+                .history-images {
+                    flex-direction: column;
+
+                    margin-right: 1em;
+                    padding: 0 15px;
+                    .image-block {
+                        width: 100%;
+                        margin: 15px 0;
+
+                        flex-basis: 0;
+                    }
+                }
+            }
+        }
+    }
 }
