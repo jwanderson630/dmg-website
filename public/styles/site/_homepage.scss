@@ -41,7 +41,7 @@
                 justify-content: center;
                 flex-basis: auto;
                 .inner-content {
-                    padding: 5px 5px;
+                    padding: 5px 15px;
 
                     color: $white;
                     .header-button {
@@ -221,6 +221,9 @@
                             &.hidden {
                                 opacity: 0;
                             }
+                        }
+                        .spacer {
+                            flex: 4 0 auto; 
                         }
                         .arrow {
                             @include flexbox;

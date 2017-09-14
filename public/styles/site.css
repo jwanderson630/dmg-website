@@ -713,7 +713,7 @@ body {
       justify-content: center;
       flex-basis: auto; }
       .homepage .header-content-container .header-content .header-border .inner-content {
-        padding: 5px 5px;
+        padding: 5px 15px;
         color: #fff; }
         .homepage .header-content-container .header-content .header-border .inner-content .header-button {
           -webkit-transition: 0.1s linear;
@@ -865,6 +865,8 @@ body {
             flex: 2 0 auto; }
             .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .dynamic-text.hidden {
               opacity: 0; }
+          .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .spacer {
+            flex: 4 0 auto; }
           .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .arrow {
             display: -webkit-box;
             display: -moz-box;
