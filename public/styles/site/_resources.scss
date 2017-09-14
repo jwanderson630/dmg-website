@@ -121,7 +121,7 @@
 
                 flex-direction: column;
 
-                padding-top: 2em;
+                padding-top: 60px;
 
                 background-color: $white;
 
@@ -137,6 +137,10 @@
                     border-bottom: 1px solid $light-grey;
 
                     align-items: end;
+                    a {
+                        text-decoration: none;
+                        color: $olive-green;
+                    }
                     &:last-child {
                         border-bottom: none;
                     }
@@ -149,45 +153,35 @@
                         justify-content: space-between;
                     }
                     .category-link {
-                        @include border-radius;
-
-                        padding: 5px;
-
-                        background-color: transparentize($orange, .9);
+                        margin-top: 1em;
                         a {
                             text-decoration: none;
-
                             color: $orange;
                             &:hover {
                                 text-decoration: underline;
                             }
                         }
                         &.strategy-and-consulting {
-                            background-color: transparentize($light-green, .9);
                             a {
                                 color: $light-green;
                             }
                         }
                         &.campaigns-and-content {
-                            background-color: transparentize($gold, .9);
                             a {
                                 color: $gold;
                             }
                         }
                         &.marketing-automation {
-                            background-color: transparentize($dark-blue, .9);
                             a {
                                 color: $dark-blue;
                             }
                         }
                         &.data-optimization {
-                            background-color: transparentize($dark-green, .9);
                             a {
-                                color: $dark-green;
+                                color: $olive-green;
                             }
                         }
                         &.teleservices {
-                            background-color: transparentize($light-blue, .9);
                             a {
                                 color: $light-blue;
                             }

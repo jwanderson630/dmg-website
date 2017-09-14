@@ -55,14 +55,11 @@
 			<div class="resources-content">
 				{{# each data.posts.results}}
 				<article class="resource">
+					<h4><a href="{{postUrl slug}}">{{{title}}}</a></h4>
+					<div class="category-link {{{categories.[0].key}}}"><a href="/resources/{{{categories.[0].key}}}">{{categories.[0].name}}</a></div>	
 
-					<h4>{{{title}}}</h4>
-					
 					{{{content.brief}}}
-					<div class="btn-cat-row">
-						<a href="{{postUrl slug}}"><div class="resource-button btn {{{categories.[0].key}}}">Read More</div></a>
-						<div class="category-link {{{categories.[0].key}}}"><a href="/resources/{{{categories.[0].key}}}">{{categories.[0].name}}</a></div>	
-					</div>
+					<a href="{{postUrl slug}}"><div class="resource-button btn {{{categories.[0].key}}}">Read More</div></a>
 				</article>
 				{{/each}}
 			</div>
