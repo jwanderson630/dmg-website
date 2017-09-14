@@ -23,9 +23,8 @@
             @include flexbox;
 
             width: 100%;
-            width: 100%;
             margin-top: $nav-base-height;
-            padding: 20px 2vw;
+            padding: 5px 2vw;
 
             align-items: stretch;
             .header-border {
@@ -42,7 +41,7 @@
                 justify-content: center;
                 flex-basis: auto;
                 .inner-content {
-                    padding: 20px 5px;
+                    padding: 5px 5px;
 
                     color: $white;
                     .header-button {
@@ -68,6 +67,9 @@
                             display: inline-block;
                         }
                     }
+                    @media(min-width: 768px) {
+                        padding: 20px 5px;
+                    }
                 }
                 @media (min-width: 768px) {
                     padding: 5%;
@@ -82,7 +84,7 @@
                 }
             }
             @media(min-width: 768px) {
-                padding: 4vh 2vw;
+                padding: 40px 2vw;
             }
         }
     }
@@ -194,7 +196,7 @@
                         @include border-radius;
 
                         position: relative;
-
+                        
                         min-height: 3em;
                         padding: 0 1em;
 
@@ -203,7 +205,8 @@
                         color: $white;
                         background-color: $orange;
                         box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
-
+                        
+                        flex-direction: row;
                         align-items: center;
                         .static {
                             font-size: 1.3em;
@@ -214,6 +217,7 @@
                             font-size: 1.2em;
 
                             opacity: 1;
+                            flex: 0 0 auto;
                             &.hidden {
                                 opacity: 0;
                             }
@@ -221,11 +225,14 @@
                         .arrow {
                             @include flexbox;
 
-                            position: absolute;
-                            right: 1em;
 
                             align-items: center;
-                            flex: 0 0 auto;
+                            flex: 2 0 auto;
+                            height: 100%;
+                            svg {
+                                position: absolute;
+                                right: 10px;
+                            }
                             #services-help-arrow {
                                 @include linear-transition(.1s);
                             }

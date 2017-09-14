@@ -135,10 +135,9 @@
                     padding: 1em 0 2em 0;
 
                     border-bottom: 1px solid $light-grey;
-
-                    align-items: end;
                     a {
                         text-decoration: none;
+
                         color: $olive-green;
                     }
                     &:last-child {
@@ -156,6 +155,7 @@
                         margin-top: 1em;
                         a {
                             text-decoration: none;
+
                             color: $orange;
                             &:hover {
                                 text-decoration: underline;
