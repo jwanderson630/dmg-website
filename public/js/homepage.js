@@ -1,4 +1,7 @@
 $(document).ready(() => {
+
+	var headerHeight = $('.header-image').height();
+
 	var helpQuestions = {
 		questions: [
 			"transform my marketing operations and processes",
@@ -36,13 +39,20 @@ $(document).ready(() => {
 		$('.capability .header').height(height);
 	};
 
+	headerResize = function() {
+		let headerHeight = $('.header-image').height();
+		$('.header-content-container').css("height", headerHeight);
+	};
+
 	setInterval(changeQuestion, 4000);
 
 	$(window).resize(() => {
 		capabilityFix();
+		headerResize();
 	});
 
 	capabilityFix();
+	headerResize();
 
 	$('.dynamic-text').html(helpQuestions[1]);
 
@@ -59,5 +69,7 @@ $(document).ready(() => {
 		$('#services-help-dropdown').removeClass('expand');
 		helpQuestions.paused = false;
 	});
+
+
 
 });
