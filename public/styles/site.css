@@ -717,6 +717,7 @@ body {
           padding: 5%; } }
       .homepage .header-content-container .header-content .header-border .arrow {
         position: absolute;
+        margin: auto;
         bottom: 5%;
         cursor: pointer; }
         .homepage .header-content-container .header-content .header-border .arrow svg {
