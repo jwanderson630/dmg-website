@@ -24,7 +24,6 @@ Post.add({
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
-	metaTitle: {type: String},
 	meta: {
 		title: {type: String},
 		description: {type:String}
