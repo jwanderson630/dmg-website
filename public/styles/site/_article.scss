@@ -41,6 +41,16 @@
     
 }
 
+.back-btn {
+    @include inline-flexbox;
+    @include arrow($white, 100%);
+    align-items: center;
+    img {
+        height: 10px;
+        margin-right: 10px;
+    }
+}
+
 .breadcrumbs {
     color: $white;
     padding: 10px 15px;

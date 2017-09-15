@@ -4,7 +4,7 @@
 
 <div class="page-content article-page {{data.post.categories.[0].key}}">
 	<div class="banner">
-		<div class="breadcrumbs container"><span class="hidden-sm-down"><a href="/resources">Resources</a> \ </span><a href="/resources/{{data.post.categories.[0].key}}">{{data.post.categories.[0].name}}</a></div>
+		<div class="breadcrumbs container"><span class="hidden-sm-down"><a href="/resources"><span class="back-btn">{{#unless data.post.categories.[0]}}<img src="/images/arrow-left-white.svg"/>{{/unless}}Resources</a>{{#if data.post.categories.[0]}} | </span><a href="/resources/{{data.post.categories.[0].key}}">{{data.post.categories.[0].name}}</a>{{/if}}</div>
 	</div>
 	
 
