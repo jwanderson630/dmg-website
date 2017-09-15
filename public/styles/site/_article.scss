@@ -1,6 +1,6 @@
 .article-page {
     .banner {
-        height: 90px;
+        margin-top: $nav-base-height;
 
         background-color: $orange;
     }
@@ -32,7 +32,31 @@
             background-color: $light-blue;
         }
     }
+    .body-content {
+       .article-title {
+        margin-bottom: 0;
+        margin-top: 50px;
+        } 
+    }
+    
 }
+
+.breadcrumbs {
+    color: $white;
+    padding: 10px 15px;
+    a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    @media(min-width: 576px) {
+       padding: 10px 0;
+    }
+}
+
+
 
 .gate-cover {
     @include flexbox;
@@ -103,5 +127,37 @@
     }
     &.visible {
         opacity: 1;
+    }
+}
+
+.article-content {
+    p,
+    li {
+        font-family: $font-family !important;
+        font-size: 18px;
+        color: $dark-grey !important;
+    }
+    p.well {
+        padding: 15px;
+    }
+    h4 {
+        font-weight: 700;
+        margin-top: 50px;
+    }
+    .well {
+        @include border-radius;
+        
+        background-color: transparentize($dark-green, .9) !important;
+    }
+    .highlight {
+        color: $orange !important;
+    }
+    li {
+        padding: 1em 0;
+    }
+    .text-right {
+        width: 100%;
+        text-align: right;
+        display: block;
     }
 }

@@ -1,12 +1,19 @@
 <div class="page-content article-page {{data.post.categories.[0].key}}">
-	<div class="banner"></div>
+	<div class="banner">
+		<div class="breadcrumbs container"><span class="hidden-sm-down"><a href="/resources">Resources</a> \ </span><a href="/resources/{{data.post.categories.[0].key}}">{{data.post.categories.[0].name}}</a></div>
+	</div>
+	
+
+
 	<div class="page-body">
 		<div class="body-content container">
 			<article>
-				<h2>{{data.post.title}}</h2>
+				<h2 class="article-title">{{data.post.title}}</h2>
 				<div class="post">
 					{{#if data.post.image}}<img src="{{{cloudinaryUrl data.post.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
-					{{{data.post.content.extended}}}
+					<div class="article-content">
+						{{{data.post.content.extended}}}
+					</div>
 				</div>
 			</article>
 		</div>

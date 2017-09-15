@@ -531,10 +531,10 @@ body {
       border-bottom: 3px solid #7fadc2; }
   .page-body .body-content p {
     line-height: 1.5em; }
-  .page-body .body-content ul {
+  .page-body .body-content .service-list {
     padding-left: 5%;
     list-style: none; }
-    .page-body .body-content ul li {
+    .page-body .body-content .service-list li {
       display: -webkit-box;
       display: -moz-box;
       display: -ms-flexbox;
@@ -543,7 +543,7 @@ body {
       line-height: 1.5em;
       padding: 1em 0;
       align-content: center; }
-    .page-body .body-content ul img {
+    .page-body .body-content .service-list img {
       height: 1.5em;
       margin-right: .2em; }
   .page-body .body-content a {
@@ -1533,7 +1533,7 @@ body {
   background-color: #fff; }
 
 .article-page .banner {
-  height: 90px;
+  margin-top: 80px;
   background-color: #c66005; }
 
 .article-page .featured-content-section {
@@ -1553,6 +1553,22 @@ body {
 
 .article-page.teleservices .banner {
   background-color: #7fadc2; }
+
+.article-page .body-content .article-title {
+  margin-bottom: 0;
+  margin-top: 50px; }
+
+.breadcrumbs {
+  color: #fff;
+  padding: 10px 15px; }
+  .breadcrumbs a {
+    color: #fff;
+    text-decoration: none; }
+    .breadcrumbs a:hover {
+      text-decoration: underline; }
+  @media (min-width: 576px) {
+    .breadcrumbs {
+      padding: 10px 0; } }
 
 .gate-cover {
   display: -webkit-box;
@@ -1608,3 +1624,31 @@ body {
       border: none; }
   .gate-cover.visible {
     opacity: 1; }
+
+.article-content p,
+.article-content li {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 18px;
+  color: #404040 !important; }
+
+.article-content p.well {
+  padding: 15px; }
+
+.article-content h4 {
+  font-weight: 700;
+  margin-top: 50px; }
+
+.article-content .well {
+  border-radius: 4px;
+  background-color: rgba(76, 69, 23, 0.1) !important; }
+
+.article-content .highlight {
+  color: #c66005 !important; }
+
+.article-content li {
+  padding: 1em 0; }
+
+.article-content .text-right {
+  width: 100%;
+  text-align: right;
+  display: block; }
