@@ -52,7 +52,7 @@
 				<div class="team-container container">
 					<div class="team-member-holder">
 						{{# each data.team.executive}}
-						<div class="team-member" id="exec{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "executive", {{@index}})'>
+						<div class="team-member" id="executive{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "executive", {{@index}})'>
 							<div class="team-photo"><img src="{{{cloudinaryUrl image}}}"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
