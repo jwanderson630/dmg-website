@@ -16,7 +16,7 @@ Employee.add({
 	jobTitle: { type: String },
 	certifications: { type: String },
 	bio: { type: String },
-	executive: {type: Boolean},
+	team: { type: Types.Select, options: 'executive, account, technical, teleservices', default: 'draft', index: true },
 	image: { type: Types.CloudinaryImage },
 });
 

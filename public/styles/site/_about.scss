@@ -125,15 +125,17 @@
         margin-top: 40px;
 
         background-color: $dark-green-lightened;
-        .executive-team {
-            padding: 2em 0;
-
-            background-color: $dark-green-transparent;
-            .header-row {
-                text-align: center;
-                h2 {
-                    margin-bottom: .5em;
-                }
+        
+        .header-row {
+            text-align: center;
+            &.executive {
+                padding-top: 15px;
+            }
+            h2 {
+                margin-bottom: 0;   
+            }
+            @media(min-width: 1200px) {
+                text-align: left;
             }
         }
         .team {
@@ -146,6 +148,9 @@
 
             flex-wrap: wrap;
             justify-content: center;
+            @media(min-width: 1200px) {
+                justify-content: flex-start;
+            }
         }
         .team-member {
             @include border-radius;

@@ -79,33 +79,35 @@ $(document).ready( () => {
 		changeQuote(newQuote, 200);
 	};
 
-	setInterval(cycleQuotes, 4000)
+	setInterval(cycleQuotes, 4000);
 
 
 	var teamSection = {
 		peoplePerLine: {
-			lg: {
-				exec: 3,
-				team: 4,
-			},
-			md: {
-				exec: 3,
-				team: 3,
-			},
-			sm: {
-				exec: 2,
-				team: 2,
-			},
-			xs: {
-				exec: 1,
-				team: 1
-			}
+			lg: 4,
+			md: 3,
+			sm: 2,
+			xs: 1
 		},
 		currentDividers: "",
-		numPeople: {
-			exec: $('.exec-divider').length,
-			team: $('.team-divider').length,
-		},
+		numPeople: [
+			{
+				name: 'executive',
+				count: $('.executive-divider').length
+			},
+			{
+				name: 'account',
+				count: $('.account-divider').length
+			},
+			{
+				name: 'technical',
+				count: $('.technical-divider').length
+			},
+			{
+				name: 'teleservices',
+				count: $('.teleservices-divider').length
+			}
+		],
 		openDivider: {
 			index: null,
 			group: null,
@@ -113,6 +115,12 @@ $(document).ready( () => {
 		selected: {
 			index: null,
 			group: null
+		},
+		groupIndex: {
+			"executive": 0,
+			"account": 1,
+			"technical": 2,
+			"teleservices": 3
 		}
 
 	};
@@ -129,28 +137,26 @@ $(document).ready( () => {
 		} else {
 			teamSection.currentDividers ="xs";
 		}
-		for (let i = 0; i < teamSection.numPeople.exec; i++) {
-			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers].exec === 0 || (i + 1) === teamSection.numPeople.exec) {
-				$("#exec-divider" + i).addClass('dividing');
+		for (var y = 0; y < teamSection.numPeople.length; y++) {
+			for (let i = 0; i < teamSection.numPeople[y].count; i++) {
+				if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers] === 0 || (i + 1) === teamSection.numPeople[y].count) {
+						$("#" + teamSection.numPeople[y].name + "-divider" + i).addClass('dividing');
+				}
 			}
-		};
-		for (let i = 0; i < teamSection.numPeople.team; i++) {
-			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers].team === 0 || (i + 1) === teamSection.numPeople.team) {
-				$("#team-divider" + i).addClass('dividing');
-			}
-		};
+		}
+		
 	};
 
 	$(window).resize((event) => {
 		if(event.target.innerWidth !== pageWidth) {
 			setDivders(event.target.innerWidth);
 			pageWidth = event.target.innerWidth;
-		};
+		} 
 	});
 
 	dertermineDivider = function(index, group) {
-		for (let i = index; i < teamSection.numPeople[group]; i++) {
-			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers][group] === 0 || (i + 1) === teamSection.numPeople[group]) {
+		for (let i = index; i < teamSection.numPeople[teamSection.groupIndex[group]].count; i++) {
+			if ((i + 1) % teamSection.peoplePerLine[teamSection.currentDividers] === 0 || (i + 1) === teamSection.numPeople[teamSection.groupIndex[group]].count) {
 				return i;
 			}
 		}
@@ -164,10 +170,10 @@ $(document).ready( () => {
 		teamSection.openDivider = {
 			index: null,
 			group: null
-		}
+		};
 		$('.team-member.active').removeClass('active');
 		$('.divider.visible').removeClass('visible');
-	}
+	};
 
 
 
@@ -186,7 +192,7 @@ $(document).ready( () => {
 						$('#' + group + "-divider" + dividerIndex + " .certText").html("<br><strong>Certifications:</strong> " + certifications);
 					} else {
 						$('#' + group + "-divider" + dividerIndex + " .certText").html("");
-					};
+					}
 					$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
 				}, 250);
 			} else {
@@ -197,7 +203,7 @@ $(document).ready( () => {
 						$('#' + group + "-divider" + dividerIndex + " .certText").html("<br><strong>Certifications:</strong> " + certifications);
 				} else {
 					$('#' + group + "-divider" + dividerIndex + " .certText").html("");
-				};
+				}
 				$('#' + group + "-divider" + dividerIndex + " .text").addClass('visible');
 			}
 			teamSection.openDivider.index = dividerIndex;
@@ -209,5 +215,7 @@ $(document).ready( () => {
 	};
 
 
-	setDivders($(window).innerWidth())
-})
+	
+
+	setDivders($(window).innerWidth());
+});

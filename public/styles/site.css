@@ -1290,13 +1290,15 @@ body {
 .about-page .team-section {
   margin-top: 40px;
   background-color: #e9e8e2; }
-  .about-page .team-section .executive-team {
-    padding: 2em 0;
-    background-color: rgba(76, 69, 23, 0.1); }
-    .about-page .team-section .executive-team .header-row {
-      text-align: center; }
-      .about-page .team-section .executive-team .header-row h2 {
-        margin-bottom: .5em; }
+  .about-page .team-section .header-row {
+    text-align: center; }
+    .about-page .team-section .header-row.executive {
+      padding-top: 15px; }
+    .about-page .team-section .header-row h2 {
+      margin-bottom: 0; }
+    @media (min-width: 1200px) {
+      .about-page .team-section .header-row {
+        text-align: left; } }
   .about-page .team-section .team {
     padding: 1em 0; }
   .about-page .team-section .team-member-holder {
@@ -1308,6 +1310,9 @@ body {
     margin: 0 -15px;
     flex-wrap: wrap;
     justify-content: center; }
+    @media (min-width: 1200px) {
+      .about-page .team-section .team-member-holder {
+        justify-content: flex-start; } }
   .about-page .team-section .team-member {
     border-radius: 4px;
     -webkit-transition: 0.1s linear;

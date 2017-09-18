@@ -51,35 +51,70 @@
 		</div>
 		<section class="body-content team-section">
 			<a class="anchor" id="team-section"></a>
-			<div class="executive-team">
-				<div class="executive-team-container container">
-					<div class="header-row"><h2>Our Team</h2></div>
-					<div class="team-member-holder executive">
-						{{# each data.executiveTeam}}
-						<div class="team-member" id="exec{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "exec", {{@index}})'>
+			<div class="header-row container executive"><h2>Executive Team</h2></div>
+			<div class="executive team">
+				<div class="team-container container">
+					<div class="team-member-holder">
+						{{# each data.team.executive}}
+						<div class="team-member" id="exec{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "executive", {{@index}})'>
 							<div class="team-photo"><img src="{{{cloudinaryUrl image}}}"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
 								<div class="team-title">{{jobTitle}}</div>
 							</div>
 						</div>
-						<div class="divider exec-divider" id="exec-divider{{@index}}"><div class="text"><div class="bioText"></div><div class="certText"></div></div></div>
+						<div class="divider executive-divider" id="executive-divider{{@index}}"><div class="text"><div class="bioText"></div><div class="certText"></div></div></div>
 						{{/each}}
 					</div>
 				</div>
 			</div>
-			<div class="team">
+			<div class="header-row container"><h2>Account Services</h2></div>
+			<div class="account team">
 				<div class="team-container container">
 					<div class="team-member-holder">
-						{{# each data.team}}
-						<div class="team-member" id="team{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "team", {{@index}})'>
+						{{# each data.team.account}}
+						<div class="team-member" id="account{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "account", {{@index}})'>
 							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
 								<div class="team-title">{{jobTitle}}</div>
 							</div>
 						</div>
-						<div class="divider team-divider" id="team-divider{{@index}}"><div class="text"><div class="bioText"></div><div class="certText"></div></div></div>
+						<div class="divider account-divider" id="account-divider{{@index}}"><div class="text"><div class="bioText"></div><div class="certText"></div></div></div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+			<div class="header-row container"><h2>Technical Services</h2></div>
+			<div class="technical team">
+				<div class="team-container container">
+					<div class="team-member-holder">
+						{{# each data.team.technical}}
+						<div class="team-member" id="technical{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "technical", {{@index}})'>
+							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
+							<div class="team-info">
+								<div class="team-name">{{name}}</div>
+								<div class="team-title">{{jobTitle}}</div>
+							</div>
+						</div>
+						<div class="divider technical-divider" id="technical-divider{{@index}}"><div class="text"><div class="bioText"></div><div class="certText"></div></div></div>
+						{{/each}}
+					</div>
+				</div>
+			</div>
+			<div class="header-row container"><h2>Teleservices</h2></div>
+			<div class="teleservices team">
+				<div class="team-container container">
+					<div class="team-member-holder">
+						{{# each data.team.teleservices}}
+						<div class="team-member" id="teleservices{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "teleservices", {{@index}})'>
+							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
+							<div class="team-info">
+								<div class="team-name">{{name}}</div>
+								<div class="team-title">{{jobTitle}}</div>
+							</div>
+						</div>
+						<div class="divider teleservices-divider" id="teleservices-divider{{@index}}"><div class="text"><div class="bioText"></div><div class="certText"></div></div></div>
 						{{/each}}
 					</div>
 				</div>
