@@ -19,7 +19,6 @@
             margin-top: 30px;
             margin-bottom: 30px;
             padding: 3%;
-
             background-color: $dark-green-transparent;
             .quote {
                 @include linear-transition(.2s);
@@ -27,7 +26,7 @@
 
                 flex-direction: row;
 
-                min-height: 6em;
+                min-height: 150px;
 
                 opacity: 1;
 
@@ -112,12 +111,21 @@
         .logo-container {
             @include flexbox;
 
-            margin-top: 0 -15px;
+            margin: 0 -25px;
 
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
             .client-logo {
-                margin: 15px;
+                margin: 15px 25px;
+                text-align: center;
+                flex: 1 0 auto;
+                img {
+                    max-width: 175px;
+                    max-height: 80px;
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
     }
