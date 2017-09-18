@@ -74,7 +74,7 @@
 					<div class="team-member-holder">
 						{{# each data.team.account}}
 						<div class="team-member" id="account{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "account", {{@index}})'>
-							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
+							<div class="team-photo"><img src="{{{cloudinaryUrl image}}}"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
 								<div class="team-title">{{jobTitle}}</div>
@@ -91,7 +91,7 @@
 					<div class="team-member-holder">
 						{{# each data.team.technical}}
 						<div class="team-member" id="technical{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "technical", {{@index}})'>
-							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
+							<div class="team-photo"><img src="{{{cloudinaryUrl image}}}"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
 								<div class="team-title">{{jobTitle}}</div>
@@ -108,7 +108,7 @@
 					<div class="team-member-holder">
 						{{# each data.team.teleservices}}
 						<div class="team-member" id="teleservices{{@index}}" onclick='displayBio("{{bio}}", "{{certifications}}", "teleservices", {{@index}})'>
-							<div class="team-photo"><img src="http://via.placeholder.com/150x100"></div>
+							<div class="team-photo"><img src="{{{cloudinaryUrl image}}}"></div>
 							<div class="team-info">
 								<div class="team-name">{{name}}</div>
 								<div class="team-title">{{jobTitle}}</div>
