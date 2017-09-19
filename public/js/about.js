@@ -8,29 +8,14 @@ $(document).ready( () => {
 				clientCompany: "Vice President, Danaher"
 			},
 			{
-				quote: "Quote 2",
-				clientName: "No Name",
-				clientCompany: "TestCo Inc."
+				quote: "Dunthorpe is a solid partner that does quality work for Fortive. They are critical thinkers and problem solvers, always seeking the best solution for every challenge and opportunity. And they’ve never let us down.",
+				clientName: "Kirsten Paust",
+				clientCompany: "FBSO"
 			},
 			{
-				quote: "Quote 3",
-				clientName: "Sample Person",
-				clientCompany: "TestCo Inc."
-			},
-			{
-				quote: "Quote 4",
-				clientName: "Doesn't Exist",
-				clientCompany: "TestCo Inc."
-			},
-			{
-				quote: "Quote 5",
-				clientName: "Test Test",
-				clientCompany: "TestCo Inc."
-			},
-			{
-				quote: "Quote 6",
-				clientName: "Human Person",
-				clientCompany: "TestCo Inc."
+				quote: "We’ve worked closely with Dunthorpe Marketing over an extended period of time to solve marketing problems. They offer a full range of services, aren’t afraid to roll up their sleeves, and have taken the time to understand what’s truly important to our business and the way we work. I trust them to fully deliver on their commitments to the business.",
+				clientName: "Sue Dancer",
+				clientCompany: "Senior Marketing Manager"
 			}
 		],
 		currentQuote: 0,
@@ -55,7 +40,7 @@ $(document).ready( () => {
 
 	cycleQuotes = function() {
 		if (!clientQuotes.paused && $(window).scrollTop() < ($('.team-section').position().top - 100)) {
-			const newQuote = clientQuotes.currentQuote + 1 > 4 ? 0 : clientQuotes.currentQuote + 1; 
+			const newQuote = clientQuotes.currentQuote + 1 > (clientQuotes.quotes.length - 1) ? 0 : clientQuotes.currentQuote + 1; 
 			changeQuote(newQuote, 500);
 		};
 	};
@@ -70,11 +55,12 @@ $(document).ready( () => {
 	})
 
 	controlClick = function(change) {
+		console.log(clientQuotes.quotes.length, clientQuotes.currentQuote);
 		let newQuote = clientQuotes.currentQuote + change;
-		if (newQuote > 4) {
+		if (newQuote > (clientQuotes.quotes.length - 1)) {
 			newQuote = 0;
 		} else if (newQuote < 0) {
-			newQuote = 4;
+			newQuote = (clientQuotes.quotes.length - 1);
 		}
 		changeQuote(newQuote, 200);
 	};
