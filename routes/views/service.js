@@ -15,11 +15,12 @@ exports = module.exports = function (req, res) {
 		keystone.list('PostCategory').model.findOne({key: req.params.service}).exec( function(err, results) {
 			if (err) {
 				return next(err);
+			} else if (results === null) {
+					res.status('404').redirect('/#capability-section');
 			} else {
 				locals.data.category = results.id;
 				next();
 			}
-	
 		});
 	});
 

@@ -26,10 +26,12 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
-			if (result.gated === false) {
+			if (result === null) {
+				return res.status('404').redirect('/resources');
+			} else if (result.gated === false) {
 				locals.gate = false;
-			}
-			next(err);
+				next(err);
+			}	
 		});
 
 
@@ -57,7 +59,6 @@ exports = module.exports = function (req, res) {
 		}, function (err) {
 			if (err) {
 				locals.validationErrors = err.errors;
-				console.log(err);
 			} else { 
 				locals.gate = false;
 			}
@@ -66,5 +67,8 @@ exports = module.exports = function (req, res) {
 	});
 
 	// Render the view
+	if (locals.data.post === null) {
+		view.render('resources');
+	}
 	view.render('article');
 };
