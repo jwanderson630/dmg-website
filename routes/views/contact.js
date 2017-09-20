@@ -33,7 +33,7 @@ exports = module.exports = function (req, res) {
 		const mailOptions = {
 			from: '<janderson@dunthorpemarketing.com>',
 			to: 'jwdunthorpe@gmail.com',
-			text: req.body
+			text: req.body.toString()
 		};
 		transporter.sendMail(mailOptions, (error,info) => {
 			if (error) {
