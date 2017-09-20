@@ -28,10 +28,11 @@
 			</div>
 			<div class="contact-form">
 				{{#if enquirySubmitted}}
-				<h3>Thanks for getting in touch.</h3>
+				<h3>Thanks for getting in touch. We will get back to you shortly!</h3>
 				{{else}}
 				<form method="post">
 					<input type="hidden" name="action" value="contact">
+					<input type="hidden" name="source" value="contact">
 					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 						<input required type="text" name="firstName" placeholder="First Name*"  value="{{formData.firstName}}">
 					</div>

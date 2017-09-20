@@ -20,9 +20,10 @@ Enquiry.add({
 	jobTitle: {type: String},
 	message: { type: Types.Markdown },
 	zip: {type: String},
+	source: {type: String},
 	createdAt: { type: Date, default: Date.now },
 });
 
 Enquiry.defaultSort = '-createdAt';
-Enquiry.defaultColumns = 'firstName, lastName, email, company, createdAt';
+Enquiry.defaultColumns = 'firstName, lastName, email, company, source, createdAt';
 Enquiry.register();

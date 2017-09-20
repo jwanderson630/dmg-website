@@ -32,8 +32,8 @@ exports = module.exports = function (req, res) {
 		var updater = newEnquiry.getUpdateHandler(req);
 		const mailOptions = {
 			from: '<janderson@dunthorpemarketing.com>',
-			to: '<jwdunthorpe@gmail.com',
-			text: 'test'
+			to: '<jwdunthorpe@gmail.com>',
+			text: req.body
 		};
 		transporter.sendMail(mailOptions, (error,info) => {
 			if (error) {
@@ -44,7 +44,7 @@ exports = module.exports = function (req, res) {
 
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'firstName, lastName, email, phone, company, zip, jobTitle, message',
+			fields: 'firstName, lastName, email, phone, company, zip, jobTitle, message, source',
 			errorMessage: 'There was a problem submitting your enquiry:',
 		}, function (err) {
 			if (err) {
