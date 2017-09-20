@@ -423,15 +423,15 @@ body {
             border-bottom: 3px solid #75702b;
             background-color: rgba(76, 69, 23, 0.1); }
             .main-nav .nav-links .nav-item:hover .dropdown {
-              height: auto; }
+              height: auto;
+              box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
           .main-nav .nav-links .nav-item .dropdown {
             position: absolute;
             top: 80px;
             width: auto;
             height: 0;
             text-align: left;
-            border-radius: 0 0 4px 4px;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
+            border-radius: 0 0 4px 4px; }
             .main-nav .nav-links .nav-item .dropdown .dropdown-links {
               padding: 0; }
               .main-nav .nav-links .nav-item .dropdown .dropdown-links .dropdown-link {
