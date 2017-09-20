@@ -32,7 +32,7 @@ exports = module.exports = function (req, res) {
 		var updater = newEnquiry.getUpdateHandler(req);
 		const mailOptions = {
 			from: '<janderson@dunthorpemarketing.com>',
-			to: '<jwdunthorpe@gmail.com>',
+			to: 'jwdunthorpe@gmail.com',
 			text: req.body
 		};
 		transporter.sendMail(mailOptions, (error,info) => {
