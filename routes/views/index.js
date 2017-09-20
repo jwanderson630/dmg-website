@@ -23,10 +23,23 @@ exports = module.exports = function (req, res) {
 		});
 	});
 
+	view.on('init', function (next) {
+		if (locals.data.posts.length < 3) {
+			const findMore = 3 - locals.data.posts.length;
+			keystone.list('Post').model.find({featured: false, state: 'published'}).sort('-publishedDate').populate('categories').limit(findMore).exec(function (err, results) {
+				locals.data.posts = locals.data.posts.concat(results);
+				next();
+			});
+		} else {
+			next();
+		}
+	});
+
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'home';
 
 	// Render the view
+	
 	view.render('index');
 };
