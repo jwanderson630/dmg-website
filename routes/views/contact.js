@@ -30,7 +30,6 @@ exports = module.exports = function (req, res) {
 
 		var newEnquiry = new Enquiry.model();
 		var updater = newEnquiry.getUpdateHandler(req);
-		console.log(req.body);
 		const mailOptions = {
 			from: '<janderson@dunthorpemarketing.com>',
 			to: 'jwdunthorpe@gmail.com',
@@ -45,12 +44,11 @@ exports = module.exports = function (req, res) {
 						Phone: ${req.body.phone}<br>
 						Title: ${req.body.jobTitle}<br>
 						Message: ${req.body.message}
+						Source: ${req.body.source}
 					</p>
 				`,
-			text: "Website form submission \n From: " + req.body.firstName + " " + req.body.lastName + "\nEmail: " + req.body.email + "\nCompany: " + req.body.company + "\nPhone: " + req.body.phone + "\nTitle: " + req.body.jobTitle + "\nMessage: " + req.body.message
+			text: "Website form submission \n From: " + req.body.firstName + " " + req.body.lastName + "\nEmail: " + req.body.email + "\nCompany: " + req.body.company + "\nPhone: " + req.body.phone + "\nTitle: " + req.body.jobTitle + "\nMessage: " + req.body.message + "\nSource: " + req.body.source
 		};
-
-		console.log(mailOptions);
 		transporter.sendMail(mailOptions, (error,info) => {
 			if (error) {
 				return console.log(error);
