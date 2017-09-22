@@ -158,10 +158,8 @@
     img {
         max-width: calc(100% - 15px);
     }
-    .list
     .well {
         @include border-radius;
-        
         background-color: transparentize($dark-green, .9) !important;
     }
     .highlight {

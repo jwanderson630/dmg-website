@@ -154,37 +154,37 @@ option {
     background-color: $orange;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
     &:hover {
-        background-color: lighten($orange, 3%);
+        background-color: lighten($orange, 6%);
         box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0, .08);
     }
     &.strategy-and-consulting {
         background-color: $light-green;
         &:hover {
-            background-color: lighten($light-green, 3%);
+            background-color: lighten($light-green, 6%);
         }
     }
     &.data-optimization {
         background-color: $dark-green;
         &:hover {
-            background-color: lighten($dark-green, 3%);
+            background-color: lighten($dark-green, 6%);
         }
     }
     &.teleservices {
         background-color: $light-blue;
         &:hover {
-            background-color: lighten($light-blue, 3%);
+            background-color: lighten($light-blue, 6%);
         }
     }
     &.marketing-automation {
         background-color: $dark-blue;
         &:hover {
-            background-color: lighten($dark-blue, 3%);
+            background-color: lighten($dark-blue, 6%);
         }
     }
     &.campaigns-and-content {
         background-color: $gold;
         &:hover {
-            background-color: lighten($gold, 3%);
+            background-color: lighten($gold, 6%);
         }
     }
 }
