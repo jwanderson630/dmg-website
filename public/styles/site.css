@@ -1204,7 +1204,6 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 3%;
-  text-align: center;
   background-color: rgba(76, 69, 23, 0.1); }
   .about-page .client-section .quote-container .quote {
     -webkit-transition: 0.2s linear;
@@ -1279,7 +1278,8 @@ body {
       .about-page .client-section .quote-container .controls .arrow:hover {
         background-color: rgba(76, 69, 23, 0.1); }
 .about-page .client-section .logo-container {
-  margin: 0 -25px; }
+  margin: 0 -25px;
+  text-align: center; }
   .about-page .client-section .logo-container .client-logo {
     display: -webkit-inline-box;
     display: -moz-inline-box;
