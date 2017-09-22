@@ -1204,6 +1204,7 @@ body {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 3%;
+  text-align: center;
   background-color: rgba(76, 69, 23, 0.1); }
   .about-page .client-section .quote-container .quote {
     -webkit-transition: 0.2s linear;
