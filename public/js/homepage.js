@@ -31,7 +31,6 @@ $(document).ready(() => {
 		let height = 0;
 		$('.capability .header').height('auto');
 		$('.capability .header').each( function(){
-			console.log('test');
 			if ($(this).height() > height) {
 				height = $(this).height();
 			}
