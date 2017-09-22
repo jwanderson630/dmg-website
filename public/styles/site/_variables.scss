@@ -132,6 +132,17 @@ option {
     font-family: $font-family;
 }
 
+a {
+    -webkit-appearance: value;
+   -moz-appearance:    value;
+   appearance:         value;
+   &:active {
+    -webkit-appearance: value;
+   -moz-appearance:    value;
+   appearance:         value;
+   }
+}
+
 
 
 .anchor {

@@ -36,6 +36,15 @@ select,
 option {
   font-family: "Poppins", sans-serif; }
 
+a {
+  -webkit-appearance: value;
+  -moz-appearance: value;
+  appearance: value; }
+  a:active {
+    -webkit-appearance: value;
+    -moz-appearance: value;
+    appearance: value; }
+
 .anchor {
   position: relative;
   top: -75px;
