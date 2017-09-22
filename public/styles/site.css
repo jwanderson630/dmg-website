@@ -1293,8 +1293,7 @@ body {
     flex: 1 0 auto; }
     .about-page .client-section .logo-container .client-logo img {
       max-width: 175px;
-      max-height: 80px;
-      width: 100%; }
+      max-height: 80px; }
 .about-page .team-section {
   margin-top: 40px;
   background-color: #e9e8e2; }
