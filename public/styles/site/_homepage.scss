@@ -198,8 +198,8 @@
 
                         position: relative;
                         
-                        min-height: 3em;
-                        padding: 0 1em;
+                        height: 50px;
+                        padding-left: 15px;
 
                         cursor: pointer;
 
@@ -210,15 +210,27 @@
                         flex-direction: row;
                         align-items: center;
                         .static {
+                            @include flexbox;
                             font-size: 1.3em;
+                            color: white;
+                            text-decoration: none;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
                         }
                         .dynamic-text {
+                            @include flexbox;
                             @include linear-transition(.5s);
+                            color: white;
+                            text-decoration: none;
 
                             font-size: 1.2em;
 
                             opacity: 1;
                             flex: 2 0 auto;
+                            height: 100%;
+                            flex-direction: column;
+                            justify-content: center;
                             &.hidden {
                                 opacity: 0;
                             }
@@ -229,7 +241,7 @@
                         .arrow {
                             @include flexbox;
 
-
+                            padding: 15px;
                             align-items: center;
                             flex: 0 0 auto;
                             height: 100%;

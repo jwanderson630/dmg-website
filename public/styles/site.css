@@ -37,13 +37,13 @@ option {
   font-family: "Poppins", sans-serif; }
 
 a {
-  -webkit-appearance: value;
-  -moz-appearance: value;
-  appearance: value; }
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
   a:active {
-    -webkit-appearance: value;
-    -moz-appearance: value;
-    appearance: value; }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
 
 .anchor {
   position: relative;
@@ -828,8 +828,8 @@ body {
           transition: 0.1s linear;
           border-radius: 4px;
           position: relative;
-          min-height: 3em;
-          padding: 0 1em;
+          height: 50px;
+          padding-left: 15px;
           cursor: pointer;
           color: #fff;
           background-color: #c66005;
@@ -837,15 +837,35 @@ body {
           flex-direction: row;
           align-items: center; }
           .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .static {
-            font-size: 1.3em; }
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            font-size: 1.3em;
+            color: white;
+            text-decoration: none;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center; }
           .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .dynamic-text {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
             -webkit-transition: 0.5s linear;
             -moz-transition: 0.5s linear;
             -o-transition: 0.5s linear;
             transition: 0.5s linear;
+            color: white;
+            text-decoration: none;
             font-size: 1.2em;
             opacity: 1;
-            flex: 2 0 auto; }
+            flex: 2 0 auto;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center; }
             .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .dynamic-text.hidden {
               opacity: 0; }
           .homepage .services-section .services-help .dropdown-container #services-help-dropdown .dropdown-btn .spacer {
@@ -856,6 +876,7 @@ body {
             display: -ms-flexbox;
             display: -webkit-flex;
             display: flex;
+            padding: 15px;
             align-items: center;
             flex: 0 0 auto;
             height: 100%;

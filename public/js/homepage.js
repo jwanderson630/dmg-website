@@ -4,11 +4,26 @@ $(document).ready(() => {
 
 	var helpQuestions = {
 		questions: [
-			"transform my marketing operations and processes",
-			"get more out of my marketing campaigns and content",
-			"optimize my automation tools and programs",
-			"maximize my data resources",
-			"convert more leads, faster",
+			{
+				text:"transform my marketing operations and processes",
+				link: "/service/strategy-and-consulting"
+			},
+			{
+				text:"get more out of my marketing campaigns and content",
+				link:"/service/campaigns-and-content"
+			},
+			{
+				text:"optimize my automation tools and programs",
+				link: "/service/marketing-automation"
+			},
+			{
+				text:"maximize my data resources",
+				link: "/service/data-optimization"
+			},
+			{
+				text:"convert more leads, faster",
+				link: "/service/teleservices"
+			},
 		],
 		currentQuestion: 0,
 		paused: false,
@@ -19,7 +34,8 @@ $(document).ready(() => {
 			$('.dynamic-text').addClass('hidden');
 			setTimeout(() => {
 				const nextQuestion = helpQuestions.currentQuestion === 4 ? 0 : helpQuestions.currentQuestion + 1;
-				$('.dynamic-text').html(helpQuestions.questions[nextQuestion]).removeClass('hidden');
+				$('.dynamic-text').html(helpQuestions.questions[nextQuestion].text).removeClass('hidden');
+				$('.dynamic-text, .static').prop("href", helpQuestions.questions[nextQuestion].link);
 				helpQuestions.currentQuestion = nextQuestion;
 			}, 500);
 		} else {
@@ -60,7 +76,7 @@ $(document).ready(() => {
 		helpQuestions.paused = true;
 	});
 
-	$('#services-help-dropdown').click(() => {
+	$('#services-help-dropdown-arrow').click(() => {
 		$('#services-help-dropdown').toggleClass('expand');
 	});
 
