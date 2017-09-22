@@ -1216,7 +1216,7 @@ body {
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    min-height: 150px;
+    min-height: 200px;
     opacity: 1;
     align-items: flex-start; }
     .about-page .client-section .quote-container .quote p {
