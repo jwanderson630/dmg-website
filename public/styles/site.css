@@ -1278,21 +1278,16 @@ body {
       .about-page .client-section .quote-container .controls .arrow:hover {
         background-color: rgba(76, 69, 23, 0.1); }
 .about-page .client-section .logo-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  margin: 0 -25px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; }
+  margin: 0 -25px; }
   .about-page .client-section .logo-container .client-logo {
     margin: 15px 25px;
     text-align: center;
-    flex: 1 0 auto; }
+    display: inline-block;
+    width: 20%;
+    height: 90px;
+    min-width: 200px; }
     .about-page .client-section .logo-container .client-logo img {
-      max-width: 175px;
+      max-width: 190px;
       max-height: 80px; }
 .about-page .team-section {
   margin-top: 40px;

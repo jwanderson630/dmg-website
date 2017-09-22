@@ -109,19 +109,19 @@
             }
         }
         .logo-container {
-            @include flexbox;
 
             margin: 0 -25px;
 
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+           
             .client-logo {
                 margin: 15px 25px;
                 text-align: center;
-                flex: 1 0 auto;
+                display: inline-block;
+                width: 20%;
+                height: 90px;
+                min-width: 200px;
                 img {
-                    max-width: 175px;
+                    max-width: 190px;
                     max-height: 80px;
                 }
             }
