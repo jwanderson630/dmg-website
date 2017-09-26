@@ -94,7 +94,9 @@ $(document).ready(() => {
 	});
 
 	$('#services-help-dropdown-arrow').click(() => {
-		$('#services-help-dropdown').toggleClass('expand');
+		if ( $(window).innerWidth() >= 768) {
+				$('#services-help-dropdown').toggleClass('expand');
+		}
 	});
 
 	$('.dropdown-btn').click(() => {
