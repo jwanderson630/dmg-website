@@ -153,34 +153,42 @@ a {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 768px) {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 992px) {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 1200px) {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
     max-width: 100%; } }
+
 @media (min-width: 768px) {
   .container {
     width: 720px;
     max-width: 100%; } }
+
 @media (min-width: 992px) {
   .container {
     width: 960px;
     max-width: 100%; } }
+
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
     max-width: 100%; } }
+
 .container-fluid {
   position: relative;
   margin-right: auto;
@@ -192,18 +200,22 @@ a {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 768px) {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 992px) {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
+
 @media (min-width: 1200px) {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -219,45 +231,57 @@ a {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
+
 @media (min-width: 768px) {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
+
 @media (min-width: 992px) {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
+
 @media (min-width: 1200px) {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
+
 .hidden-xs-up {
   display: none !important; }
 
 @media (max-width: 575px) {
   .hidden-xs-down {
     display: none !important; } }
+
 @media (min-width: 576px) {
   .hidden-sm-up {
     display: none !important; } }
+
 @media (max-width: 767px) {
   .hidden-sm-down {
     display: none !important; } }
+
 @media (min-width: 768px) {
   .hidden-md-up {
     display: none !important; } }
+
 @media (max-width: 991px) {
   .hidden-md-down {
     display: none !important; } }
+
 @media (min-width: 992px) {
   .hidden-lg-up {
     display: none !important; } }
+
 @media (max-width: 1199px) {
   .hidden-lg-down {
     display: none !important; } }
+
 @media (min-width: 1200px) {
   .hidden-xl-up {
     display: none !important; } }
+
 html,
 body {
   font-family: "Poppins", sans-serif;
@@ -652,6 +676,27 @@ body {
     background-color: white;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); }
 
+.category-link a {
+  text-decoration: none;
+  color: #c66005; }
+  .category-link a:hover {
+    text-decoration: underline; }
+
+.category-link.strategy-and-consulting a {
+  color: #a89e00; }
+
+.category-link.campaigns-and-content a {
+  color: #f9a718; }
+
+.category-link.marketing-automation a {
+  color: #4c779c; }
+
+.category-link.data-optimization a {
+  color: #75702b; }
+
+.category-link.teleservices a {
+  color: #7fadc2; }
+
 .homepage .header-image {
   -webkit-transition: 0.1s linear;
   -moz-transition: 0.1s linear;
@@ -665,6 +710,7 @@ body {
   background-image: url("/images/headers/homepage-min.jpg");
   background-position: 50% 100%;
   background-size: cover; }
+
 .homepage .header-content-container {
   display: -webkit-box;
   display: -moz-box;
@@ -736,6 +782,7 @@ body {
     @media (min-width: 768px) {
       .homepage .header-content-container .header-content {
         padding: 40px 2vw; } }
+
 .homepage .page-body {
   padding: 40px 0 0 0;
   background-color: #fff; }
@@ -793,6 +840,7 @@ body {
             position: relative;
             padding: 0 .3em;
             background-color: #fff; }
+
 .homepage .services-section {
   margin: 40px 0 40px 0;
   padding: 0 5%; }
@@ -1023,6 +1071,7 @@ body {
     @media (min-width: 1500px) {
       .homepage .services-section .services-capabilities {
         flex-wrap: nowrap; } }
+
 .homepage .contact-section {
   background-color: rgba(76, 69, 23, 0.1); }
   .homepage .contact-section .contact-content {
@@ -1082,6 +1131,7 @@ body {
   background-image: url("http://via.placeholder.com/1000x1000");
   background-position: 50% 50%;
   background-size: cover; }
+
 .resources-page .header-content-container {
   display: -webkit-box;
   display: -moz-box;
@@ -1116,6 +1166,7 @@ body {
           @media (min-width: 768px) {
             .resources-page .header-content-container .header-content .header-border .inner-content h1 {
               width: 60%; } }
+
 .resources-page .resources {
   background-color: #fff; }
   .resources-page .resources .resources-filters {
@@ -1188,9 +1239,9 @@ body {
       box-sizing: border-box;
       padding: 1em 0 2em 0;
       border-bottom: 1px solid #dee3e5; }
-      .resources-page .resources .resources-container .resources-content .resource a {
-        text-decoration: none;
-        color: #75702b; }
+      .resources-page .resources .resources-container .resources-content .resource h4 a {
+        color: #75702b;
+        text-decoration: none; }
       .resources-page .resources .resources-container .resources-content .resource:last-child {
         border-bottom: none; }
       .resources-page .resources .resources-container .resources-content .resource .btn-cat-row {
@@ -1204,31 +1255,18 @@ body {
         justify-content: space-between; }
       .resources-page .resources .resources-container .resources-content .resource .category-link {
         margin-top: 1em; }
-        .resources-page .resources .resources-container .resources-content .resource .category-link a {
-          text-decoration: none;
-          color: #c66005; }
-          .resources-page .resources .resources-container .resources-content .resource .category-link a:hover {
-            text-decoration: underline; }
-        .resources-page .resources .resources-container .resources-content .resource .category-link.strategy-and-consulting a {
-          color: #a89e00; }
-        .resources-page .resources .resources-container .resources-content .resource .category-link.campaigns-and-content a {
-          color: #f9a718; }
-        .resources-page .resources .resources-container .resources-content .resource .category-link.marketing-automation a {
-          color: #4c779c; }
-        .resources-page .resources .resources-container .resources-content .resource .category-link.data-optimization a {
-          color: #75702b; }
-        .resources-page .resources .resources-container .resources-content .resource .category-link.teleservices a {
-          color: #7fadc2; }
 
 .about-page .header-image-md {
   background-image: url("/images/headers/about-min.jpg");
   background-position: 50% 20%; }
+
 .about-page .intro {
   font-size: 1.2em;
   margin-top: 50px;
   margin-bottom: 50px; }
   .about-page .intro strong {
     color: #4c4517; }
+
 .about-page .client-section .quote-container {
   border-radius: 4px;
   position: relative;
@@ -1318,6 +1356,7 @@ body {
       cursor: pointer; }
       .about-page .client-section .quote-container .controls .arrow:hover {
         background-color: rgba(76, 69, 23, 0.1); }
+
 .about-page .client-section .logo-container {
   margin: 0 -25px;
   text-align: center; }
@@ -1338,6 +1377,7 @@ body {
     .about-page .client-section .logo-container .client-logo img {
       max-width: 190px;
       max-height: 80px; }
+
 .about-page .team-section {
   margin-top: 40px;
   background-color: #e9e8e2; }
@@ -1445,10 +1485,13 @@ body {
         max-width: 300px; }
       .about-page .team-section .executive-team .team-member-holder {
         justify-content: space-between; } }
+
 .about-page .building-section h2 {
   margin: 1em 0; }
+
 .about-page .building-section p {
   margin-bottom: 1em; }
+
 .about-page .building-section .building-history {
   display: -webkit-box;
   display: -moz-box;
@@ -1555,18 +1598,25 @@ body {
 .article-page .banner {
   margin-top: 80px;
   background-color: #c66005; }
+
 .article-page .featured-content-section {
   background-color: #e9e8e2; }
+
 .article-page.strategy-and-consulting .banner {
   background-color: #a89e00; }
+
 .article-page.campaigns-and-content .banner {
   background-color: #f9a718; }
+
 .article-page.marketing-automation .banner {
   background-color: #4c779c; }
+
 .article-page.data-optimization .banner {
   background-color: #4c4517; }
+
 .article-page.teleservices .banner {
   background-color: #7fadc2; }
+
 .article-page .body-content .article-title {
   margin-bottom: 0;
   margin-top: 50px; }
@@ -1659,23 +1709,28 @@ body {
   font-size: 18px;
   color: #404040 !important;
   line-height: 1.8em; }
+
 .article-content p.well {
   padding: 15px; }
+
 .article-content h4 {
   font-weight: 700;
   margin-top: 50px; }
+
 .article-content img {
   max-width: calc(100% - 15px); }
+
 .article-content .well {
   border-radius: 4px;
   background-color: rgba(76, 69, 23, 0.1) !important; }
+
 .article-content .highlight {
   color: #c66005 !important; }
+
 .article-content li {
   padding: 5px 0; }
+
 .article-content .text-right {
   width: 100%;
   text-align: right;
   display: block; }
-
-/*# sourceMappingURL=site.css.map */

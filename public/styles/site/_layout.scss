@@ -527,3 +527,39 @@ body {
         box-shadow: 0 2px 2px 0 rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.08);
     }
 }
+
+.category-link {
+    a {
+        text-decoration: none;
+
+        color: $orange;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &.strategy-and-consulting {
+        a {
+            color: $light-green;
+        }
+    }
+    &.campaigns-and-content {
+        a {
+            color: $gold;
+        }
+    }
+    &.marketing-automation {
+        a {
+            color: $dark-blue;
+        }
+    }
+    &.data-optimization {
+        a {
+            color: $olive-green;
+        }
+    }
+    &.teleservices {
+        a {
+            color: $light-blue;
+        }
+    }
+}

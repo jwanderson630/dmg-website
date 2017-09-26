@@ -43,7 +43,7 @@ exports = module.exports = function (req, res) {
 						Company: ${req.body.company}<br>
 						Phone: ${req.body.phone}<br>
 						Title: ${req.body.jobTitle}<br>
-						Message: ${req.body.message}
+						Message: ${req.body.message}<br>
 						Source: ${req.body.source}
 					</p>
 				`,

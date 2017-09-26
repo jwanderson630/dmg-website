@@ -7,8 +7,6 @@
         width: 100%;
         height: 40%;
 
-        background-image: url('http://via.placeholder.com/1000x1000');
-        background-position: 50% 50%;
         background-size: cover;
     }
     .header-content-container {
@@ -38,7 +36,7 @@
 
                     color: $white;
                     h1 {
-                        font-family: 'lato', sans-serif;
+                        font-family: 'Poppins', sans-serif;
 
                         width: 90%;
                         margin: 0 auto;
@@ -135,10 +133,9 @@
                     padding: 1em 0 2em 0;
 
                     border-bottom: 1px solid $light-grey;
-                    a {
-                        text-decoration: none;
-
+                    h4 a {
                         color: $olive-green;
+                        text-decoration: none;
                     }
                     &:last-child {
                         border-bottom: none;
@@ -153,39 +150,6 @@
                     }
                     .category-link {
                         margin-top: 1em;
-                        a {
-                            text-decoration: none;
-
-                            color: $orange;
-                            &:hover {
-                                text-decoration: underline;
-                            }
-                        }
-                        &.strategy-and-consulting {
-                            a {
-                                color: $light-green;
-                            }
-                        }
-                        &.campaigns-and-content {
-                            a {
-                                color: $gold;
-                            }
-                        }
-                        &.marketing-automation {
-                            a {
-                                color: $dark-blue;
-                            }
-                        }
-                        &.data-optimization {
-                            a {
-                                color: $olive-green;
-                            }
-                        }
-                        &.teleservices {
-                            a {
-                                color: $light-blue;
-                            }
-                        }
                     }
                 }
             }
