@@ -35,8 +35,8 @@ $(document).ready(() => {
 			setTimeout(() => {
 				const nextQuestion = helpQuestions.currentQuestion === 4 ? 0 : helpQuestions.currentQuestion + 1;
 				$('.dynamic-text').html(helpQuestions.questions[nextQuestion].text).removeClass('hidden');
-				$('.dynamic-text, .static').prop("href", helpQuestions.questions[nextQuestion].link);
 				helpQuestions.currentQuestion = nextQuestion;
+				setLink();
 			}, 500);
 		} else {
 			$('.dynamic-text').removeClass('hidden');
@@ -44,14 +44,21 @@ $(document).ready(() => {
 	};
 
 	capabilityFix = function() {
-		let height = 0;
-		$('.capability .header').height('auto');
-		$('.capability .header').each( function(){
-			if ($(this).height() > height) {
-				height = $(this).height();
-			}
-		});
-		$('.capability .header').height(height);
+		var height = "auto";
+		if ($(window).innerWidth() > 500) {
+			height = 0;
+			$('.capability .header').height('auto');
+			$('.capability .header').each( function(){
+				if ($(this).height() > height) {
+					height = $(this).height();
+				}
+			});
+			console.log(height);
+			$('.capability .header').height(height);
+		} else {
+			$('.capability .header').height(height);
+		}
+		
 	};
 
 	headerResize = function() {
@@ -59,13 +66,23 @@ $(document).ready(() => {
 		$('.header-content-container').css("height", headerHeight);
 	};
 
+	setLink = function() {
+		if ($(window).innerWidth() < 768) {
+			$('.dynamic-text, .static').removeAttr("href");
+		} else {
+			$('.dynamic-text, .static').prop("href", helpQuestions.questions[helpQuestions.currentQuestion].link);
+		}
+	};
+
 	setInterval(changeQuestion, 4000);
 
 	$(window).resize(() => {
 		capabilityFix();
 		headerResize();
+		setLink();
 	});
 
+	setLink();
 	capabilityFix();
 	headerResize();
 
@@ -78,6 +95,12 @@ $(document).ready(() => {
 
 	$('#services-help-dropdown-arrow').click(() => {
 		$('#services-help-dropdown').toggleClass('expand');
+	});
+
+	$('.dropdown-btn').click(() => {
+		if ( $(window).innerWidth() < 768) {
+			$('#services-help-dropdown').toggleClass('expand');
+		}
 	});
 
 	$('#services-help-dropdown').mouseleave(() => {

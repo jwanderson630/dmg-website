@@ -52,20 +52,19 @@ $(document).ready( () => {
 		if (!clientQuotes.paused && $(window).scrollTop() < ($('.team-section').position().top - 100)) {
 			const newQuote = clientQuotes.currentQuote + 1 > (clientQuotes.quotes.length - 1) ? 0 : clientQuotes.currentQuote + 1; 
 			changeQuote(newQuote, 500);
-		};
+		}
 	};
 
 	$(".quote-container").mouseenter(() => {
 		clientQuotes.paused = true;
 		$('.quote').removeClass('hidden');
-	})
+	});
 
 	$('.quote-container').mouseleave(() => {
 		clientQuotes.paused = false;
-	})
+	});
 
 	controlClick = function(change) {
-		console.log(clientQuotes.quotes.length, clientQuotes.currentQuote);
 		let newQuote = clientQuotes.currentQuote + change;
 		if (newQuote > (clientQuotes.quotes.length - 1)) {
 			newQuote = 0;

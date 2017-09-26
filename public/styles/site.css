@@ -576,7 +576,7 @@ body {
       border-bottom: 3px solid rgba(149, 152, 154, 0.3); }
       .featured-content-section .featured-content .fc:last-child {
         border-bottom: none; }
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         .featured-content-section .featured-content .fc {
           width: 33%;
           padding: 0 1em;
@@ -1231,10 +1231,18 @@ body {
     color: #4c4517; }
 .about-page .client-section .quote-container {
   border-radius: 4px;
+  position: relative;
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 3%;
+  min-height: 650px;
   background-color: rgba(76, 69, 23, 0.1); }
+  @media (min-width: 768px) {
+    .about-page .client-section .quote-container {
+      min-height: 450px; } }
+  @media (min-width: 992px) {
+    .about-page .client-section .quote-container {
+      min-height: 350px; } }
   .about-page .client-section .quote-container .quote {
     -webkit-transition: 0.2s linear;
     -moz-transition: 0.2s linear;
@@ -1246,7 +1254,6 @@ body {
     display: -webkit-flex;
     display: flex;
     flex-direction: row;
-    min-height: 200px;
     opacity: 1;
     align-items: flex-start; }
     .about-page .client-section .quote-container .quote p {
@@ -1262,6 +1269,7 @@ body {
     -o-transition: 0.2s linear;
     transition: 0.2s linear;
     margin-top: 1em;
+    margin-bottom: 50px;
     text-align: right;
     opacity: 1; }
     .about-page .client-section .quote-container .client-info .client-name {
@@ -1278,6 +1286,9 @@ body {
     display: -webkit-flex;
     display: flex;
     margin-top: 1em;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
     align-items: center;
     justify-content: center; }
     .about-page .client-section .quote-container .controls .dot {
@@ -1478,9 +1489,11 @@ body {
       align-items: flex-start; }
       .about-page .building-section .building-history .history-text {
         padding: 1em;
+        flex: 1 1 auto;
         background-color: rgba(76, 69, 23, 0.1); }
       .about-page .building-section .building-history .history-images {
         flex-direction: column;
+        flex: 0 0 200px;
         margin-right: 1em;
         padding: 0 15px; }
         .about-page .building-section .building-history .history-images .image-block {

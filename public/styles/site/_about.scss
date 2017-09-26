@@ -15,19 +15,24 @@
     .client-section {
         .quote-container {
             @include border-radius;
-
+            position: relative;
             margin-top: 30px;
             margin-bottom: 30px;
             padding: 3%;
+            min-height: 650px;
             
             background-color: $dark-green-transparent;
+            @media (min-width: 768px) {
+                min-height: 450px;
+            }
+            @media (min-width: 992px) {
+                min-height: 350px;
+            }
             .quote {
                 @include linear-transition(.2s);
                 @include flexbox;
 
                 flex-direction: row;
-
-                min-height: 200px;
 
                 opacity: 1;
 
@@ -48,6 +53,7 @@
                 @include linear-transition(.2s);
 
                 margin-top: 1em;
+                margin-bottom: 50px;
 
                 text-align: right;
 
@@ -68,6 +74,9 @@
                 @include flexbox;
 
                 margin-top: 1em;
+                position: absolute;
+                bottom: 15px;
+                width: 100%;
 
                 align-items: center;
                 justify-content: center;
@@ -322,12 +331,12 @@
                 align-items: flex-start;
                 .history-text {
                     padding: 1em;
-
+                    flex: 1 1 auto;
                     background-color: $dark-green-transparent;
                 }
                 .history-images {
                     flex-direction: column;
-
+                    flex: 0 0 200px;
                     margin-right: 1em;
                     padding: 0 15px;
                     .image-block {
