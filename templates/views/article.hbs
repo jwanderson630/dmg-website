@@ -29,6 +29,7 @@
 			<div class="featured-content">
 				{{# each data.posts}}
 				<article class="fc">
+					<div class="category-link {{{categories.[0].key}}}"><a href="/resources/{{{categories.[0].key}}}">{{categories.[0].name}}</a></div>
 					<h4>{{{title}}}</h4>
 					{{{content.brief}}}
 					<div class="fc-cta">

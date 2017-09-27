@@ -51,7 +51,7 @@ $(document).ready( () => {
 	cycleQuotes = function() {
 		if (!clientQuotes.paused && $(window).scrollTop() < ($('.team-section').position().top - 100)) {
 			const newQuote = clientQuotes.currentQuote + 1 > (clientQuotes.quotes.length - 1) ? 0 : clientQuotes.currentQuote + 1; 
-			changeQuote(newQuote, 2000);
+			changeQuote(newQuote, 500);
 		}
 	};
 
@@ -74,7 +74,7 @@ $(document).ready( () => {
 		changeQuote(newQuote, 200);
 	};
 
-	setInterval(cycleQuotes, 4000);
+	setInterval(cycleQuotes, 8000);
 
 
 	var teamSection = {

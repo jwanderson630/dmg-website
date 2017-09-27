@@ -414,7 +414,8 @@ body {
             box-sizing: border-box;
             padding: 1em 0 2em 0;
 
-            border-bottom: 3px solid $dark-grey-transparent;
+
+            border-bottom: 1px solid $light-grey;
             &:last-child {
                 border-bottom: none;
             }
@@ -422,7 +423,7 @@ body {
                 width: 33%;
                 padding: 0 1em;
 
-                border-right: 3px solid $dark-grey-transparent;
+                border-right: 1px solid $light-grey;
                 border-bottom: none;
                 .fc-button {
                 }
@@ -440,8 +441,9 @@ body {
             }
             .fc-cta {
                 @include flexbox;
-
+                justify-content: space-between;
                 flex-grow: 10;
+                margin-top: 15px;
                 align-items: flex-end;
                 a {
                     text-decoration: none;
@@ -529,6 +531,10 @@ body {
 }
 
 .category-link {
+    @include border-radius;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 15px;
     a {
         text-decoration: none;
 
@@ -538,26 +544,31 @@ body {
         }
     }
     &.strategy-and-consulting {
+        background-color: transparentize($light-green, .8);
         a {
             color: $light-green;
         }
     }
     &.campaigns-and-content {
+        background-color: transparentize($gold, .8);
         a {
             color: $gold;
         }
     }
     &.marketing-automation {
+        background-color: transparentize($dark-blue, .8);
         a {
             color: $dark-blue;
         }
     }
     &.data-optimization {
+        background-color: transparentize($olive-green, .8);
         a {
             color: $olive-green;
         }
     }
     &.teleservices {
+        background-color: transparentize($light-blue, .8);
         a {
             color: $light-blue;
         }

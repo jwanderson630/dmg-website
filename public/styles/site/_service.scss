@@ -1,5 +1,27 @@
 .service-page {
     .featured-content-section {
         background-color: $dark-green-lightened;
+        .fc {
+        	border-bottom: 1px solid #ccc;
+        	@media (min-width: 992px) {
+        		border-right: 1px solid #ccc;
+        		border-bottom: none;
+        	}
+        }
+    }
+    .quote {
+    	@include border-radius;
+    	padding: 15px;
+    	margin: 30px 0;
+    	&.sc {
+    		background-color: transparentize($light-green, .8);
+    		border-left: 5px solid $light-green;
+    	}
+    	.highlight {
+    		color: $light-green;
+    	}
+    	.quote-info {
+    		text-align: right;
+    	}
     }
 }

@@ -94,7 +94,6 @@
 
         background-color: $white;
         .intro {
-            padding-bottom: 40px;
             h2 {
                 margin-bottom: 20px;
             }
@@ -495,5 +494,12 @@
             background-position: left;
             background-size: cover;
         }
+    }
+    .category-link {
+        @include border-radius;
+        padding: 5px;
+        display: inline-block;
+        margin-bottom: 15px;
+        
     }
 }

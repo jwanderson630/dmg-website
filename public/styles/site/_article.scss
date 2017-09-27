@@ -6,6 +6,13 @@
     }
     .featured-content-section {
         background-color: $dark-green-lightened;
+        .fc {
+            border-bottom: 1px solid #ccc;
+            @media (min-width: 992px) {
+                border-right: 1px solid #ccc;
+                border-bottom: none;
+            }
+        }
     }
     &.strategy-and-consulting {
         .banner {
