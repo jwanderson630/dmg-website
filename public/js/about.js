@@ -5,27 +5,32 @@ $(document).ready( () => {
 			{
 				quote: "DMG is one of those awesome partnership’s at Danaher. They originally started working in a single BU and then through referrals and significant value added results they have helped many Danaher BUs in recent years. They bring unique experience, a graceful style and a mindset of getting to the right answer. In the DBSO, we view them as part of a very short list of significantly valued partners.",
 				clientName: "Mike Weatherred",
-				clientCompany: "Vice President, DBSO, Danaher"
+				clientCompany: "DBSO, Danaher",
+				clientTitle: "Vice President"
 			},
 			{
 				quote: "Dunthorpe is a solid partner that does quality work for Fortive. They are critical thinkers and problem solvers, always seeking the best solution for every challenge and opportunity. And they’ve never let us down.",
 				clientName: "Kirsten Paust",
-				clientCompany: "Vice President, FBSO, Fortive"
+				clientCompany: "FBSO, Fortive",
+				clientTitle: "Vice President"
 			},
 			{
 				quote: "We’ve worked closely with Dunthorpe Marketing over an extended period of time to solve marketing problems. They offer a full range of services, aren’t afraid to roll up their sleeves, and have taken the time to understand what’s truly important to our business and the way we work. I trust them to fully deliver on their commitments to the business.",
 				clientName: "Sue Dancer",
-				clientCompany: "Senior Marketing Manager, Tektronix"
+				clientCompany: "Tektronix",
+				clientTitle: "Senior Marketing Manager"
 			},
 			{
 				quote: "DMG has had a big impact on our marketing organization here at KaVo Kerr – they quickly helped us make the leap from marketing theory to optimized lead processes and campaigns, with great results. We trust their insight, and value the exceptional quality of their work.",
 				clientName: "Phil Prentice",
-				clientCompany: "VP Marketing, KaVo Kerr"
+				clientCompany: "KaVo Kerr",
+				clientTitle: "VP Marketing"
 			},
 			{
 				quote: "Dunthorpe is an essential partner for any company that believes in the power of content marketing to drive brand preference and customer advocacy. I have had the pleasure to work with Dunthorpe at two Danaher companies: their expertise, process approach - combined with a keen sense of understanding their clients’ customers and marketing abilities - resulted in content strategies that were truly effective and that contributed to gains in customer engagements and revenue growth.",
 				clientName: "Veronique A. Berger",
-				clientCompany: "Vice President, Global Marketing & Digital Strategies, Leica Biosystems"
+				clientCompany: "Leica Biosystems",
+				clientTitle: "Vice President, Global Marketing & Digital Strategies"
 			},
 		],
 		currentQuote: 0,
@@ -42,6 +47,7 @@ $(document).ready( () => {
 			$('.quoteText').html(clientQuotes.quotes[changeTo].quote);
 			$('#client-name').html(clientQuotes.quotes[changeTo].clientName);
 			$('#client-company').html(clientQuotes.quotes[changeTo].clientCompany);
+			$('#client-title').html(clientQuotes.quotes[changeTo].clientTitle);
 			$('.quote, .client-info').removeClass('hidden');
 			$('#dot' + changeTo).addClass('active');
 			clientQuotes.currentQuote = changeTo;
