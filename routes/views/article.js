@@ -41,6 +41,8 @@ exports = module.exports = function (req, res) {
 			} else if (result.gated === false) {
 				locals.gate = false;
 				next(err);
+			} else {
+				next();
 			}	
 		});
 
