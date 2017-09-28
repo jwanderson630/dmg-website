@@ -12,6 +12,9 @@
         background-image: url('/images/headers/homepage-min.jpg');
         background-position: 50% 100%;
         background-size: cover;
+        @media (min-width: 992px) {
+            position: fixed;
+        }
     }
     .header-content-container {
         @include flexbox;

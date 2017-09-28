@@ -98,6 +98,9 @@ a {
   min-height: 60vh;
   background-position: 50% 50%;
   background-size: cover; }
+  @media (min-width: 992px) {
+    .header-image-md {
+      position: fixed; } }
 
 .header-content-container-md {
   display: -webkit-box;
@@ -600,6 +603,9 @@ body {
       border-bottom: 1px solid #dee3e5; }
       .featured-content-section .featured-content .fc:last-child {
         border-bottom: none; }
+      .featured-content-section .featured-content .fc h4 a {
+        color: #75702b;
+        text-decoration: none; }
       @media (min-width: 992px) {
         .featured-content-section .featured-content .fc {
           width: 33%;
@@ -722,6 +728,9 @@ body {
   background-image: url("/images/headers/homepage-min.jpg");
   background-position: 50% 100%;
   background-size: cover; }
+  @media (min-width: 992px) {
+    .homepage .header-image {
+      position: fixed; } }
 
 .homepage .header-content-container {
   display: -webkit-box;

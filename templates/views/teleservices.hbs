@@ -38,7 +38,7 @@
 			<div class="featured-content">
 				{{# each data.posts}}
 				<article class="fc">
-					<h4>{{{title}}}</h4>
+					<h4><a href="{{postUrl slug}}">{{{title}}}</a></h4>
 					{{{content.brief}}}
 					<div class="fc-cta">
 						<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">{{cta}}</a>

@@ -17,7 +17,7 @@
 	</div>
 	<a class="anchor" id="introduction"></a>
 	<div class="page-body">
-		<div class="intro container">
+		<div class="intro container animated" id="hp-intro">
 			<article>
 				<h2>The bridge between smart thinking and desired results.</h2>
 				<p>Big ideas are a fantastic start. But many things must be in place before smart thinking can deliver desired results. You need rigorous  processes, systems, data, and content. You need a deep understanding of your audiences and the different stages of their buyer journey. And you need to engage them with the right message at the right time through the right channel.</p>
@@ -141,7 +141,7 @@
 					{{# each data.posts}}
 					<article class="fc">
 						<div class="category-link {{{categories.[0].key}}}"><a href="/resources/{{{categories.[0].key}}}">{{categories.[0].name}}</a></div>
-						<h4>{{{title}}}</h4>
+						<h4><a href="{{postUrl slug}}">{{{title}}}</a></h4>
 						{{{content.brief}}}
 						<div class="fc-cta">
 							<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">{{cta}}</a>
