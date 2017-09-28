@@ -8,7 +8,7 @@ $(document).ready(() => {
 	$('#gateForm').submit( () => {
 		let date = new Date();
 		date.setMonth(date.getMonth() + 12);
-		document.cookie = "completedGate=true;expires=" + date + ";domain=dmg-website.herokuapp.com;path=/";
+		document.cookie = "completedGate=true;expires=" + date + ";domain=dunthorpe-marketing-group.herokuapp.com;path=/";
 		return true;
 	});
 })

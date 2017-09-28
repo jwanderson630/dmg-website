@@ -120,11 +120,19 @@
                 }
             }
             .section-break {
+                transition: opacity 2s, transform 1.5s;
                 position: relative;
 
-                margin-top: 2em;
-
-                opacity: .8;
+                margin-top: 40px;
+                transform: translateY(100%);
+                opacity: 0;
+                @media(min-width: 992px) {
+                    margin-top: 80px;
+                }
+                &.animated {
+                    opacity: .8;
+                    transform: translateY(0);
+                }
                 .break-line {
                     position: absolute;
                     top: 10px;
@@ -169,6 +177,10 @@
     .services-section {
         margin: 40px 0 40px 0;
         padding: 0 5%;
+        overflow: hidden;
+        @media(min-width: 992px) {
+            margin-top: 80px;
+        }
         .services-help {
             margin-bottom: 2em;
             .dropdown-container {
@@ -177,15 +189,27 @@
                 flex-direction: column;
 
                 align-items: stretch;
+
                 .header {
+                    transition: 1s opacity, 1s transform;
                     font-size: 1.9em;
 
                     display: inline-block;
 
                     margin-right: 1em;
                     margin-bottom: 1em;
+                    opacity: 0;
+                    transform: translateX(-100%);
+                    &.animated {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+
                 }
                 #services-help-dropdown {
+                    transition: opacity 2s, transform 1.5s;
+                    opacity: 0;
+                    transform: translateX(100%);
                     @include border-radius;
 
                     position: relative;
@@ -193,6 +217,10 @@
                     min-width: 200px;
 
                     flex-grow: 2;
+                    &.animated {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
                     .dropdown-btn {
                         @include flexbox;
                         @include linear-transition(.1s);
@@ -345,6 +373,14 @@
 
                 flex-basis: 100%;
                 justify-content: space-evenly;
+                transition: opacity 2s, transform 1.5s;
+                opacity: 0;
+                transform: translateY(100%);
+                &.animated {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
                 h3 {
                     font-size: 1.4em;
 
@@ -390,6 +426,9 @@
                             color: $light-green;
                         }
                     }
+                    @media(min-width: 992px) {
+                        transition-delay: 0;
+                    }
                 }
                 &.do {
                     background-color: $dark-green;
@@ -397,6 +436,9 @@
                         .capability-btn {
                             color: $dark-green;
                         }
+                    }
+                    @media(min-width: 992px) {
+                        transition-delay: 0.3s;
                     }
                 }
                 &.tel {
@@ -406,6 +448,9 @@
                             color: $light-blue;
                         }
                     }
+                    @media(min-width: 992px) {
+                        transition-delay: 0.4s;
+                    }
                 }
                 &.ma {
                     background-color: $dark-blue;
@@ -414,6 +459,9 @@
                             color: $dark-blue;
                         }
                     }
+                    @media(min-width: 992px) {
+                        transition-delay: 0.2s;
+                    }
                 }
                 &.cc {
                     background-color: $gold;
@@ -421,6 +469,9 @@
                         .capability-btn {
                             color: $gold;
                         }
+                    }
+                    @media(min-width: 992px) {
+                        transition-delay: 0.1s;
                     }
                 }
                 &:hover {
@@ -443,22 +494,25 @@
     }
     .contact-section {
         background-color: $dark-green-transparent;
+        overflow: hidden;
         .contact-content {
             display: block;
 
             padding-top: 50px;
             padding-bottom: 50px;
+            .content {
+                transition: opacity 2s, transform 1.5s;
+                opacity: 0;
+                transform: translateY(50px);
+                &.animated {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
             h2 {
                 display: inline-block;
 
                 border-bottom: 3px solid $orange;
-            }
-            .contact-arrow {
-                position: absolute;
-
-                height: 100%;
-
-                opacity: .2;
             }
             .contact-button {
                 font-size: 1.3em;
@@ -504,5 +558,48 @@
         display: inline-block;
         margin-bottom: 15px;
         
+    }
+    .featured-content-section{
+        overflow: hidden;
+        .container {
+            transition: opacity 2s, transform 1.5s;
+            opacity: 0;
+            transform: translateY(100%);
+            &.animated {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+#hp-intro {
+    transition: opacity 2s, transform 1.5s;
+    opacity: 0;
+    transform: translateY(50%);
+    &.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .intro-bullet {
+        transition: opacity 2s, transform 1.5s;
+        opacity: 0;
+        transform: translateX(-50%);
+        &.animated {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    #bullet1 {
+        transition-delay: 0s;
+    }
+    #bullet2 {
+        transition-delay: .1s;
+    }
+    #bullet3 {
+        transition-delay: .2s;
+    }
+    #bullet4 {
+        transition-delay: .3s;
     }
 }
