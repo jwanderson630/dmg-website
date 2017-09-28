@@ -49,7 +49,7 @@
 		<div class="gate-form">
 			<form method="post" id="gateForm">
 				<input type="hidden" name="action" value="gate">
-				<input type="hidden" name="source" value={{data.post.title}}>
+				<input type="hidden" name="source" value={{data.post.slug}}>
 				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 					<input required type="text" name="firstName" placeholder="First Name*"  value="{{formData.firstName}}">
 				</div>
