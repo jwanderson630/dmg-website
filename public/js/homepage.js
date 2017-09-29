@@ -82,14 +82,14 @@ $(document).ready(() => {
 		setLink();
 	});
 
-	$(window).scroll(() => {
-		$('.animate').each(function() {
-			if (($(this).offset().top - $(this).innerHeight() + 150 ) <  ($(window).scrollTop() + $('#header-image').innerHeight())) {
-				$(this).addClass('animated');
-				$(this).removeClass('animate');
-			}
-		});
-	});
+	// $(window).scroll(() => {
+	// 	$('.animate').each(function() {
+	// 		if (($(this).offset().top - $(this).innerHeight() + 150 ) <  ($(window).scrollTop() + $('#header-image').innerHeight())) {
+	// 			$(this).addClass('animated');
+	// 			$(this).removeClass('animate');
+	// 		}
+	// 	});
+	// });
 
 	setLink();
 	capabilityFix();
