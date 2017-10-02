@@ -577,7 +577,7 @@ body {
         text-decoration: none; }
       @media (min-width: 992px) {
         .featured-content-section .featured-content .fc {
-          width: 33%;
+          width: 33.33%;
           padding: 0 1em;
           border-right: 1px solid #dee3e5;
           border-bottom: none; }
