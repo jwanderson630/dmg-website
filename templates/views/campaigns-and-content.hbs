@@ -24,7 +24,7 @@
 			</article>
 			<div>
 				<p>
-				Want to learn more about best practices for customer engagement and buyer journeys, case studies and sample campaign results? 
+				Want to learn more about buyer journey mapping, best practices for customer engagement, case studies and sample campaign results? 
 				</p>
 				<a href="/contact"><div class="btn campaigns-and-content">Contact Us</div></a>
 			</div>
@@ -37,7 +37,7 @@
 			<div class="featured-content">
 				{{# each data.posts}}
 				<article class="fc">
-					<h4><a href="{{postUrl slug}}">{{{title}}}</a></h4>
+					<h4><a href="{{postUrl slug}}">{{{type}}}:&nbsp;{{{title}}}</a></h4>
 					{{{content.brief}}}
 					<div class="fc-cta">
 						<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">{{cta}}</a>

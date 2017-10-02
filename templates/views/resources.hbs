@@ -56,7 +56,7 @@
 				{{# each data.posts.results}}
 				<article class="resource">
 					<div class="category-link {{{categories.[0].key}}}"><a href="/resources/{{{categories.[0].key}}}">{{categories.[0].name}}</a></div>	
-					<h4><a href="{{postUrl slug}}">{{{title}}}</a></h4>
+					<h4><a href="{{postUrl slug}}">{{{type}}}:&nbsp;{{{title}}}</a></h4>
 					
 
 					{{{content.brief}}}

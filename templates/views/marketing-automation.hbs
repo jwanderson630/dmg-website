@@ -21,6 +21,12 @@
 					<li><img src='/images/arrow-dark-blue.svg'/>Program development and lead management</li>
 					<li><img src='/images/arrow-dark-blue.svg'/>Standards documentation and training</li>
 				</ul>
+				<br>
+				<h3 class="ma">Marketing Automation Maturity Ladder </h3>
+				<p>
+					As your organization’s marketing maturity increases, so too does the scope and sophistication of your marketing automation activities. Progressing through the stages means moving from reactive one-off batch emails to persona-based triggered programs covering the entire buying journey.
+				</p>
+				<div style="text-align: center;"><img src="http://res.cloudinary.com/djoiybrev/image/upload/v1506972341/ma-ladder_ukpzuy.jpg" alt="Marketin Automation Maturity Ladder"></div>
 			</article>
 			<div>
 				<p>
@@ -37,7 +43,7 @@
 			<div class="featured-content">
 				{{# each data.posts}}
 				<article class="fc">
-					<h4><a href="{{postUrl slug}}">{{{title}}}</a></h4>
+					<h4><a href="{{postUrl slug}}">{{{type}}}:&nbsp;{{{title}}}</a></h4>
 					{{{content.brief}}}
 					<div class="fc-cta">
 						<a href="{{postUrl slug}}" class="fc-button btn {{{categories.[0].key}}}">{{cta}}</a>

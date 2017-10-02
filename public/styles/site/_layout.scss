@@ -374,29 +374,6 @@ body {
 
 .featured-content-section {
     padding: 40px 0;
-    h3 {
-        font-family: 'Bree Serif', serif;
-
-        display: inline-block;
-
-        color: $dark-green;
-        border-bottom: 3px solid $orange;
-        &.sc {
-            border-bottom: 3px solid $light-green;
-        }
-        &.cc {
-            border-bottom: 3px solid $gold;
-        }
-        &.ma {
-            border-bottom: 3px solid $dark-blue;
-        }
-        &.do {
-            border-bottom: 3px solid $dark-green;
-        }
-        &.tel {
-            border-bottom: 3px solid $light-blue;
-        }
-    }
     .featured-content {
         @include flexbox;
 

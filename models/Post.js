@@ -24,6 +24,7 @@ Post.add({
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
 	cta: {type: String, default: 'Read More'},
+	type: {type: String},
 	categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
 	meta: {
 		title: {type: String},
