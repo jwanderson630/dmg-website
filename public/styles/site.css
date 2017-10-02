@@ -569,6 +569,11 @@ body {
 
 .featured-content-section {
   padding: 40px 0; }
+  .featured-content-section h3 {
+    font-family: 'Bree Serif', serif;
+    display: inline-block;
+    color: #4c4517;
+    border-bottom: 3px solid #c66005; }
   .featured-content-section .featured-content {
     display: -webkit-box;
     display: -moz-box;

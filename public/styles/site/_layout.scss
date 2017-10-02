@@ -378,6 +378,14 @@ body {
 
 .featured-content-section {
     padding: 40px 0;
+    h3 {
+         font-family: 'Bree Serif', serif;
+
+        display: inline-block;
+
+        color: $dark-green;
+        border-bottom: 3px solid $orange;
+    }
     .featured-content {
         @include flexbox;
 
