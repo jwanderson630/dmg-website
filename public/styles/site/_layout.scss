@@ -257,6 +257,10 @@ body {
                 padding-bottom: .2em;
 
                 border-bottom: 3px solid $lime-green;
+                a {
+                    color: $lime-green;
+                    text-decoration: none;
+                }
             }
             ul {
                 font-weight: lighter;

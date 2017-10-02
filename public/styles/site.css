@@ -488,6 +488,9 @@ body {
         font-weight: bold;
         padding-bottom: .2em;
         border-bottom: 3px solid #ede100; }
+        .footer .footer-content .footer-links .footer-links-header a {
+          color: #ede100;
+          text-decoration: none; }
       .footer .footer-content .footer-links ul {
         font-weight: lighter;
         margin: .5em 0;
