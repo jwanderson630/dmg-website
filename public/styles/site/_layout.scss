@@ -356,7 +356,7 @@ body {
 
                 line-height: 1.5em;
 
-                padding: 1em 0;
+                padding: 7px 0;
 
                 align-content: center;
             }
@@ -446,11 +446,11 @@ body {
     }
     .resource-btn {
         @include border-radius;
-        @include linear-transition(.1s);
+        @include linear-transition(0.2s);
 
         display: inline-block;
-
-        margin-top: 20px;
+        
+        float: right;
         padding: 5px;
 
         text-decoration: none;
@@ -525,45 +525,45 @@ body {
 
 .category-link {
     @include border-radius;
+    @include linear-transition(0.2s);
     padding: 5px;
-    display: inline-block;
+    display: block;
     margin-bottom: 15px;
-    a {
-        text-decoration: none;
-
-        color: $orange;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    text-decoration: none;
+    color: $orange;
     &.strategy-and-consulting {
         background-color: transparentize($light-green, .8);
-        a {
-            color: $light-green;
+        color: $light-green;
+        &:hover {
+            background-color: transparentize($light-green, .6)
         }
     }
     &.campaigns-and-content {
         background-color: transparentize($gold, .8);
-        a {
-            color: $gold;
+        color: $gold;
+         &:hover {
+            background-color: transparentize($gold, .6)
         }
     }
     &.marketing-automation {
         background-color: transparentize($dark-blue, .8);
-        a {
-            color: $dark-blue;
+        color: $dark-blue;
+         &:hover {
+            background-color: transparentize($dark-blue, .6)
         }
     }
     &.data-optimization {
         background-color: transparentize($olive-green, .8);
-        a {
-            color: $olive-green;
+        color: $olive-green;
+         &:hover {
+            background-color: transparentize($olive-green, .6)
         }
     }
     &.teleservices {
         background-color: transparentize($light-blue, .8);
-        a {
-            color: $light-blue;
+        color: $light-blue;
+         &:hover {
+            background-color: transparentize($light-blue, .6)
         }
     }
 }

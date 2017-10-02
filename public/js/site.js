@@ -3,17 +3,31 @@ $(document).ready(function(){
 
 	$('.nav-menu').click(() => {
 		$('.nav-links').toggleClass('expand');
-	})
+	});
 
 	$('#service-dropdown').click(function(){
-		$('#service-dropdown.nav-item').toggleClass('expand');
-	})
+    if ($(window).innerWidth() < 768) {
+      $('#service-dropdown.nav-item').toggleClass('expand');
+    }
+		else {
+     window.location.replace("/#capability-section");
+    }
+	});
+
+  $('#about-dropdown').click(function(){
+    if ($(window).innerWidth() < 768) {
+      $('#service-dropdown.nav-item').toggleClass('expand');
+    }
+    else {
+     window.location.replace("/about");
+    }
+  });
 
 	$(window).resize(() => {
 		if ($(window).width() > 767) {
 			$('.expand').removeClass('expand');
 		}
-	})
+	});
 
 
 	$('a[href*="#"]')

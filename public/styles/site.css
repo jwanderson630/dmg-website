@@ -156,42 +156,34 @@ a {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 768px) {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 992px) {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 1200px) {
   .container {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 576px) {
   .container {
     width: 540px;
     max-width: 100%; } }
-
 @media (min-width: 768px) {
   .container {
     width: 720px;
     max-width: 100%; } }
-
 @media (min-width: 992px) {
   .container {
     width: 960px;
     max-width: 100%; } }
-
 @media (min-width: 1200px) {
   .container {
     width: 1140px;
     max-width: 100%; } }
-
 .container-fluid {
   position: relative;
   margin-right: auto;
@@ -203,22 +195,18 @@ a {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 768px) {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 992px) {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
-
 @media (min-width: 1200px) {
   .container-fluid {
     padding-right: 15px;
     padding-left: 15px; } }
-
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -234,57 +222,45 @@ a {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
-
 @media (min-width: 768px) {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
-
 @media (min-width: 992px) {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
-
 @media (min-width: 1200px) {
   .row {
     margin-right: -15px;
     margin-left: -15px; } }
-
 .hidden-xs-up {
   display: none !important; }
 
 @media (max-width: 575px) {
   .hidden-xs-down {
     display: none !important; } }
-
 @media (min-width: 576px) {
   .hidden-sm-up {
     display: none !important; } }
-
 @media (max-width: 767px) {
   .hidden-sm-down {
     display: none !important; } }
-
 @media (min-width: 768px) {
   .hidden-md-up {
     display: none !important; } }
-
 @media (max-width: 991px) {
   .hidden-md-down {
     display: none !important; } }
-
 @media (min-width: 992px) {
   .hidden-lg-up {
     display: none !important; } }
-
 @media (max-width: 1199px) {
   .hidden-lg-down {
     display: none !important; } }
-
 @media (min-width: 1200px) {
   .hidden-xl-up {
     display: none !important; } }
-
 html,
 body {
   font-family: "Poppins", sans-serif;
@@ -556,7 +532,7 @@ body {
       display: -webkit-flex;
       display: flex;
       line-height: 1.5em;
-      padding: 1em 0;
+      padding: 7px 0;
       align-content: center; }
     .page-body .body-content .service-list img {
       height: 1.5em;
@@ -626,12 +602,12 @@ body {
           text-decoration: none; }
   .featured-content-section .resource-btn {
     border-radius: 4px;
-    -webkit-transition: 0.1s linear;
-    -moz-transition: 0.1s linear;
-    -o-transition: 0.1s linear;
-    transition: 0.1s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
+    transition: 0.2s linear;
     display: inline-block;
-    margin-top: 20px;
+    float: right;
     padding: 5px;
     text-decoration: none;
     color: #404040;
@@ -679,34 +655,40 @@ body {
 
 .category-link {
   border-radius: 4px;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
   padding: 5px;
-  display: inline-block;
-  margin-bottom: 15px; }
-  .category-link a {
-    text-decoration: none;
-    color: #c66005; }
-    .category-link a:hover {
-      text-decoration: underline; }
+  display: block;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #c66005; }
   .category-link.strategy-and-consulting {
-    background-color: rgba(168, 158, 0, 0.2); }
-    .category-link.strategy-and-consulting a {
-      color: #a89e00; }
+    background-color: rgba(168, 158, 0, 0.2);
+    color: #a89e00; }
+    .category-link.strategy-and-consulting:hover {
+      background-color: rgba(168, 158, 0, 0.4); }
   .category-link.campaigns-and-content {
-    background-color: rgba(249, 167, 24, 0.2); }
-    .category-link.campaigns-and-content a {
-      color: #f9a718; }
+    background-color: rgba(249, 167, 24, 0.2);
+    color: #f9a718; }
+    .category-link.campaigns-and-content:hover {
+      background-color: rgba(249, 167, 24, 0.4); }
   .category-link.marketing-automation {
-    background-color: rgba(76, 119, 156, 0.2); }
-    .category-link.marketing-automation a {
-      color: #4c779c; }
+    background-color: rgba(76, 119, 156, 0.2);
+    color: #4c779c; }
+    .category-link.marketing-automation:hover {
+      background-color: rgba(76, 119, 156, 0.4); }
   .category-link.data-optimization {
-    background-color: rgba(117, 112, 43, 0.2); }
-    .category-link.data-optimization a {
-      color: #75702b; }
+    background-color: rgba(117, 112, 43, 0.2);
+    color: #75702b; }
+    .category-link.data-optimization:hover {
+      background-color: rgba(117, 112, 43, 0.4); }
   .category-link.teleservices {
-    background-color: rgba(127, 173, 194, 0.2); }
-    .category-link.teleservices a {
-      color: #7fadc2; }
+    background-color: rgba(127, 173, 194, 0.2);
+    color: #7fadc2; }
+    .category-link.teleservices:hover {
+      background-color: rgba(127, 173, 194, 0.4); }
 
 .homepage .header-image {
   -webkit-transition: 0.1s linear;
@@ -724,7 +706,6 @@ body {
   @media (min-width: 992px) {
     .homepage .header-image {
       position: fixed; } }
-
 .homepage .header-content-container {
   display: -webkit-box;
   display: -moz-box;
@@ -796,7 +777,6 @@ body {
     @media (min-width: 768px) {
       .homepage .header-content-container .header-content {
         padding: 40px 2vw; } }
-
 .homepage .page-body {
   padding: 40px 0 0 0;
   background-color: #fff; }
@@ -813,7 +793,7 @@ body {
       display: -webkit-flex;
       display: flex;
       line-height: 1.5em;
-      padding: 1em 0;
+      padding: 7px 0;
       align-content: center; }
     .homepage .page-body .intro ul img {
       height: 1.5em;
@@ -855,7 +835,6 @@ body {
           position: relative;
           padding: 0 .3em;
           background-color: #fff; }
-
 .homepage .services-section {
   margin: 40px 0 40px 0;
   padding: 0 5%;
@@ -1107,7 +1086,6 @@ body {
     @media (min-width: 1500px) {
       .homepage .services-section .services-capabilities {
         flex-wrap: nowrap; } }
-
 .homepage .contact-section {
   background-color: rgba(76, 69, 23, 0.1);
   overflow: hidden; }
@@ -1151,25 +1129,20 @@ body {
       background-repeat: no-repeat;
       background-position: left;
       background-size: cover; } }
-
 .homepage .category-link {
   border-radius: 4px;
   padding: 5px;
   display: inline-block;
   margin-bottom: 15px; }
-
 .homepage .featured-content-section {
   overflow: hidden; }
 
 #hp-intro #bullet1 {
   transition-delay: 0s; }
-
 #hp-intro #bullet2 {
   transition-delay: .1s; }
-
 #hp-intro #bullet3 {
   transition-delay: .2s; }
-
 #hp-intro #bullet4 {
   transition-delay: .3s; }
 
@@ -1181,7 +1154,6 @@ body {
       .service-page .featured-content-section .fc {
         border-right: 1px solid #ccc;
         border-bottom: none; } }
-
 .service-page .quote {
   border-radius: 4px;
   padding: 15px;
@@ -1193,7 +1165,6 @@ body {
     color: #a89e00; }
   .service-page .quote .quote-info {
     text-align: right; }
-
 .service-page h3 {
   font-family: 'Bree Serif', serif;
   display: inline-block;
@@ -1217,7 +1188,6 @@ body {
   width: 100%;
   height: 40%;
   background-size: cover; }
-
 .resources-page .header-content-container {
   display: -webkit-box;
   display: -moz-box;
@@ -1252,7 +1222,6 @@ body {
           @media (min-width: 768px) {
             .resources-page .header-content-container .header-content .header-border .inner-content h1 {
               width: 60%; } }
-
 .resources-page .resources {
   background-color: #fff; }
   .resources-page .resources .resources-filters {
@@ -1345,14 +1314,26 @@ body {
 .about-page .header-image-md {
   background-image: url("/images/headers/about-min.jpg");
   background-position: 50% 20%; }
-
 .about-page .intro {
   font-size: 1.2em;
   margin-top: 50px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column; }
+  @media (min-width: 992px) {
+    .about-page .intro {
+      flex-direction: row; } }
   .about-page .intro strong {
     color: #4c4517; }
-
+  .about-page .intro .intro-text {
+    flex: 1 1 100%;
+    padding-right: 20px;
+    margin: 0; }
+  .about-page .intro .intro-img {
+    flex: 0 0 auto;
+    text-align: center; }
 .about-page .client-section .quote-container {
   border-radius: 4px;
   position: relative;
@@ -1442,7 +1423,6 @@ body {
       cursor: pointer; }
       .about-page .client-section .quote-container .controls .arrow:hover {
         background-color: rgba(76, 69, 23, 0.1); }
-
 .about-page .client-section .logo-container {
   margin: 0 -25px;
   text-align: center; }
@@ -1463,7 +1443,6 @@ body {
     .about-page .client-section .logo-container .client-logo img {
       max-width: 190px;
       max-height: 80px; }
-
 .about-page .team-section {
   margin-top: 40px;
   background-color: #e9e8e2; }
@@ -1571,13 +1550,10 @@ body {
         max-width: 300px; }
       .about-page .team-section .executive-team .team-member-holder {
         justify-content: space-between; } }
-
 .about-page .building-section h2 {
   margin: 1em 0; }
-
 .about-page .building-section p {
   margin-bottom: 1em; }
-
 .about-page .building-section .building-history {
   display: -webkit-box;
   display: -moz-box;
@@ -1684,7 +1660,6 @@ body {
 .article-page .banner {
   margin-top: 80px;
   background-color: #c66005; }
-
 .article-page .featured-content-section {
   background-color: #e9e8e2; }
   .article-page .featured-content-section .fc {
@@ -1693,25 +1668,20 @@ body {
       .article-page .featured-content-section .fc {
         border-right: 1px solid #ccc;
         border-bottom: none; } }
-
 .article-page.strategy-and-consulting .banner {
   background-color: #a89e00; }
-
 .article-page.campaigns-and-content .banner {
   background-color: #f9a718; }
-
 .article-page.marketing-automation .banner {
   background-color: #4c779c; }
-
 .article-page.data-optimization .banner {
   background-color: #4c4517; }
-
 .article-page.teleservices .banner {
   background-color: #7fadc2; }
-
 .article-page .body-content .article-title {
   margin-bottom: 0;
-  margin-top: 50px; }
+  margin-top: 50px;
+  border-bottom: 0 transparent; }
 
 .back-btn {
   display: -webkit-inline-box;
@@ -1801,28 +1771,23 @@ body {
   font-size: 18px;
   color: #404040 !important;
   line-height: 1.8em; }
-
 .article-content p.well {
   padding: 15px; }
-
 .article-content h4 {
   font-weight: 700;
   margin-top: 50px; }
-
 .article-content img {
   max-width: calc(100% - 15px); }
-
 .article-content .well {
   border-radius: 4px;
   background-color: rgba(76, 69, 23, 0.1) !important; }
-
 .article-content .highlight {
   color: #c66005 !important; }
-
 .article-content li {
   padding: 5px 0; }
-
 .article-content .text-right {
   width: 100%;
   text-align: right;
   display: block; }
+
+/*# sourceMappingURL=site.css.map */

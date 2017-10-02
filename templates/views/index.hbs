@@ -137,10 +137,11 @@
 		<div class="featured-content-section">
 			<div class="container animate">
 				<h3>Featured Content</h3>
+				<a  href="/resources" class="resource-btn hidden-md-down">View all resources</a>
 				<div class="featured-content">
 					{{# each data.posts}}
 					<article class="fc">
-						<div class="category-link {{{categories.[0].key}}}"><a href="/resources/{{{categories.[0].key}}}">{{categories.[0].name}}</a></div>
+						<a href="/resources/{{{categories.[0].key}}}" class="category-link {{{categories.[0].key}}}">{{categories.[0].name}}</a>
 						<h4><a href="{{postUrl slug}}">{{{type}}}:&nbsp;{{{title}}}</a></h4>
 						{{{content.brief}}}
 						<div class="fc-cta">
@@ -150,7 +151,7 @@
 					</article>
 					{{/each}}
 				</div>
-				<a  href="/resources" class="resource-btn">View all resources</a>
+				<a  href="/resources" class="resource-btn hidden-lg-up">View all resources</a>
 			</div>
 		</div>
 		{{/if}}

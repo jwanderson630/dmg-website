@@ -52,7 +52,7 @@ exports = module.exports = function (req, res) {
 	// Load other posts
 	view.on('init', function (next) {
 
-		var q = keystone.list('Post').model.find({state: 'published', "_id": {"$ne": locals.data.post._id}}).populate('categories').sort('-publishedDate').limit(3);
+		var q = keystone.list('Post').model.find({state: 'published',  "_id": {"$ne": locals.data.post._id}}).populate('categories').sort('-publishedDate').limit(3).where('categories').in(locals.data.post.categories);
 		q.exec(function (err, results) {
 			locals.data.posts = results;
 			next(err);
